@@ -254,7 +254,7 @@
     {
       "path": "reports/DOCX_VALIDATION.json",
       "bytes": 509,
-      "sha256": "cfc4f1a2a11f1643f73d8757595b8da50c778f968de1074292ce7005c61ade90"
+      "sha256": "7e3d3fea6610465543f1100bfc78f2fa3b715a1ccc1f002b2be69e864ed54bd7"
     },
     {
       "path": "reports/EXPERIMENT_AUDIT.md",
@@ -278,8 +278,8 @@
     },
     {
       "path": "reports/FINAL_RELEASE_REPORT.md",
-      "bytes": 10151,
-      "sha256": "97743b0c3cae0eb82dc91427e30b2c0bd2ce245c7b0cf7a842cd58e06a0a063d"
+      "bytes": 10301,
+      "sha256": "2653254fbddbf2e0a175305d4c5159001d9e3d9e3b6a2d48b1f714ad35f7beeb"
     },
     {
       "path": "reports/OPENPI_BASELINE_FILES.csv",
@@ -295,6 +295,11 @@
       "path": "reports/PROJECT_INVENTORY.md",
       "bytes": 3453,
       "sha256": "d549b223225fcc25b5c595ac620d626ac440acc950e6cfd389757e3037e044d8"
+    },
+    {
+      "path": "reports/PUSH_VERIFICATION.json",
+      "bytes": 386,
+      "sha256": "3753524bc4e9371968628792c8b6b5dc1060ca8aea75b074bbef2e5144a62f75"
     },
     {
       "path": "reports/RESULTS_TRACEABILITY.md",
@@ -1543,8 +1548,8 @@
     },
     {
       "path": "tools/plotting/update_dissertation.py",
-      "bytes": 12433,
-      "sha256": "31dbd388d4bed813e53fbb8c9ead9bfb30ef3f55eeb4a18d3b5a3d13bdb33cab"
+      "bytes": 12603,
+      "sha256": "eff5e759caf25bac8906dd88993f0f784c1b31c2e379571c54f5abb66f9dd048"
     },
     {
       "path": "tools/release_inventory.py",

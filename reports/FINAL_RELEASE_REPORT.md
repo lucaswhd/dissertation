@@ -73,7 +73,7 @@ FSM编排中的`ExecuteBehaviorTask`：数据构建使用上游state/action repl
 
 目标：[lucaswhd/dissertation](https://github.com/lucaswhd/dissertation)。认证账号SaladMike；在用户添加协作者后，本次已接受该仓库邀请。API确认private=true、push=true、默认main；git ls-remote确认远程最初为空。使用独立staging，不在原研究目录初始化发布仓库，不force push、不覆盖既有提交。
 
-本报告随研究快照提交；**实际commit SHA、推送状态、远程ref与最终文件数量/字节以本机`/root/dissertation_local_audit/RELEASE_RECEIPT.json`及后续推送回执为准**。这避免把尚未发生的push写成成功；最终聊天会报告已实际核验的SHA与链接。
+**研究代码与证据提交：`a2b7d22c70cb5aaaa2cdf00d335ca24c933ab948`；已成功推送到`main`。** GitHub API再次确认仓库private=true，远程main指向该提交；远程tree逐项比对全部312个本地Git blobs一致，总计13,497,667字节。详细回执见`PUSH_VERIFICATION.json`；本段与回执随后追加为独立文档提交，最终HEAD由本机`/root/dissertation_local_audit/RELEASE_RECEIPT.json`及最终聊天记录。
 
 发布包括经检查源码、必要原许可/补丁、numeric evidence、非视频图表、全部图表源脚本、审计报告与文档。排除原始视频/HDF5/LeRobot、checkpoint、环境/cache、人物/场景/纹理/运动派生素材、私人绝对资源清单、Word全文和含第三方渲染素材的storyboard成图。图表/Word成品仍在本地交付目录完整保留。未启用Git LFS。
 
@@ -89,4 +89,4 @@ FSM编排中的`ExecuteBehaviorTask`：数据构建使用上游state/action repl
 
 ## 验收记录
 
-已完成真实项目发现、三版本边界识别、数据/训练/评估链路审计、清单、真实图表与可编辑Word成稿、按章图表方案、干净发布目录与低成本验证。远程push及验证由随后独立回执记录；未复现实验与未验证分页保持明确限制。
+已完成真实项目发现、三版本边界识别、数据/训练/评估链路审计、清单、真实图表与可编辑Word成稿、按章图表方案、干净发布目录与低成本验证。已成功push并逐项验证远程研究快照；未复现实验与未验证分页保持明确限制。

@@ -85,6 +85,9 @@ def build(inp,out):
  before=hashlib.sha256(inp.read_bytes()).hexdigest();doc=Document(inp);orig=list(doc.paragraphs);assert len(orig)==836
  for section in doc.sections:section.page_width=Cm(21);section.page_height=Cm(29.7)
  width=min((s.page_width-s.left_margin-s.right_margin)/914400 for s in doc.sections)
+ for shape in doc.inline_shapes:
+  if shape.width>Inches(width):
+   ratio=float(Inches(width))/shape.width;shape.height=int(shape.height*ratio);shape.width=Inches(width)
  payload=json.loads((ROOT/'tables/native_tables.json').read_text());assert len(payload)==18
  # Original image/table placeholder paragraphs; retain references before mutations.
  positions={'3.1':294,'3.2':304,'4.1':472,'4.2':518,'5.1':550,'5.2':560,'5.3':570,'5.4':580,'5.5':590,'A.1':789,'A.2':794,'A.3':795,'A.4':804,'A.5':810,'A.6':815,'A.7':820,'A.8':823,'A.9':825}
