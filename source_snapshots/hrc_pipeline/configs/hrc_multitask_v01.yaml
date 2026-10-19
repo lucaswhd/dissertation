@@ -1,0 +1,115 @@
+# Multi-task HRC: task-0026 (assembling_gift_baskets) base scene + radio from task-0000.
+# Round 0 = Turn on the radio (scripted toggle, no playback)
+# Round 1 = Place a gift basket on the table (replay task-0026 demo_0 segment 0)
+raw_hdf5: /root/autodl-tmp/datasets/2025-challenge-rawdata/task-0026/episode_00260010.hdf5
+output_dir: /root/autodl-tmp/outputs/hrc_multitask_v01
+
+# Human (Habitat male_0)
+human_usd: /root/hrc_pipeline/assets/character.usda
+human_motion_mode: walk
+human_distance: 1.8
+
+# Rendering / pacing
+resolution: 256
+fps: 30
+# Pitch the onboard ZED head camera nose-down so tabletop objects are visible.
+# Positive = look down. Tune 15–35 if needed; flip axis to "y"/"z" if the
+# rotation goes sideways instead of down.
+head_camera_pitch_deg: -15
+head_camera_pitch_axis: x
+# Widen the onboard ZED camera so the robot can see floor-level baskets,
+# tabletop radio, and the human in a single frame during navigation.
+# Default OmniGibson aperture is 20.995mm (HFOV ≈ 63°). 40mm matches
+# BEHAVIOR-1K's official setup (HFOV ≈ 99°). 50mm approximates ZED 2's
+# real wide-angle (HFOV ≈ 111°, VFOV ≈ 92° at 4:3). Above ~80mm the
+# perspective projection gets visibly stretched at the edges — switch to
+# fisheye instead. Comment out / set to 0 to disable.
+head_camera_horizontal_aperture: 45.0
+# Phase-conditioned active gaze: re-pitch the head camera whenever the FSM
+# phase changes. Negative = nose-down (look at floor / tabletop), 0 = level,
+# positive = nose-up. Phases not listed fall back to head_camera_pitch_deg
+# above. Comment the whole block out to disable dynamic gaze (static pitch only).
+head_camera_phase_pitch:
+  WaitNearHuman:        0     # Level — look at the human's torso/face
+  ReceiveCommand:       0     # Level — listening to instruction
+  FaceHuman:            0     # Level — facing the human
+  WaitNextCommand:      0     # Level
+  AllTasksDone:         0     # Level
+  GoToTask:           -10     # Slight nose-down — scan path + obstacles
+  ReturnToHuman:      -10     # Slight nose-down — scan path
+  Relocate:           -10     # Slight nose-down — scan path
+  ExecuteBehaviorTask: -25    # Strong nose-down — table / floor manipulation
+  TaskSegmentDone:    -15     # Neutral — transitioning back to human
+# Smooth interpolation speed for head-camera pitch transitions, in degrees per
+# recorded frame. At 30 fps:
+#   1.0 → 25° transition takes ~25 frames ≈ 0.83 s   (very smooth)
+#   1.5 → ~17 frames ≈ 0.55 s                        (smooth, default)
+#   3.0 →  ~8 frames ≈ 0.27 s                        (quick)
+#   0   → snap (no interpolation, instant)
+head_camera_pitch_smooth_deg_per_frame: 1.0
+return_steps: 90          # ~3s walk back; smooth turn spans first 50% = 1.5s
+go_to_task_steps: 90      # ~3s walk to task; smooth turn spans 1.5s
+face_human_steps: 45      # 1.5s rotation to face human (was 10 = 0.33s, snap-turn)
+wait_steps: 5
+stand_off: 1.0
+relocate_steps: 120       # ~4s between-round walk (human relocates, robot follows)
+
+episode_id: 0
+require_task_success: false
+max_playback_steps: null
+
+# === Visually hide task-0026 props that aren't relevant to this two-round
+#     demo (radio + place 1 gift basket on the table). The objects still
+#     exist physically (so reward / state restore stays consistent), they
+#     just aren't rendered into the head/third-person videos.
+# Matched against `obj.category` (case-insensitive). Anything in this list
+# gets `obj.visible = False` after the step-0 state load and before video
+# recording starts. `og.sim.load_state` does NOT overwrite USD visibility,
+# so a single set is enough for the entire episode.
+hidden_categories:
+  - swiss_cheese     # 4 cube-like cheese props on the coffee table
+  - butter_cookie    # 4 cookies on the coffee table
+  - bow              # 4 bow ribbons (assembling_gift_baskets props)
+  - pillar_candle    # 4 candle props
+# Also accepts exact object names (overrides categories if both target the
+# same object). Leave empty unless you want surgical removal.
+hidden_object_names: []
+
+# === Extra objects spawned on top of task-0026's scene ===
+# These objects are *not* in the recorded state, so their UUIDs are skipped during
+# load_state(serialized=True). They keep their spawned pose throughout playback.
+extra_objects:
+  - name: radio_89
+    category: radio
+    model: wxnicr
+    # Pose copied from task-0000's recorded state (same coffee_table_koagbh_0).
+    position: [3.4642012119293213, 4.886016845703125, 0.533974826335907]
+    orientation: [0.02642742544412613, -0.0009975440334528685, 0.9628932476043701, 0.26858365535736084]
+    in_rooms: [living_room_0]
+
+# === Task-round plan ===
+# Each entry defines one HRC round.
+# kind: "scripted_radio" or "replay_segment".
+task_rounds:
+  # Round 0: REAL replay of task-0000 (turning_on_radio).
+  # Possible because the merged scene (task-0026 base + spawned radio_89) covers
+  # all 126 objects task-0000's recording references — task-0000 has only 1
+  # task-specific object beyond the shared scene fixtures, and that's the radio.
+  # OmniGibson's UUID-based deserialize matches our spawned radio_89 to the
+  # recorded one (same name = same UUID), so the recorded button press lands on
+  # the right object. Task-0026-only objects (baskets, bows...) keep their
+  # initial pose because their UUIDs aren't in task-0000's recording.
+  - kind: replay_external_segment
+    instruction: "Turn on the radio receiver that's on the table in the living room."
+    external_hdf5: /root/autodl-tmp/datasets/2025-challenge-rawdata/task-0000/episode_00000010.hdf5
+    episode_id: 0
+    # task-0000 demo_0 has 1956 steps; reward fires at 1364 (radio toggled).
+    # Replay ALL steps so the robot completes the full natural motion sequence.
+    start_step: 0
+
+  # Round 1: replay until basket is placed (~step 4200), skip block cleanup.
+  - kind: replay_segment
+    instruction: "Place the gift basket on the coffee table."
+    activity_override: assembling_gift_baskets
+    segment_index: 0
+    end_step: 4200

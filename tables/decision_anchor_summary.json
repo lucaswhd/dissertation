@@ -1,0 +1,20 @@
+{
+  "train": {
+    "num_rows": 341269,
+    "num_valid_anchors": 323255,
+    "num_decision_anchors": 12785,
+    "decision_fraction": 0.03955081901285363
+  },
+  "val": {
+    "num_rows": 31084,
+    "num_valid_anchors": 29387,
+    "num_decision_anchors": 1367,
+    "decision_fraction": 0.04651716745499711
+  },
+  "test": {
+    "num_rows": 37317,
+    "num_valid_anchors": 34902,
+    "num_decision_anchors": 1350,
+    "decision_fraction": 0.038679731820526045
+  }
+}

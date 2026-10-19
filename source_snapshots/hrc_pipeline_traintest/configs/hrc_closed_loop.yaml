@@ -1,0 +1,83 @@
+raw_hdf5: /path/to/external_project/datasets/2025-challenge-rawdata/task-0026/episode_00260010.hdf5
+output_root: outputs/hrc_closed_loop
+episode_name: assembling_gift_baskets_closed_loop
+task_data_path: /path/to/external_project/docs/challenge/task_data.json
+
+resolution: 256
+fps: 30
+wait_steps: 20
+command_steps: 10
+return_steps: 30
+stand_off: 1.0
+max_playback_steps: null
+
+human:
+  name: human_npc
+  usd_path: /path/to/external_project/asset_pipeline/b1k_pipeline/tools/HumanFemale/HumanFemale.usd
+  distance: 1.8
+  body_profile:
+    pelvis_height: 0.98
+    spine_height: 1.14
+    neck_height: 1.42
+    head_height: 1.65
+    shoulder_width: 0.42
+    hip_width: 0.28
+    upper_arm_length: 0.30
+    lower_arm_length: 0.28
+    upper_leg_length: 0.46
+    lower_leg_length: 0.45
+    foot_length: 0.16
+    step_swing_amplitude: 0.08
+    arm_swing_amplitude: 0.12
+  collision_proxy:
+    enabled: true
+    lower_body_radius: 0.18
+    lower_body_height: 0.96
+    torso_radius: 0.20
+    torso_height: 0.58
+    head_radius: 0.12
+    mass_kg: 70.0
+  phase_motion:
+    default:
+      mode: hold
+      face_robot: true
+      speed: 0.35
+      patrol_radius: 0.8
+      loop: true
+    ExecuteBehaviorTask:
+      mode: waypoint_loop
+      face_robot: false
+      speed: 0.40
+      patrol_radius: 0.9
+      loop: true
+    ReturnToHuman:
+      mode: hold
+      face_robot: true
+      speed: 0.30
+      patrol_radius: 0.8
+      loop: true
+    WaitNextCommand:
+      mode: hold
+      face_robot: true
+      speed: 0.30
+      patrol_radius: 0.8
+      loop: true
+
+rounds:
+  - round_id: 0
+    episode_id: 0
+    activity: assembling_gift_baskets
+    instruction: Place one candle, one butter cookie, one piece of Swiss cheese, and one bow from the table into each of the four wicker baskets on the floor in the living room.
+    wait_steps: 20
+    command_steps: 10
+    return_steps: 30
+    stand_off: 1.0
+  - round_id: 1
+    episode_id: 0
+    activity: assembling_gift_baskets
+    instruction: Repeat the basket assembly task, then come back and wait for the next instruction.
+    wait_steps: 12
+    command_steps: 10
+    return_steps: 30
+    stand_off: 1.0
+

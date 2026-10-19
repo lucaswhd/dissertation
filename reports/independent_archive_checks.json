@@ -1,0 +1,1487 @@
+{
+  "scope": "Independent archive consistency and saved-prediction rescoring only; training, policy inference and simulation: Not independently verified",
+  "manifest_sha256": "d5553026605163a74820a865db80e90e81249d3fcceba9cb19655a43fa2bd6a8",
+  "models": {
+    "A20": {
+      "seeds": {
+        "0": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0010395779732229689,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.028861459377087437,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.021442246283046328,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -68.81316403177443,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.02083679001967539,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.0497985468240222,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.0853084907028824,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 15,
+              "gripper_true_positives": 1,
+              "gripper_f1": 0.06896551724137931,
+              "gripper_precision": 0.06666666666666667,
+              "gripper_recall": 0.07142857142857142,
+              "arms_skill": -0.02984763887058417,
+              "base_skill": 0.279696741877428,
+              "grippers_skill": -1.0758593615837828
+            },
+            "follow": {
+              "arms_raw_mae": 0.0008857861447904724,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12677862311014906,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.023981999293901025,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -2.943843475380242,
+              "base_skill": 0.3782349416531551,
+              "grippers_skill": -5682.133249908686
+            },
+            "radio": {
+              "arms_raw_mae": 0.017170325343467994,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.042070391661836765,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.07160322739742696,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 7,
+              "gripper_true_positives": 0,
+              "gripper_f1": 0.0,
+              "gripper_precision": 0.0,
+              "gripper_recall": 0.0,
+              "arms_skill": -0.19469100494268665,
+              "base_skill": 0.3422268896849979,
+              "grippers_skill": -2.523340607317922
+            }
+          }
+        },
+        "1": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0009648526129939666,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.03837135364637316,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.021386794835472338,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -63.7949605248001,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.02011978425522102,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.046714261503657324,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.07833819398656487,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 8,
+              "gripper_true_positives": 1,
+              "gripper_f1": 0.09090909090909091,
+              "gripper_precision": 0.125,
+              "gripper_recall": 0.07142857142857142,
+              "arms_skill": 0.0055900025743159665,
+              "base_skill": 0.32430890241073007,
+              "grippers_skill": -0.9062472213106743
+            },
+            "follow": {
+              "arms_raw_mae": 0.0008589333896816243,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12883876656880602,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.02502761587034911,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -2.8242852008973363,
+              "base_skill": 0.36813130441249975,
+              "grippers_skill": -5929.91819308392
+            },
+            "radio": {
+              "arms_raw_mae": 0.01711517196628847,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.04369948981940979,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.06294532486237586,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 3,
+              "gripper_true_positives": 0,
+              "gripper_f1": 0.0,
+              "gripper_precision": 0.0,
+              "gripper_recall": 0.0,
+              "arms_skill": -0.19085349794788442,
+              "base_skill": 0.31675584176301474,
+              "grippers_skill": -2.0973159617159487
+            }
+          }
+        },
+        "2": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0009905920607987074,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.03196573514679375,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.021022779437211845,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -65.5235006997219,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.01994673988869181,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.04682230304752011,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.07706613851711154,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 9,
+              "gripper_true_positives": 2,
+              "gripper_f1": 0.17391304347826086,
+              "gripper_precision": 0.2222222222222222,
+              "gripper_recall": 0.14285714285714285,
+              "arms_skill": 0.014142631463971544,
+              "base_skill": 0.32274615247081784,
+              "grippers_skill": -0.8752935819605723
+            },
+            "follow": {
+              "arms_raw_mae": 0.0008791109845333267,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.1276281742565334,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.02423586114309728,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -2.9141232236218575,
+              "base_skill": 0.37406845675892064,
+              "grippers_skill": -5742.292150689633
+            },
+            "radio": {
+              "arms_raw_mae": 0.017080464978207602,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.042556859189644455,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.06593735186383128,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 7,
+              "gripper_true_positives": 0,
+              "gripper_f1": 0.0,
+              "gripper_precision": 0.0,
+              "gripper_recall": 0.0,
+              "arms_skill": -0.18843862661379873,
+              "base_skill": 0.334620940555611,
+              "grippers_skill": -2.2445429878653087
+            }
+          }
+        },
+        "3": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0013379250063175836,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.02580612412510583,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.02348208434593219,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -88.84874663964126,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.020624053030478536,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.04661109749606112,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.08408640870358795,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 10,
+              "gripper_true_positives": 1,
+              "gripper_f1": 0.08333333333333333,
+              "gripper_precision": 0.1,
+              "gripper_recall": 0.07142857142857142,
+              "arms_skill": -0.01933322250328673,
+              "base_skill": 0.32580110199348344,
+              "grippers_skill": -1.0461217547177326
+            },
+            "follow": {
+              "arms_raw_mae": 0.0009156863909447566,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12816879630263428,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.0255293820053339,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -3.076970293180864,
+              "base_skill": 0.371417064199266,
+              "grippers_skill": -6048.824201313828
+            },
+            "radio": {
+              "arms_raw_mae": 0.016029598614550195,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.03997244827987743,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.06496180826798081,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 3,
+              "gripper_true_positives": 0,
+              "gripper_f1": 0.0,
+              "gripper_precision": 0.0,
+              "gripper_recall": 0.0,
+              "arms_skill": -0.11532058330683581,
+              "base_skill": 0.37502836095981806,
+              "grippers_skill": -2.1965399509855437
+            }
+          }
+        },
+        "4": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0007009516305585678,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.028551719268971983,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.023524080940450613,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -46.07261256297253,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.02072230107092764,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.044344543038750996,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.08357824562583119,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 14,
+              "gripper_true_positives": 2,
+              "gripper_f1": 0.14285714285714285,
+              "gripper_precision": 0.14285714285714285,
+              "gripper_recall": 0.14285714285714285,
+              "arms_skill": -0.024189081413638513,
+              "base_skill": 0.3585853229082425,
+              "grippers_skill": -1.0337563374716745
+            },
+            "follow": {
+              "arms_raw_mae": 0.0009083260272745974,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12979927890002727,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.025126074478030204,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -3.0441992655375616,
+              "base_skill": 0.36342062850347234,
+              "grippers_skill": -5953.250417399116
+            },
+            "radio": {
+              "arms_raw_mae": 0.017054709999938494,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.04817228737898404,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.07146696674171835,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 8,
+              "gripper_true_positives": 1,
+              "gripper_f1": 0.11764705882352941,
+              "gripper_precision": 0.125,
+              "gripper_recall": 0.1111111111111111,
+              "arms_skill": -0.1866466255739172,
+              "base_skill": 0.2468233822266479,
+              "grippers_skill": -2.516635704216652
+            }
+          }
+        }
+      },
+      "max_absolute_csv_error": 0.0,
+      "max_absolute_seed_summary_error": 0.0,
+      "aggregate_pickup": {
+        "arms_raw_mae": {
+          "mean": 0.020449933652998877,
+          "sample_std": 0.00039254362996100125
+        },
+        "arms_skill": {
+          "mean": -0.01072746174984438,
+          "sample_std": 0.019401267185938768
+        },
+        "gripper_f1": {
+          "mean": 0.11199562556384146,
+          "sample_std": 0.044452106397586705
+        },
+        "gripper_precision": {
+          "mean": 0.13134920634920633,
+          "sample_std": 0.058303631354104636
+        },
+        "gripper_recall": {
+          "mean": 0.09999999999999999,
+          "sample_std": 0.03912303982179758
+        }
+      }
+    },
+    "B20": {
+      "seeds": {
+        "0": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0007881060776596244,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.016429017784853037,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.02329638505426164,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -51.92549504825741,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.020378922954114385,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.04942059490655083,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.07033227579668164,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 19,
+              "gripper_true_positives": 6,
+              "gripper_f1": 0.36363636363636365,
+              "gripper_precision": 0.3157894736842105,
+              "gripper_recall": 0.42857142857142855,
+              "arms_skill": -0.0072177944492817225,
+              "base_skill": 0.285163568018567,
+              "grippers_skill": -0.7114347227467832
+            },
+            "follow": {
+              "arms_raw_mae": 0.0008992291675531305,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.13807660167396535,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.02980375539511442,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -3.0036967231688925,
+              "base_skill": 0.3228258503678729,
+              "grippers_skill": -7061.743651284972
+            },
+            "radio": {
+              "arms_raw_mae": 0.017104219951143022,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.043918452920333945,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.09272338817827404,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 26,
+              "gripper_true_positives": 4,
+              "gripper_f1": 0.22857142857142856,
+              "gripper_precision": 0.15384615384615385,
+              "gripper_recall": 0.4444444444444444,
+              "arms_skill": -0.1900914696392455,
+              "base_skill": 0.31333234047743597,
+              "grippers_skill": -3.562588736445073
+            }
+          }
+        },
+        "1": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0007255134982047961,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.023955933178792924,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.02588361603781008,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -47.72207199658934,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.019426934895018347,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.045828298080596144,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.07643781991209835,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 23,
+              "gripper_true_positives": 4,
+              "gripper_f1": 0.21621621621621623,
+              "gripper_precision": 0.17391304347826086,
+              "gripper_recall": 0.2857142857142857,
+              "arms_skill": 0.03983372615284986,
+              "base_skill": 0.3371237811754364,
+              "grippers_skill": -0.860004352863593
+            },
+            "follow": {
+              "arms_raw_mae": 0.000876984389469726,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.13676419562892989,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.03190753983333707,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -2.904654845598919,
+              "base_skill": 0.32926233154386153,
+              "grippers_skill": -7560.287877935175
+            },
+            "radio": {
+              "arms_raw_mae": 0.016726009131380126,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.04478899000023375,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.09625018793158233,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 22,
+              "gripper_true_positives": 2,
+              "gripper_f1": 0.12903225806451613,
+              "gripper_precision": 0.09090909090909091,
+              "gripper_recall": 0.2222222222222222,
+              "arms_skill": -0.16377600646052204,
+              "base_skill": 0.29972144074317775,
+              "grippers_skill": -3.736130031109626
+            }
+          }
+        },
+        "2": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0007787218469624909,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.01697405773470214,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.028166961336794954,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 2,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": 0.0,
+              "gripper_recall": null,
+              "arms_skill": -51.295294280401706,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.019529856957233277,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.046535379526030735,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.07408672402612865,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 23,
+              "gripper_true_positives": 8,
+              "gripper_f1": 0.43243243243243246,
+              "gripper_precision": 0.34782608695652173,
+              "gripper_recall": 0.5714285714285714,
+              "arms_skill": 0.03474685611866268,
+              "base_skill": 0.3268963126771214,
+              "grippers_skill": -0.8027938177262457
+            },
+            "follow": {
+              "arms_raw_mae": 0.0008938083905377425,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.13804897115100176,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.030385543312877416,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -2.9795614438022384,
+              "base_skill": 0.3229613597566102,
+              "grippers_skill": -7199.612818042677
+            },
+            "radio": {
+              "arms_raw_mae": 0.01686276735403226,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.04320301576372003,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.08830152130220086,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 31,
+              "gripper_true_positives": 3,
+              "gripper_f1": 0.15,
+              "gripper_precision": 0.0967741935483871,
+              "gripper_recall": 0.3333333333333333,
+              "arms_skill": -0.17329148244517545,
+              "base_skill": 0.3245182435591928,
+              "grippers_skill": -3.3450043664257043
+            }
+          }
+        },
+        "3": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0012302455305381534,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.011473116383198291,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.03703921667944927,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 1,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": 0.0,
+              "gripper_recall": null,
+              "arms_skill": -81.61749982691903,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.020266198477038415,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.04649745100818109,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.08916940710972994,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 19,
+              "gripper_true_positives": 6,
+              "gripper_f1": 0.36363636363636365,
+              "gripper_precision": 0.3157894736842105,
+              "gripper_recall": 0.42857142857142855,
+              "arms_skill": -0.0016464450979665202,
+              "base_skill": 0.327444923765702,
+              "grippers_skill": -1.16980920645164
+            },
+            "follow": {
+              "arms_raw_mae": 0.0009151251976436469,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.1387245087919291,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.030101482905447483,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -3.074471655612389,
+              "base_skill": 0.3196482956893206,
+              "grippers_skill": -7132.2976152247775
+            },
+            "radio": {
+              "arms_raw_mae": 0.016283806693536462,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.042222370308008975,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.09102155015338212,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 28,
+              "gripper_true_positives": 1,
+              "gripper_f1": 0.05405405405405406,
+              "gripper_precision": 0.03571428571428571,
+              "gripper_recall": 0.1111111111111111,
+              "arms_skill": -0.13300808189952784,
+              "base_skill": 0.3398506943883699,
+              "grippers_skill": -3.4788473292749975
+            }
+          }
+        },
+        "4": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0006394543284281659,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.014524295945123483,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.02657650658287681,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -41.94274318162069,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.020330996996344764,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.04521620072046062,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.08714986579958349,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 19,
+              "gripper_true_positives": 5,
+              "gripper_f1": 0.30303030303030304,
+              "gripper_precision": 0.2631578947368421,
+              "gripper_recall": 0.35714285714285715,
+              "arms_skill": -0.0048490786152664,
+              "base_skill": 0.34597736729215334,
+              "grippers_skill": -1.1206665748069917
+            },
+            "follow": {
+              "arms_raw_mae": 0.0009180723856843543,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.14128708749776706,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.03141413602977991,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -3.0875936133145068,
+              "base_skill": 0.30708054680968977,
+              "grippers_skill": -7443.363532835213
+            },
+            "radio": {
+              "arms_raw_mae": 0.016888116803311277,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.0504417019871471,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.09512706291861832,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 22,
+              "gripper_true_positives": 5,
+              "gripper_f1": 0.3225806451612903,
+              "gripper_precision": 0.22727272727272727,
+              "gripper_recall": 0.5555555555555556,
+              "arms_skill": -0.1750552672557768,
+              "base_skill": 0.21134094799107972,
+              "grippers_skill": -3.6808650366519498
+            }
+          }
+        }
+      },
+      "max_absolute_csv_error": 0.0,
+      "max_absolute_seed_summary_error": 0.0,
+      "aggregate_pickup": {
+        "arms_raw_mae": {
+          "mean": 0.019986582055949838,
+          "sample_std": 0.0004670495517122671
+        },
+        "arms_skill": {
+          "mean": 0.01217345282179958,
+          "sample_std": 0.02308368408052598
+        },
+        "gripper_f1": {
+          "mean": 0.33579033579033585,
+          "sample_std": 0.08102729045720974
+        },
+        "gripper_precision": {
+          "mean": 0.2832951945080091,
+          "sample_std": 0.06827510205875169
+        },
+        "gripper_recall": {
+          "mean": 0.41428571428571426,
+          "sample_std": 0.10594569267279517
+        }
+      }
+    },
+    "C20": {
+      "seeds": {
+        "0": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0010557944366994959,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.02673080350863389,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.009322339346489081,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -69.90218539800459,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.020691910379973706,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.04571903637028299,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.056798111703246834,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 19,
+              "gripper_true_positives": 7,
+              "gripper_f1": 0.42424242424242425,
+              "gripper_precision": 0.3684210526315789,
+              "gripper_recall": 0.5,
+              "arms_skill": -0.022687037130761922,
+              "base_skill": 0.33870418002130487,
+              "grippers_skill": -0.3821003153145994
+            },
+            "follow": {
+              "arms_raw_mae": 0.0011835326539585368,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12384984696633182,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.013925563232041895,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -4.269519694641359,
+              "base_skill": 0.3925986460795964,
+              "grippers_skill": -3299.0097472211096
+            },
+            "radio": {
+              "arms_raw_mae": 0.019492679712420795,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.03631957852805499,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.06413236454129219,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 23,
+              "gripper_true_positives": 2,
+              "gripper_f1": 0.125,
+              "gripper_precision": 0.08695652173913043,
+              "gripper_recall": 0.2222222222222222,
+              "arms_skill": -0.356277685414804,
+              "base_skill": 0.4321411997835043,
+              "grippers_skill": -2.155725969968926
+            }
+          }
+        },
+        "1": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.001005423086238667,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.03734135295739039,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.009763671944920834,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -66.51948256781523,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.019658217097603483,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.046446236973279154,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.061756686908192936,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 21,
+              "gripper_true_positives": 6,
+              "gripper_f1": 0.34285714285714286,
+              "gripper_precision": 0.2857142857142857,
+              "gripper_recall": 0.42857142857142855,
+              "arms_skill": 0.02840272214406625,
+              "base_skill": 0.328185701128781,
+              "grippers_skill": -0.5027601074934898
+            },
+            "follow": {
+              "arms_raw_mae": 0.0011585609956819099,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12654278333298863,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.014273568456992507,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -4.158336750380026,
+              "base_skill": 0.37939157933551315,
+              "grippers_skill": -3381.478270417245
+            },
+            "radio": {
+              "arms_raw_mae": 0.018571521769626998,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.03825854981492739,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.07399872084148228,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 19,
+              "gripper_true_positives": 1,
+              "gripper_f1": 0.07142857142857142,
+              "gripper_precision": 0.05263157894736842,
+              "gripper_recall": 0.1111111111111111,
+              "arms_skill": -0.292184601191102,
+              "base_skill": 0.4018252668007719,
+              "grippers_skill": -2.641214334980472
+            }
+          }
+        },
+        "2": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0010055548168915825,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.03039301990513475,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.010399122525436373,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 1,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": 0.0,
+              "gripper_recall": null,
+              "arms_skill": -66.52832897849042,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.019334547470061806,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.0452579304180108,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.055638775867410006,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 21,
+              "gripper_true_positives": 7,
+              "gripper_f1": 0.4,
+              "gripper_precision": 0.3333333333333333,
+              "gripper_recall": 0.5,
+              "arms_skill": 0.044399927154202934,
+              "base_skill": 0.3453737746368881,
+              "grippers_skill": -0.3538895460440077
+            },
+            "follow": {
+              "arms_raw_mae": 0.0011628586158622055,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12135290313977748,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.013780544688925147,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 2,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": 0.0,
+              "gripper_recall": null,
+              "arms_skill": -4.177471325251629,
+              "base_skill": 0.4048444994097551,
+              "grippers_skill": -3264.643984211113
+            },
+            "radio": {
+              "arms_raw_mae": 0.019034316578763536,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.038158753747993615,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.0682313128374517,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 27,
+              "gripper_true_positives": 5,
+              "gripper_f1": 0.2777777777777778,
+              "gripper_precision": 0.18518518518518517,
+              "gripper_recall": 0.5555555555555556,
+              "arms_skill": -0.32438531868187015,
+              "base_skill": 0.40338558432459903,
+              "grippers_skill": -2.3574206631284467
+            }
+          }
+        },
+        "3": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.0011019887684736974,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.0269744336412539,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.01013561744744388,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -73.00437931184086,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.02033662525296677,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.046458041725563816,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.06256210594438016,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 23,
+              "gripper_true_positives": 6,
+              "gripper_f1": 0.32432432432432434,
+              "gripper_precision": 0.2608695652173913,
+              "gripper_recall": 0.42857142857142855,
+              "arms_skill": -0.005127252306495134,
+              "base_skill": 0.3280149531436637,
+              "grippers_skill": -0.5223588207340062
+            },
+            "follow": {
+              "arms_raw_mae": 0.001179034210217651,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12618531273445113,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.014626333313062788,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -4.2494909799214495,
+              "base_skill": 0.3811447355230815,
+              "grippers_skill": -3465.074706992994
+            },
+            "radio": {
+              "arms_raw_mae": 0.017998137865797615,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.03589847359457053,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.0628804509807378,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 28,
+              "gripper_true_positives": 4,
+              "gripper_f1": 0.21621621621621623,
+              "gripper_precision": 0.14285714285714285,
+              "gripper_recall": 0.4444444444444444,
+              "arms_skill": -0.2522892248029962,
+              "base_skill": 0.43872520080953537,
+              "grippers_skill": -2.094123748322256
+            }
+          }
+        },
+        "4": {
+          "num_predictions": 652,
+          "finite": true,
+          "anchor_order_exact": true,
+          "by_context": {
+            "wait": {
+              "arms_raw_mae": 0.000990019605244295,
+              "arms_null_mae": 1.489085887512304e-05,
+              "base_raw_mae": 0.026773309021686707,
+              "base_null_mae": 0.0,
+              "grippers_raw_mae": 0.00957675577284625,
+              "grippers_null_mae": 0.0,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -65.48505727888141,
+              "base_skill": null,
+              "grippers_skill": null
+            },
+            "pickup": {
+              "arms_raw_mae": 0.019684937867859843,
+              "arms_null_mae": 0.020232886140834124,
+              "base_raw_mae": 0.044543162221089005,
+              "base_null_mae": 0.06913552904622308,
+              "grippers_raw_mae": 0.06931871894747019,
+              "grippers_null_mae": 0.041095505929552016,
+              "gripper_expert_events": 14,
+              "gripper_predicted_events": 24,
+              "gripper_true_positives": 8,
+              "gripper_f1": 0.42105263157894735,
+              "gripper_precision": 0.3333333333333333,
+              "gripper_recall": 0.5714285714285714,
+              "arms_skill": 0.0270820618057257,
+              "base_skill": 0.355712426944646,
+              "grippers_skill": -0.6867712753384718
+            },
+            "follow": {
+              "arms_raw_mae": 0.0011696704653149936,
+              "arms_null_mae": 0.00022459972114006633,
+              "base_raw_mae": 0.12285192015056964,
+              "base_null_mae": 0.20390117039904,
+              "grippers_raw_mae": 0.014154298775829376,
+              "grippers_null_mae": 4.2198551818728446e-06,
+              "gripper_expert_events": 0,
+              "gripper_predicted_events": 0,
+              "gripper_true_positives": 0,
+              "gripper_f1": null,
+              "gripper_precision": null,
+              "gripper_recall": null,
+              "arms_skill": -4.207800167238659,
+              "base_skill": 0.3974928152195243,
+              "grippers_skill": -3353.2143428598547
+            },
+            "radio": {
+              "arms_raw_mae": 0.019033871783176438,
+              "arms_null_mae": 0.014372189354762668,
+              "base_raw_mae": 0.04190317814412992,
+              "base_null_mae": 0.06395881954142152,
+              "grippers_raw_mae": 0.06380677844863385,
+              "grippers_null_mae": 0.020322539140470327,
+              "gripper_expert_events": 9,
+              "gripper_predicted_events": 16,
+              "gripper_true_positives": 5,
+              "gripper_f1": 0.4,
+              "gripper_precision": 0.3125,
+              "gripper_recall": 0.5555555555555556,
+              "arms_skill": -0.32435437032903947,
+              "base_skill": 0.34484128311667395,
+              "grippers_skill": -2.139705034277383
+            }
+          }
+        }
+      },
+      "max_absolute_csv_error": 0.0,
+      "max_absolute_seed_summary_error": 0.0,
+      "aggregate_pickup": {
+        "arms_raw_mae": {
+          "mean": 0.01994124761369312,
+          "sample_std": 0.0005553611638940395
+        },
+        "arms_skill": {
+          "mean": 0.014414084333347565,
+          "sample_std": 0.027448440130012196
+        },
+        "gripper_f1": {
+          "mean": 0.3824953046005678,
+          "sample_std": 0.046073177217967824
+        },
+        "gripper_precision": {
+          "mean": 0.3163343140459845,
+          "sample_std": 0.04273431334302779
+        },
+        "gripper_recall": {
+          "mean": 0.48571428571428577,
+          "sample_std": 0.05976143046671968
+        }
+      }
+    }
+  },
+  "conditioning": {
+    "B20": {
+      "val": {
+        "num_anchors": 108,
+        "sources": [
+          0,
+          2,
+          15,
+          18
+        ],
+        "pickup": {
+          "n": 96,
+          "arms_image_over_noise_mean": 0.35810054304830113
+        },
+        "radio": {
+          "n": 12,
+          "arms_image_over_noise_mean": 0.2850874317654513
+        }
+      },
+      "train_coverage": {
+        "num_anchors": 216,
+        "sources": [
+          4,
+          6,
+          12,
+          14,
+          23,
+          35,
+          46,
+          52
+        ],
+        "pickup": {
+          "n": 192,
+          "arms_image_over_noise_mean": 0.31185153640634583
+        },
+        "radio": {
+          "n": 24,
+          "arms_image_over_noise_mean": 0.46344658249193826
+        }
+      }
+    },
+    "C20": {
+      "val": {
+        "num_anchors": 108,
+        "sources": [
+          0,
+          2,
+          15,
+          18
+        ],
+        "pickup": {
+          "n": 96,
+          "arms_image_over_noise_mean": 0.4413949639468342
+        },
+        "radio": {
+          "n": 12,
+          "arms_image_over_noise_mean": 0.4378004403257412
+        }
+      },
+      "train_coverage": {
+        "num_anchors": 216,
+        "sources": [
+          4,
+          6,
+          12,
+          14,
+          23,
+          35,
+          46,
+          52
+        ],
+        "pickup": {
+          "n": 192,
+          "arms_image_over_noise_mean": 0.37401508560247554
+        },
+        "radio": {
+          "n": 24,
+          "arms_image_over_noise_mean": 0.5315255652876778
+        }
+      }
+    }
+  },
+  "logs": {
+    "A20": {
+      "path": "/root/autodl-tmp/openpi_hrc/logs/hrc/train_e6_rerun_20k.log",
+      "training_points": 200,
+      "validation_points": 20,
+      "last_training": [
+        "20000",
+        "0.1041"
+      ],
+      "last_validation": [
+        "20000",
+        "0.0071"
+      ]
+    },
+    "B20": {
+      "path": "/root/autodl-tmp/openpi_hrc/logs/hrc/train_b_subinstr_20k.log",
+      "training_points": 200,
+      "validation_points": 20,
+      "last_training": [
+        "20000",
+        "0.1935"
+      ],
+      "last_validation": [
+        "20000",
+        "0.0082"
+      ]
+    },
+    "C20": {
+      "path": "/root/autodl-tmp/openpi_hrc/logs/hrc/train_c_qnorm_20k.log",
+      "training_points": 200,
+      "validation_points": 20,
+      "last_training": [
+        "20000",
+        "0.0417"
+      ],
+      "last_validation": [
+        "20000",
+        "0.0041"
+      ]
+    }
+  },
+  "checks": {
+    "matched_physical_rows": true,
+    "context_counts": {
+      "wait": 52,
+      "pickup": 200,
+      "follow": 200,
+      "radio": 200
+    },
+    "comparison_csv_recomputed_rows": 156,
+    "comparison_csv_max_absolute_difference": 0
+  },
+  "current_checkpoint_inventory": {
+    "A20": {
+      "checkpoint_path": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_e6_rerun_20k/hrc_e6_rerun_seed42/20000",
+      "checkpoint_present": true,
+      "repository_norm_sha256": "038b3453843efdb1dcab05cb679dbe58b1ab94f506e834a2f81428a6051f685f",
+      "checkpoint_norm_present": true,
+      "norm_bytes_equal": true
+    },
+    "B20": {
+      "checkpoint_path": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_b_subinstr_20k/b_subinstr_seed42/20000",
+      "checkpoint_present": false,
+      "repository_norm_sha256": "b0328714f8415e586ffe63dc9eba6c65c3ff0446baa8e79c57f581f7d93da793",
+      "checkpoint_norm_present": false,
+      "norm_bytes_equal": null
+    },
+    "C20": {
+      "checkpoint_path": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_c_qnorm_20k/c_qnorm_seed42/20000",
+      "checkpoint_present": false,
+      "repository_norm_sha256": "ef9567d4aed6c3d3fc8963173a445157b9804403bb0c2353b8983aeb4d4aab2b",
+      "checkpoint_norm_present": false,
+      "norm_bytes_equal": null
+    }
+  },
+  "geometry_csv_recount": {
+    "all_pickup_valid": {
+      "n": 179353,
+      "in_frustum": 154560,
+      "ratio": 0.8617642303167496
+    },
+    "val_pickup_valid": {
+      "n": 12302,
+      "in_frustum": 10911,
+      "ratio": 0.8869289546415217
+    },
+    "all_pickup_decision": {
+      "n": 11115,
+      "in_frustum": 10010,
+      "ratio": 0.9005847953216374
+    },
+    "val_pickup_decision": {
+      "n": 988,
+      "in_frustum": 903,
+      "ratio": 0.9139676113360324
+    },
+    "train_pickup_valid": {
+      "n": 150928,
+      "in_frustum": 129433,
+      "ratio": 0.8575810982720238
+    },
+    "train_pickup_decision": {
+      "n": 9139,
+      "in_frustum": 8204,
+      "ratio": 0.8976912134806871
+    },
+    "test_pickup_valid": {
+      "n": 16123,
+      "in_frustum": 14216,
+      "ratio": 0.8817217639397135
+    },
+    "test_pickup_decision": {
+      "n": 988,
+      "in_frustum": 903,
+      "ratio": 0.9139676113360324
+    }
+  },
+  "closed_loop_inventory": [
+    {
+      "path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/pi05_rerun_v1_closed_loop/e6_rerun_20k_TRAIN_s0038_horizon1/policy_rollout_metrics.json",
+      "seed": 0,
+      "contacts": {
+        "pickup": 0,
+        "radio": 0
+      },
+      "collision_frames": 0,
+      "min_distance_m": null,
+      "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_e6_rerun_20k/hrc_e6_rerun_seed42/20000"
+    },
+    {
+      "path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/pi05_rerun_v1_closed_loop/e6_rerun_20k_TRAIN_source0038_relaxed/policy_rollout_metrics.json",
+      "seed": 0,
+      "contacts": {
+        "pickup": 0,
+        "radio": 0
+      },
+      "collision_frames": 9715,
+      "min_distance_m": null,
+      "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_e6_rerun_20k/hrc_e6_rerun_seed42/20000"
+    },
+    {
+      "path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/pi05_rerun_v1_closed_loop/e6_rerun_20k_TRAIN_source0038_seed0/policy_rollout_metrics.json",
+      "seed": 0,
+      "contacts": {
+        "pickup": 0,
+        "radio": 0
+      },
+      "collision_frames": 2879,
+      "min_distance_m": null,
+      "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_e6_rerun_20k/hrc_e6_rerun_seed42/20000"
+    },
+    {
+      "path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/pi05_rerun_v1_closed_loop/e6_rerun_20k_source0000_seed0/policy_rollout_metrics.json",
+      "seed": 0,
+      "contacts": {
+        "pickup": 0,
+        "radio": 0
+      },
+      "collision_frames": 4477,
+      "min_distance_m": null,
+      "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_e6_rerun_20k/hrc_e6_rerun_seed42/20000"
+    },
+    {
+      "path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/pi05_rerun_v1_closed_loop/e6_rerun_20k_source0015_seed0/policy_rollout_metrics.json",
+      "seed": 0,
+      "contacts": {
+        "pickup": 0,
+        "radio": 0
+      },
+      "collision_frames": 1294,
+      "min_distance_m": null,
+      "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_e6_rerun_20k/hrc_e6_rerun_seed42/20000"
+    },
+    {
+      "path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/pi05_b_closed_loop/b20_TRAIN_source0038_seed0_h8/policy_rollout_metrics.json",
+      "seed": 0,
+      "contacts": {
+        "pickup": 0,
+        "radio": 0
+      },
+      "collision_frames": 2718,
+      "min_distance_m": {
+        "can_of_soda_113": 1.142887830734253,
+        "can_of_soda_114": 2.3157594203948975,
+        "can_of_soda_115": 1.094852328300476,
+        "radio_89": 1.850875735282898
+      },
+      "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_b_subinstr_20k/b_subinstr_seed42/20000"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+from,to,count
+WaitNearHuman,ReceiveCommand,90
+ReceiveCommand,GoToTask,90
+GoToTask,ExecuteBehaviorTask,90
+ExecuteBehaviorTask,TaskSegmentDone,90
+TaskSegmentDone,ReturnToHuman,90
+ReturnToHuman,FaceHuman,35
+ReturnToHuman,WaitNextCommand,36
+ReturnToHuman,AllTasksDone,19
+FaceHuman,WaitNextCommand,9
+FaceHuman,AllTasksDone,26
+WaitNextCommand,Relocate,45
+Relocate,WaitNearHuman,45

@@ -1,0 +1,900 @@
+{
+  "3.1": {
+    "caption": "Controller scope during dataset generation and policy evaluation.",
+    "headers": [
+      "Phase or function",
+      "Dataset generation",
+      "Policy evaluation"
+    ],
+    "rows": [
+      [
+        "Human-facing and transition phases",
+        "Scripted FSM",
+        "Scripted FSM"
+      ],
+      [
+        "ExecuteBehaviorTask",
+        "Replayed BEHAVIOR state–action trajectory",
+        "π0.5 policy"
+      ]
+    ],
+    "source": "/root/NTU_Dissertation_Reviewed_v6_editable.docx; Table 3.1, original image4.png; faithful text transcription"
+  },
+  "3.2": {
+    "caption": "Source-level dataset split.",
+    "headers": [
+      "Split",
+      "Sources",
+      "Frames",
+      "Use"
+    ],
+    "rows": [
+      [
+        "Training",
+        "37",
+        "341,269",
+        "Policy training and baseline fitting"
+      ],
+      [
+        "Validation",
+        "4",
+        "31,084",
+        "Main diagnostic evaluation"
+      ],
+      [
+        "Test",
+        "4",
+        "37,317",
+        "Held out from training, selection, and policy performance"
+      ],
+      [
+        "Total",
+        "45",
+        "409,670",
+        "—"
+      ]
+    ],
+    "source": "/root/dissertation_release_staging/tables/split_summary.csv"
+  },
+  "4.1": {
+    "caption": "Main policy configurations. A20 to B20 combines prompt and sampling changes. B20 to C20 changes the normalisation pipeline for both state and action.",
+    "headers": [
+      "Setting",
+      "A20",
+      "B20",
+      "C20"
+    ],
+    "rows": [
+      [
+        "Instruction",
+        "Round-level",
+        "Local sub-instructions",
+        "Local sub-instructions"
+      ],
+      [
+        "Anchor sampling",
+        "Natural",
+        "80% ordinary, 20% decision target",
+        "Same as B20"
+      ],
+      [
+        "State scaling",
+        "z-score",
+        "z-score",
+        "Quantile"
+      ],
+      [
+        "Action scaling",
+        "z-score",
+        "z-score",
+        "Quantile"
+      ],
+      [
+        "Training updates",
+        "20,000",
+        "20,000",
+        "20,000"
+      ],
+      [
+        "Training seed",
+        "42",
+        "42",
+        "42"
+      ],
+      [
+        "Visual tower",
+        "Frozen",
+        "Frozen",
+        "Frozen"
+      ]
+    ],
+    "source": "/root/NTU_Dissertation_Reviewed_v6_editable.docx; Table 4.1, original image6.png; configuration text, not measured outcomes"
+  },
+  "4.2": {
+    "caption": "Populations and anchor rules for the offline protocols. The conditioning coverage subset and all-source geometry analysis are reported separately from validation policy performance.",
+    "headers": [
+      "Setting",
+      "Teacher-forced audit",
+      "Conditioning probe",
+      "Frustum audit"
+    ],
+    "rows": [
+      [
+        "Population",
+        "652 validation anchors",
+        "108 validation; 216 train-coverage anchors",
+        "45 sources across all splits"
+      ],
+      [
+        "Policy checkpoints",
+        "A20, B20, C20",
+        "B20, C20",
+        "No policy inference"
+      ],
+      [
+        "Local prompt stability",
+        "Not required within a stable coarse context",
+        "Required through the horizon",
+        "Separate geometric populations"
+      ],
+      [
+        "Flow seeds",
+        "0, 1, 2, 3, 4",
+        "0 reference; 1 noise perturbation",
+        "Not applicable"
+      ],
+      [
+        "Purpose",
+        "Matched offline policy comparison",
+        "Local output sensitivity",
+        "Descriptive target geometry"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/anchor_manifest.json; /root/autodl-tmp/openpi_hrc/outputs/dissertation_conditioning_probe/anchor_manifest.json; /root/NTU_Dissertation_Reviewed_v6_editable.docx, Table 4.2 for protocol descriptions"
+  },
+  "5.1": {
+    "caption": "Validation pickup target-centre geometric frustum coverage by task segment. The metric does not model occlusion or rendered-pixel visibility.",
+    "headers": [
+      "Segment",
+      "Valid anchors",
+      "In frustum",
+      "Ratio"
+    ],
+    "rows": [
+      [
+        "Walk to / acquire trash can",
+        "3,569",
+        "2,916",
+        "0.8170"
+      ],
+      [
+        "Pick up soda can",
+        "6,792",
+        "6,054",
+        "0.8913"
+      ],
+      [
+        "Deposit can",
+        "1,560",
+        "1,560",
+        "1.0000"
+      ],
+      [
+        "Put trash can down",
+        "381",
+        "381",
+        "1.0000"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_target_visibility/summary.csv; val/pickup/valid_anchors; sum counts across early/middle/late before division"
+  },
+  "5.2": {
+    "caption": "Unified validation audit. Values are mean ± sample standard deviation over five inference flow-noise seeds; each model is one trained checkpoint.",
+    "headers": [
+      "Metric",
+      "A20",
+      "B20",
+      "C20"
+    ],
+    "rows": [
+      [
+        "Pickup arm skill",
+        "-0.0107 ± 0.0194",
+        "0.0122 ± 0.0231",
+        "0.0144 ± 0.0274"
+      ],
+      [
+        "Pickup motion ratio",
+        "0.4034 ± 0.0231",
+        "0.3792 ± 0.0220",
+        "0.4736 ± 0.0390"
+      ],
+      [
+        "Pickup base skill",
+        "0.3222 ± 0.0281",
+        "0.3245 ± 0.0234",
+        "0.3392 ± 0.0118"
+      ],
+      [
+        "Radio arm skill",
+        "-0.1752 ± 0.0336",
+        "-0.1670 ± 0.0212",
+        "-0.3099 ± 0.0394"
+      ],
+      [
+        "Follow base skill",
+        "0.3711 ± 0.0056",
+        "0.3204 ± 0.0082",
+        "0.3911 ± 0.0108"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/comparison.csv"
+  },
+  "5.3": {
+    "caption": "Gripper event precision, recall and F1. Values are mean ± sample standard deviation over five inference flow-noise seeds. Expert transitions are pooled over sampled chunks: 14 pickup and 9 radio transitions per seed.",
+    "headers": [
+      "Context",
+      "Model",
+      "Precision",
+      "Recall",
+      "F1"
+    ],
+    "rows": [
+      [
+        "Pickup",
+        "A20",
+        "0.1313 ± 0.0583",
+        "0.1000 ± 0.0391",
+        "0.1120 ± 0.0445"
+      ],
+      [
+        "Pickup",
+        "B20",
+        "0.2833 ± 0.0683",
+        "0.4143 ± 0.1059",
+        "0.3358 ± 0.0810"
+      ],
+      [
+        "Pickup",
+        "C20",
+        "0.3163 ± 0.0427",
+        "0.4857 ± 0.0598",
+        "0.3825 ± 0.0461"
+      ],
+      [
+        "Radio",
+        "A20",
+        "0.0250 ± 0.0559",
+        "0.0222 ± 0.0497",
+        "0.0235 ± 0.0526"
+      ],
+      [
+        "Radio",
+        "B20",
+        "0.1209 ± 0.0727",
+        "0.3333 ± 0.1757",
+        "0.1768 ± 0.1025"
+      ],
+      [
+        "Radio",
+        "C20",
+        "0.1560 ± 0.1012",
+        "0.3778 ± 0.2018",
+        "0.2181 ± 0.1293"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/comparison.csv"
+  },
+  "5.4": {
+    "caption": "Shared-manifest trivial baselines. Lookup is fitted on training anchors only. The persistence variant repeats the previous base command. Lookup B is also the prompt-matched reference for C20.",
+    "headers": [
+      "Baseline",
+      "Pickup arms",
+      "Pickup base",
+      "Radio arms",
+      "Radio base",
+      "Follow base"
+    ],
+    "rows": [
+      [
+        "Lookup A",
+        "-0.0201",
+        "-0.1298",
+        "-0.0958",
+        "-0.1803",
+        "-0.0330"
+      ],
+      [
+        "Lookup A + persistence",
+        "-0.0201",
+        "0.5402",
+        "-0.0958",
+        "0.5787",
+        "0.5093"
+      ],
+      [
+        "Lookup B",
+        "-0.0815",
+        "-0.1098",
+        "-0.2606",
+        "-0.1703",
+        "-0.0330"
+      ],
+      [
+        "Lookup B + persistence",
+        "-0.0815",
+        "0.5402",
+        "-0.2606",
+        "0.5787",
+        "0.5093"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/comparison.csv"
+  },
+  "5.5": {
+    "caption": "Validation conditioning ratios for arm outputs. Brackets show 95% anchor-level percentile-bootstrap intervals for the mean. Anchors, not source trajectories, are resampled.",
+    "headers": [
+      "Model / context",
+      "Image / noise",
+      "State / noise",
+      "n"
+    ],
+    "rows": [
+      [
+        "B20 pickup",
+        "0.3581 [0.2969, 0.4257]",
+        "0.9187 [0.7134, 1.1640]",
+        "96"
+      ],
+      [
+        "C20 pickup",
+        "0.4414 [0.3349, 0.5852]",
+        "0.8073 [0.6726, 0.9649]",
+        "96"
+      ],
+      [
+        "B20 radio",
+        "0.2851 [0.2103, 0.3723]",
+        "0.4662 [0.3779, 0.5517]",
+        "12"
+      ],
+      [
+        "C20 radio",
+        "0.4378 [0.2873, 0.6245]",
+        "0.8560 [0.3562, 1.6777]",
+        "12"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_conditioning_probe/summary.json; split=val; per-anchor ratios"
+  },
+  "A.1": {
+    "caption": "Round 0 expert segment durations. Frames at 30 Hz across the 45 retained sources.",
+    "headers": [
+      "Segment",
+      "Min",
+      "Median",
+      "90th percentile",
+      "Max"
+    ],
+    "rows": [
+      [
+        "Walk to / acquire trash can",
+        "437",
+        "880",
+        "1242",
+        "1479"
+      ],
+      [
+        "Pick up soda can 1",
+        "446",
+        "992",
+        "1472",
+        "1974"
+      ],
+      [
+        "Deposit can 1",
+        "105",
+        "182",
+        "292",
+        "332"
+      ],
+      [
+        "Pick up soda can 2",
+        "254",
+        "599",
+        "941",
+        "1409"
+      ],
+      [
+        "Deposit can 2",
+        "88",
+        "201",
+        "284",
+        "368"
+      ],
+      [
+        "Pick up soda can 3",
+        "278",
+        "517",
+        "900",
+        "1189"
+      ],
+      [
+        "Deposit can 3",
+        "79",
+        "182",
+        "321",
+        "379"
+      ],
+      [
+        "Put trash can down",
+        "50",
+        "240",
+        "338",
+        "533"
+      ],
+      [
+        "Stand by",
+        "46",
+        "397",
+        "544",
+        "784"
+      ],
+      [
+        "Round 0 total",
+        "2505",
+        "4555",
+        "5115",
+        "5197"
+      ]
+    ],
+    "source": "/root/autodl-tmp/lerobot_datasets/hrc_subinstructions_rerun_v1.json; source IDs from /root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/manifest.json; stop-start, total=execute_stop-execute_start; p90 uses higher order statistic ceil(0.90*(n-1)), matching the original integer table"
+  },
+  "A.2": {
+    "caption": "Round 1 expert segment durations. Frames at 30 Hz across the 45 retained sources.",
+    "headers": [
+      "Segment",
+      "Min",
+      "Median",
+      "90th percentile",
+      "Max"
+    ],
+    "rows": [
+      [
+        "Walk to / acquire trash can",
+        "797",
+        "1429",
+        "1906",
+        "2321"
+      ],
+      [
+        "Turn on radio receiver",
+        "72",
+        "146",
+        "256",
+        "372"
+      ],
+      [
+        "Put trash can down",
+        "185",
+        "342",
+        "488",
+        "701"
+      ],
+      [
+        "Stand by",
+        "63",
+        "324",
+        "500",
+        "548"
+      ],
+      [
+        "Round 1 total",
+        "1547",
+        "2277",
+        "2655",
+        "3227"
+      ]
+    ],
+    "source": "/root/autodl-tmp/lerobot_datasets/hrc_subinstructions_rerun_v1.json; source IDs from /root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/manifest.json; stop-start, total=execute_stop-execute_start; p90 uses higher order statistic ceil(0.90*(n-1)), matching the original integer table"
+  },
+  "A.3": {
+    "caption": "Shared hyperparameters for the main 20k runs.",
+    "headers": [
+      "Parameter",
+      "Value"
+    ],
+    "rows": [
+      [
+        "Base model",
+        "π0.5 flow-matching VLA"
+      ],
+      [
+        "Physical state/action dimensions",
+        "23"
+      ],
+      [
+        "Model action dimensions",
+        "32"
+      ],
+      [
+        "Action horizon",
+        "32"
+      ],
+      [
+        "Head-image model input",
+        "224 × 224, resized with padding"
+      ],
+      [
+        "Combined prompt/state token budget",
+        "200 tokens"
+      ],
+      [
+        "State input",
+        "Discrete-state input enabled"
+      ],
+      [
+        "Fine-tuning",
+        "LoRA variants with frozen visual tower"
+      ],
+      [
+        "EMA",
+        "Disabled"
+      ],
+      [
+        "Training seed",
+        "42; one run per configuration"
+      ],
+      [
+        "Optimiser",
+        "AdamW"
+      ],
+      [
+        "AdamW β1, β2",
+        "0.9, 0.95"
+      ],
+      [
+        "AdamW ε",
+        "10⁻⁸"
+      ],
+      [
+        "Weight decay",
+        "10⁻¹⁰"
+      ],
+      [
+        "Global gradient-norm clipping",
+        "1.0"
+      ],
+      [
+        "Warm-up",
+        "1,000 updates"
+      ],
+      [
+        "Peak learning rate",
+        "2.5 × 10⁻⁵"
+      ],
+      [
+        "Cosine schedule length",
+        "30,000 updates, including warm-up"
+      ],
+      [
+        "End-of-schedule learning rate",
+        "2.5 × 10⁻⁶"
+      ],
+      [
+        "Physical microbatch size",
+        "2"
+      ],
+      [
+        "Gradient accumulation",
+        "4 microbatches per update"
+      ],
+      [
+        "Effective batch size",
+        "8"
+      ],
+      [
+        "Main training length",
+        "20,000 optimiser updates"
+      ],
+      [
+        "Flow-loss dimensions in A/B/C",
+        "All 32, including padding"
+      ],
+      [
+        "Training-time validation",
+        "Every 1,000 updates; 10 × 2 examples"
+      ],
+      [
+        "Checkpoint save / retention intervals",
+        "1,000 / 5,000 updates"
+      ],
+      [
+        "Offline action integration",
+        "10 Euler steps"
+      ],
+      [
+        "Main audit flow-noise seeds",
+        "0, 1, 2, 3, 4"
+      ],
+      [
+        "Conditioning reference / alternate seeds",
+        "0 / 1"
+      ],
+      [
+        "Protocol seed",
+        "20260907"
+      ],
+      [
+        "Conditioning bootstrap resamples",
+        "10,000"
+      ]
+    ],
+    "source": "/root/NTU_Dissertation_Reviewed_v6_editable.docx; original paragraphs 796–802; audit/probe manifests for protocol fields; no OCR inference"
+  },
+  "A.4": {
+    "caption": "Checkpoint configuration identifiers. Each experiment uses the checkpoint directory named 20000.",
+    "headers": [
+      "Model",
+      "Configuration",
+      "Experiment"
+    ],
+    "rows": [
+      [
+        "A20",
+        "pi05_hrc_e6_rerun_20k",
+        "hrc_e6_rerun_seed42"
+      ],
+      [
+        "B20",
+        "pi05_hrc_b_subinstr_20k",
+        "b_subinstr_seed42"
+      ],
+      [
+        "C20",
+        "pi05_hrc_c_qnorm_20k",
+        "c_qnorm_seed42"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/{A20,B20,C20}/summary.json; config and checkpoint fields"
+  },
+  "A.5": {
+    "caption": "Frozen teacher-forced validation manifest.",
+    "headers": [
+      "Context",
+      "Candidate anchors",
+      "Selected anchors"
+    ],
+    "rows": [
+      [
+        "Pickup",
+        "15,311",
+        "200"
+      ],
+      [
+        "Follow",
+        "2,498",
+        "200"
+      ],
+      [
+        "Radio",
+        "11,526",
+        "200"
+      ],
+      [
+        "Wait",
+        "52",
+        "52"
+      ],
+      [
+        "Total",
+        "—",
+        "652"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/anchor_manifest.json"
+  },
+  "A.6": {
+    "caption": "Raw arm MAE across all four contexts. Model values are mean ± sample standard deviation over five inference flow-noise seeds.",
+    "headers": [
+      "Context",
+      "No-motion",
+      "A20",
+      "B20",
+      "C20"
+    ],
+    "rows": [
+      [
+        "Wait",
+        "0.000015",
+        "0.001007 ± 0.000227",
+        "0.000832 ± 0.000230",
+        "0.001032 ± 0.000046"
+      ],
+      [
+        "Pickup",
+        "0.020233",
+        "0.020450 ± 0.000393",
+        "0.019987 ± 0.000467",
+        "0.019941 ± 0.000555"
+      ],
+      [
+        "Follow",
+        "0.000225",
+        "0.000890 ± 0.000023",
+        "0.000901 ± 0.000017",
+        "0.001171 ± 0.000011"
+      ],
+      [
+        "Radio",
+        "0.014372",
+        "0.016890 ± 0.000483",
+        "0.016773 ± 0.000305",
+        "0.018826 ± 0.000566"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/comparison.csv"
+  },
+  "A.7": {
+    "caption": "Predicted and matched gripper transitions. Values are mean ± sample standard deviation over five inference flow-noise seeds. Expert counts are 14 for pickup and 9 for radio on every seed.",
+    "headers": [
+      "Model",
+      "Context",
+      "Predicted",
+      "True positives"
+    ],
+    "rows": [
+      [
+        "A20",
+        "Pickup",
+        "11.2 ± 3.1",
+        "1.4 ± 0.5"
+      ],
+      [
+        "B20",
+        "Pickup",
+        "20.6 ± 2.2",
+        "5.8 ± 1.5"
+      ],
+      [
+        "C20",
+        "Pickup",
+        "21.6 ± 1.9",
+        "6.8 ± 0.8"
+      ],
+      [
+        "A20",
+        "Radio",
+        "5.6 ± 2.4",
+        "0.2 ± 0.4"
+      ],
+      [
+        "B20",
+        "Radio",
+        "25.8 ± 3.9",
+        "3.0 ± 1.6"
+      ],
+      [
+        "C20",
+        "Radio",
+        "22.6 ± 5.1",
+        "3.4 ± 1.8"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/comparison.csv"
+  },
+  "A.8": {
+    "caption": "Full validation conditioning summary for arm outputs. Intervals are 95% anchor-level percentile-bootstrap intervals.",
+    "headers": [
+      "Model / context",
+      "Metric",
+      "Mean",
+      "Median",
+      "Std.",
+      "95% anchor BI",
+      "n"
+    ],
+    "rows": [
+      [
+        "B20 pickup",
+        "image/noise",
+        "0.3581",
+        "0.2489",
+        "0.3273",
+        "[0.2969, 0.4257]",
+        "96"
+      ],
+      [
+        "B20 pickup",
+        "state/noise",
+        "0.9187",
+        "0.5566",
+        "1.1277",
+        "[0.7134, 1.1640]",
+        "96"
+      ],
+      [
+        "C20 pickup",
+        "image/noise",
+        "0.4414",
+        "0.2775",
+        "0.6462",
+        "[0.3349, 0.5852]",
+        "96"
+      ],
+      [
+        "C20 pickup",
+        "state/noise",
+        "0.8073",
+        "0.6037",
+        "0.7393",
+        "[0.6726, 0.9649]",
+        "96"
+      ],
+      [
+        "B20 radio",
+        "image/noise",
+        "0.2851",
+        "0.2405",
+        "0.1492",
+        "[0.2103, 0.3723]",
+        "12"
+      ],
+      [
+        "B20 radio",
+        "state/noise",
+        "0.4662",
+        "0.4765",
+        "0.1591",
+        "[0.3779, 0.5517]",
+        "12"
+      ],
+      [
+        "C20 radio",
+        "image/noise",
+        "0.4378",
+        "0.3469",
+        "0.3112",
+        "[0.2873, 0.6245]",
+        "12"
+      ],
+      [
+        "C20 radio",
+        "state/noise",
+        "0.8560",
+        "0.4277",
+        "1.3335",
+        "[0.3562, 1.6777]",
+        "12"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_conditioning_probe/summary.json; split=val; arms_*_over_noise"
+  },
+  "A.9": {
+    "caption": "Additional validation pickup image-perturbation ratios.",
+    "headers": [
+      "Model",
+      "Horizontal flip / noise",
+      "Black / noise",
+      "White / noise",
+      "Random / noise"
+    ],
+    "rows": [
+      [
+        "B20",
+        "0.1466",
+        "0.6816",
+        "0.5041",
+        "0.6348"
+      ],
+      [
+        "C20",
+        "0.1797",
+        "0.7988",
+        "0.6446",
+        "0.8040"
+      ]
+    ],
+    "source": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_conditioning_probe/summary.json; split=val, context=pickup; means of per-anchor ratios"
+  }
+}

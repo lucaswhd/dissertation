@@ -1,0 +1,2092 @@
+{
+  "created_at_utc": "2026-10-19T01:38:59.501444+00:00",
+  "method": "Independent NumPy/PyArrow/h5py reconstruction, one HDF5 source at a time; no project alignment functions imported.",
+  "scope": "All 45 retained sources and both complete A/B_C exports across train/val/test; numeric columns only.",
+  "experiment_execution": "Training, model inference and simulation: Not independently verified",
+  "horizon": 32,
+  "action_shift": 1,
+  "exact_float32_comparison": true,
+  "input_manifests": {
+    "A": {
+      "path": "/root/autodl-tmp/lerobot_datasets/hrc_pi05_continuous_rerun_v1/manifest.json",
+      "sha256": "a748bf7eaec8ff3a7406db31b843f60c0cf2dc92e5877a9fb28641619940b6b4"
+    },
+    "B_C": {
+      "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/manifest.json",
+      "sha256": "a804b01f9630ee0503b0def0914afeb19e8e44441e6a93de1131ac02ac0cd142"
+    }
+  },
+  "subinstruction_plan": {
+    "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstructions_rerun_v1.json",
+    "sha256": "7c822fd29fde7c21b9eec876e68993b8a614d9ed8ff41e4b754eceab4d907682"
+  },
+  "totals": {
+    "sources": 45,
+    "unique_raw_rows": 409670,
+    "exported_rows_A_plus_B": 819340,
+    "state_action_numeric_values_checked": 37689640,
+    "nonfinite_state_action_values": 0,
+    "state_raw_max_abs_diff": 0.0,
+    "action_raw_shift1_max_abs_diff": 0.0,
+    "A_B_state_max_abs_diff": 0.0,
+    "A_B_action_max_abs_diff": 0.0,
+    "source_sentinels_checked_per_export": 45,
+    "valid_anchors_A": 403910,
+    "valid_anchors_B_C": 387544,
+    "horizon_violations_A": 0,
+    "horizon_violations_B_C": 0,
+    "decision_anchors_B_C": 15502,
+    "demo_boundaries_checked_per_export": 45
+  },
+  "splits": {
+    "train": {
+      "source_ids": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        20,
+        22,
+        23,
+        26,
+        29,
+        30,
+        31,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        42,
+        43,
+        45,
+        46,
+        50,
+        52,
+        53,
+        54,
+        57,
+        58,
+        59,
+        61,
+        62,
+        64
+      ],
+      "rows_per_export": 341269,
+      "valid_anchors_A": 336533,
+      "valid_anchors_B_C": 323255,
+      "decision_anchors_B_C": 12785,
+      "parquet_inputs": {
+        "A": [
+          {
+            "path": "/root/autodl-tmp/lerobot_datasets/hrc_pi05_continuous_rerun_v1/train/data/chunk-000/file-000.parquet",
+            "bytes": 80257380,
+            "sha256": "49660402f336ae9033f9a32b0a8161fc969dc1c812031cb08a1fec400fd9d407"
+          }
+        ],
+        "B_C": [
+          {
+            "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/train/data/chunk-000/file-000.parquet",
+            "bytes": 80261153,
+            "sha256": "dee33040ff0271c61afc129c0a2db6b26ffa0bac87c0f66be73cae024daa8fd1"
+          }
+        ]
+      }
+    },
+    "val": {
+      "source_ids": [
+        0,
+        2,
+        15,
+        18
+      ],
+      "rows_per_export": 31084,
+      "valid_anchors_A": 30572,
+      "valid_anchors_B_C": 29387,
+      "decision_anchors_B_C": 1367,
+      "parquet_inputs": {
+        "A": [
+          {
+            "path": "/root/autodl-tmp/lerobot_datasets/hrc_pi05_continuous_rerun_v1/val/data/chunk-000/file-000.parquet",
+            "bytes": 7344556,
+            "sha256": "2da963e816399e41edfc3c20419e53fd88ddfd5408ed5fe8efd4d0a3ddeca443"
+          }
+        ],
+        "B_C": [
+          {
+            "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/val/data/chunk-000/file-000.parquet",
+            "bytes": 7344952,
+            "sha256": "ab1dbf24b94f75c174b596c0d3ec6d2930bc3546dc878d09c9d2adfc86757548"
+          }
+        ]
+      }
+    },
+    "test": {
+      "source_ids": [
+        10,
+        17,
+        44,
+        47
+      ],
+      "rows_per_export": 37317,
+      "valid_anchors_A": 36805,
+      "valid_anchors_B_C": 34902,
+      "decision_anchors_B_C": 1350,
+      "parquet_inputs": {
+        "A": [
+          {
+            "path": "/root/autodl-tmp/lerobot_datasets/hrc_pi05_continuous_rerun_v1/test/data/chunk-000/file-000.parquet",
+            "bytes": 8833284,
+            "sha256": "0f34eac2baad8ec03c0f5e11b8cb3f46743154cdfdd4a95303311b9b276125dc"
+          }
+        ],
+        "B_C": [
+          {
+            "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/test/data/chunk-000/file-000.parquet",
+            "bytes": 8833708,
+            "sha256": "b15564dfc15dbf5bed94d79c13c4528b7ab9590423904b5c97597377f7c5d605"
+          }
+        ]
+      }
+    }
+  },
+  "sources": [
+    {
+      "source_id": 3,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0003/hrc_dataset.hdf5",
+      "rows": 7710,
+      "round0_frames": 4124,
+      "round1_frames": 3586,
+      "exports": {
+        "A": {
+          "rows": 7710,
+          "valid_anchors": 7582,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 7710,
+          "valid_anchors": 7582,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 363
+    },
+    {
+      "source_id": 4,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0004/hrc_dataset.hdf5",
+      "rows": 11128,
+      "round0_frames": 6204,
+      "round1_frames": 4924,
+      "exports": {
+        "A": {
+          "rows": 11128,
+          "valid_anchors": 11000,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 11128,
+          "valid_anchors": 10577,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 5,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0005/hrc_dataset.hdf5",
+      "rows": 7482,
+      "round0_frames": 3652,
+      "round1_frames": 3830,
+      "exports": {
+        "A": {
+          "rows": 7482,
+          "valid_anchors": 7354,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 7482,
+          "valid_anchors": 7354,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 363
+    },
+    {
+      "source_id": 6,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0006/hrc_dataset.hdf5",
+      "rows": 8617,
+      "round0_frames": 4443,
+      "round1_frames": 4174,
+      "exports": {
+        "A": {
+          "rows": 8617,
+          "valid_anchors": 8489,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8617,
+          "valid_anchors": 8156,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 7,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0007/hrc_dataset.hdf5",
+      "rows": 8001,
+      "round0_frames": 4034,
+      "round1_frames": 3967,
+      "exports": {
+        "A": {
+          "rows": 8001,
+          "valid_anchors": 7873,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8001,
+          "valid_anchors": 7569,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 8,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0008/hrc_dataset.hdf5",
+      "rows": 10616,
+      "round0_frames": 5056,
+      "round1_frames": 5560,
+      "exports": {
+        "A": {
+          "rows": 10616,
+          "valid_anchors": 10488,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10616,
+          "valid_anchors": 10119,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 9,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0009/hrc_dataset.hdf5",
+      "rows": 7761,
+      "round0_frames": 4592,
+      "round1_frames": 3169,
+      "exports": {
+        "A": {
+          "rows": 7761,
+          "valid_anchors": 7633,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 7761,
+          "valid_anchors": 7444,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 11,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0011/hrc_dataset.hdf5",
+      "rows": 6972,
+      "round0_frames": 4219,
+      "round1_frames": 2753,
+      "exports": {
+        "A": {
+          "rows": 6972,
+          "valid_anchors": 6844,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 6972,
+          "valid_anchors": 6217,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 12,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0012/hrc_dataset.hdf5",
+      "rows": 7630,
+      "round0_frames": 4901,
+      "round1_frames": 2729,
+      "exports": {
+        "A": {
+          "rows": 7630,
+          "valid_anchors": 7502,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 7630,
+          "valid_anchors": 7040,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 14,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0014/hrc_dataset.hdf5",
+      "rows": 8237,
+      "round0_frames": 4891,
+      "round1_frames": 3346,
+      "exports": {
+        "A": {
+          "rows": 8237,
+          "valid_anchors": 8109,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8237,
+          "valid_anchors": 7290,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 20,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0020/hrc_dataset.hdf5",
+      "rows": 9314,
+      "round0_frames": 5463,
+      "round1_frames": 3851,
+      "exports": {
+        "A": {
+          "rows": 9314,
+          "valid_anchors": 9186,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9314,
+          "valid_anchors": 8626,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 22,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0022/hrc_dataset.hdf5",
+      "rows": 8355,
+      "round0_frames": 5177,
+      "round1_frames": 3178,
+      "exports": {
+        "A": {
+          "rows": 8355,
+          "valid_anchors": 8227,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8355,
+          "valid_anchors": 7581,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 23,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0023/hrc_dataset.hdf5",
+      "rows": 8494,
+      "round0_frames": 5539,
+      "round1_frames": 2955,
+      "exports": {
+        "A": {
+          "rows": 8494,
+          "valid_anchors": 8366,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8494,
+          "valid_anchors": 7772,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 26,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0026/hrc_dataset.hdf5",
+      "rows": 7640,
+      "round0_frames": 4686,
+      "round1_frames": 2954,
+      "exports": {
+        "A": {
+          "rows": 7640,
+          "valid_anchors": 7512,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 7640,
+          "valid_anchors": 7341,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 29,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0029/hrc_dataset.hdf5",
+      "rows": 8320,
+      "round0_frames": 4782,
+      "round1_frames": 3538,
+      "exports": {
+        "A": {
+          "rows": 8320,
+          "valid_anchors": 8192,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8320,
+          "valid_anchors": 7832,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 30,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0030/hrc_dataset.hdf5",
+      "rows": 10204,
+      "round0_frames": 5920,
+      "round1_frames": 4284,
+      "exports": {
+        "A": {
+          "rows": 10204,
+          "valid_anchors": 10076,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10204,
+          "valid_anchors": 9659,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 31,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0031/hrc_dataset.hdf5",
+      "rows": 9789,
+      "round0_frames": 5770,
+      "round1_frames": 4019,
+      "exports": {
+        "A": {
+          "rows": 9789,
+          "valid_anchors": 9661,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9789,
+          "valid_anchors": 8877,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 34,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0034/hrc_dataset.hdf5",
+      "rows": 8339,
+      "round0_frames": 5408,
+      "round1_frames": 2931,
+      "exports": {
+        "A": {
+          "rows": 8339,
+          "valid_anchors": 8211,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8339,
+          "valid_anchors": 7756,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 35,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0035/hrc_dataset.hdf5",
+      "rows": 9980,
+      "round0_frames": 6393,
+      "round1_frames": 3587,
+      "exports": {
+        "A": {
+          "rows": 9980,
+          "valid_anchors": 9852,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9980,
+          "valid_anchors": 9852,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 363
+    },
+    {
+      "source_id": 36,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0036/hrc_dataset.hdf5",
+      "rows": 9221,
+      "round0_frames": 5450,
+      "round1_frames": 3771,
+      "exports": {
+        "A": {
+          "rows": 9221,
+          "valid_anchors": 9093,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9221,
+          "valid_anchors": 9093,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 363
+    },
+    {
+      "source_id": 37,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0037/hrc_dataset.hdf5",
+      "rows": 8286,
+      "round0_frames": 4954,
+      "round1_frames": 3332,
+      "exports": {
+        "A": {
+          "rows": 8286,
+          "valid_anchors": 8158,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8286,
+          "valid_anchors": 8158,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 363
+    },
+    {
+      "source_id": 38,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0038/hrc_dataset.hdf5",
+      "rows": 11223,
+      "round0_frames": 5733,
+      "round1_frames": 5490,
+      "exports": {
+        "A": {
+          "rows": 11223,
+          "valid_anchors": 11095,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 11223,
+          "valid_anchors": 10731,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 39,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0039/hrc_dataset.hdf5",
+      "rows": 10594,
+      "round0_frames": 5372,
+      "round1_frames": 5222,
+      "exports": {
+        "A": {
+          "rows": 10594,
+          "valid_anchors": 10466,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10594,
+          "valid_anchors": 9988,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 42,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0042/hrc_dataset.hdf5",
+      "rows": 8259,
+      "round0_frames": 5319,
+      "round1_frames": 2940,
+      "exports": {
+        "A": {
+          "rows": 8259,
+          "valid_anchors": 8131,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8259,
+          "valid_anchors": 7729,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 43,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0043/hrc_dataset.hdf5",
+      "rows": 9924,
+      "round0_frames": 6022,
+      "round1_frames": 3902,
+      "exports": {
+        "A": {
+          "rows": 9924,
+          "valid_anchors": 9796,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9924,
+          "valid_anchors": 9336,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 45,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0045/hrc_dataset.hdf5",
+      "rows": 10195,
+      "round0_frames": 5884,
+      "round1_frames": 4311,
+      "exports": {
+        "A": {
+          "rows": 10195,
+          "valid_anchors": 10067,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10195,
+          "valid_anchors": 9735,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 46,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0046/hrc_dataset.hdf5",
+      "rows": 10552,
+      "round0_frames": 6507,
+      "round1_frames": 4045,
+      "exports": {
+        "A": {
+          "rows": 10552,
+          "valid_anchors": 10424,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10552,
+          "valid_anchors": 10035,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 50,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0050/hrc_dataset.hdf5",
+      "rows": 10147,
+      "round0_frames": 6063,
+      "round1_frames": 4084,
+      "exports": {
+        "A": {
+          "rows": 10147,
+          "valid_anchors": 10019,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10147,
+          "valid_anchors": 9587,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 52,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0052/hrc_dataset.hdf5",
+      "rows": 11415,
+      "round0_frames": 6958,
+      "round1_frames": 4457,
+      "exports": {
+        "A": {
+          "rows": 11415,
+          "valid_anchors": 11287,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 11415,
+          "valid_anchors": 11287,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 363
+    },
+    {
+      "source_id": 53,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0053/hrc_dataset.hdf5",
+      "rows": 8388,
+      "round0_frames": 5263,
+      "round1_frames": 3125,
+      "exports": {
+        "A": {
+          "rows": 8388,
+          "valid_anchors": 8260,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8388,
+          "valid_anchors": 7887,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 54,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0054/hrc_dataset.hdf5",
+      "rows": 11096,
+      "round0_frames": 6206,
+      "round1_frames": 4890,
+      "exports": {
+        "A": {
+          "rows": 11096,
+          "valid_anchors": 10968,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 11096,
+          "valid_anchors": 10584,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 57,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0057/hrc_dataset.hdf5",
+      "rows": 9494,
+      "round0_frames": 5562,
+      "round1_frames": 3932,
+      "exports": {
+        "A": {
+          "rows": 9494,
+          "valid_anchors": 9366,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9494,
+          "valid_anchors": 8728,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 58,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0058/hrc_dataset.hdf5",
+      "rows": 9087,
+      "round0_frames": 6069,
+      "round1_frames": 3018,
+      "exports": {
+        "A": {
+          "rows": 9087,
+          "valid_anchors": 8959,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9087,
+          "valid_anchors": 8519,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 59,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0059/hrc_dataset.hdf5",
+      "rows": 9245,
+      "round0_frames": 6124,
+      "round1_frames": 3121,
+      "exports": {
+        "A": {
+          "rows": 9245,
+          "valid_anchors": 9117,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9245,
+          "valid_anchors": 8690,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 61,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0061/hrc_dataset.hdf5",
+      "rows": 9334,
+      "round0_frames": 6089,
+      "round1_frames": 3245,
+      "exports": {
+        "A": {
+          "rows": 9334,
+          "valid_anchors": 9206,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9334,
+          "valid_anchors": 8958,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 62,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0062/hrc_dataset.hdf5",
+      "rows": 9474,
+      "round0_frames": 6564,
+      "round1_frames": 2910,
+      "exports": {
+        "A": {
+          "rows": 9474,
+          "valid_anchors": 9346,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9474,
+          "valid_anchors": 8994,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 64,
+      "split": "train",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0064/hrc_dataset.hdf5",
+      "rows": 10746,
+      "round0_frames": 6989,
+      "round1_frames": 3757,
+      "exports": {
+        "A": {
+          "rows": 10746,
+          "valid_anchors": 10618,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10746,
+          "valid_anchors": 10572,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 0,
+      "split": "val",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0000/hrc_dataset.hdf5",
+      "rows": 5849,
+      "round0_frames": 2817,
+      "round1_frames": 3032,
+      "exports": {
+        "A": {
+          "rows": 5849,
+          "valid_anchors": 5721,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 5849,
+          "valid_anchors": 5568,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 2,
+      "split": "val",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0002/hrc_dataset.hdf5",
+      "rows": 7379,
+      "round0_frames": 3757,
+      "round1_frames": 3622,
+      "exports": {
+        "A": {
+          "rows": 7379,
+          "valid_anchors": 7251,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 7379,
+          "valid_anchors": 7108,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 7.120768231061447e-06,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 15,
+      "split": "val",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0015/hrc_dataset.hdf5",
+      "rows": 8489,
+      "round0_frames": 4813,
+      "round1_frames": 3676,
+      "exports": {
+        "A": {
+          "rows": 8489,
+          "valid_anchors": 8361,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8489,
+          "valid_anchors": 7933,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 18,
+      "split": "val",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0018/hrc_dataset.hdf5",
+      "rows": 9367,
+      "round0_frames": 5354,
+      "round1_frames": 4013,
+      "exports": {
+        "A": {
+          "rows": 9367,
+          "valid_anchors": 9239,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 9367,
+          "valid_anchors": 8778,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 10,
+      "split": "test",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0010/hrc_dataset.hdf5",
+      "rows": 8115,
+      "round0_frames": 4596,
+      "round1_frames": 3519,
+      "exports": {
+        "A": {
+          "rows": 8115,
+          "valid_anchors": 7987,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8115,
+          "valid_anchors": 7541,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 17,
+      "split": "test",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0017/hrc_dataset.hdf5",
+      "rows": 8517,
+      "round0_frames": 5305,
+      "round1_frames": 3212,
+      "exports": {
+        "A": {
+          "rows": 8517,
+          "valid_anchors": 8389,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 8517,
+          "valid_anchors": 7910,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 329
+    },
+    {
+      "source_id": 44,
+      "split": "test",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0044/hrc_dataset.hdf5",
+      "rows": 10492,
+      "round0_frames": 5964,
+      "round1_frames": 4528,
+      "exports": {
+        "A": {
+          "rows": 10492,
+          "valid_anchors": 10364,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10492,
+          "valid_anchors": 9783,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    },
+    {
+      "source_id": 47,
+      "split": "test",
+      "raw_hdf5_path": "/root/autodl-tmp/hrc_pipeline_traintest/outputs/hrc_batch_rerun_v1/ep_0047/hrc_dataset.hdf5",
+      "rows": 10193,
+      "round0_frames": 6199,
+      "round1_frames": 3994,
+      "exports": {
+        "A": {
+          "rows": 10193,
+          "valid_anchors": 10065,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        },
+        "B_C": {
+          "rows": 10193,
+          "valid_anchors": 9668,
+          "state_raw_max_abs_diff": 0.0,
+          "action_raw_shift1_max_abs_diff": 0.0,
+          "nonfinite_state_action_values": 0,
+          "horizon_violations": 0,
+          "sentinel_valid": false,
+          "timestamp_max_abs_diff_from_nominal_seconds": 1.4241536462122895e-05,
+          "demo_boundary_state_base_matches_current_raw_action": true
+        }
+      },
+      "decision_anchors_B_C": 346
+    }
+  ],
+  "failures": [],
+  "metadata_warnings": [
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 4,
+      "manifest_count": 11000,
+      "parquet_count": 10577
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 6,
+      "manifest_count": 8489,
+      "parquet_count": 8156
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 7,
+      "manifest_count": 7873,
+      "parquet_count": 7569
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 8,
+      "manifest_count": 10488,
+      "parquet_count": 10119
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 9,
+      "manifest_count": 7633,
+      "parquet_count": 7444
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 11,
+      "manifest_count": 6844,
+      "parquet_count": 6217
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 12,
+      "manifest_count": 7502,
+      "parquet_count": 7040
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 14,
+      "manifest_count": 8109,
+      "parquet_count": 7290
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 20,
+      "manifest_count": 9186,
+      "parquet_count": 8626
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 22,
+      "manifest_count": 8227,
+      "parquet_count": 7581
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 23,
+      "manifest_count": 8366,
+      "parquet_count": 7772
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 26,
+      "manifest_count": 7512,
+      "parquet_count": 7341
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 29,
+      "manifest_count": 8192,
+      "parquet_count": 7832
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 30,
+      "manifest_count": 10076,
+      "parquet_count": 9659
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 31,
+      "manifest_count": 9661,
+      "parquet_count": 8877
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 34,
+      "manifest_count": 8211,
+      "parquet_count": 7756
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 38,
+      "manifest_count": 11095,
+      "parquet_count": 10731
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 39,
+      "manifest_count": 10466,
+      "parquet_count": 9988
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 42,
+      "manifest_count": 8131,
+      "parquet_count": 7729
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 43,
+      "manifest_count": 9796,
+      "parquet_count": 9336
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 45,
+      "manifest_count": 10067,
+      "parquet_count": 9735
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 46,
+      "manifest_count": 10424,
+      "parquet_count": 10035
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 50,
+      "manifest_count": 10019,
+      "parquet_count": 9587
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 53,
+      "manifest_count": 8260,
+      "parquet_count": 7887
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 54,
+      "manifest_count": 10968,
+      "parquet_count": 10584
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 57,
+      "manifest_count": 9366,
+      "parquet_count": 8728
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 58,
+      "manifest_count": 8959,
+      "parquet_count": 8519
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 59,
+      "manifest_count": 9117,
+      "parquet_count": 8690
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 61,
+      "manifest_count": 9206,
+      "parquet_count": 8958
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 62,
+      "manifest_count": 9346,
+      "parquet_count": 8994
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 64,
+      "manifest_count": 10618,
+      "parquet_count": 10572
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 0,
+      "manifest_count": 5721,
+      "parquet_count": 5568
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 2,
+      "manifest_count": 7251,
+      "parquet_count": 7108
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 15,
+      "manifest_count": 8361,
+      "parquet_count": 7933
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 18,
+      "manifest_count": 9239,
+      "parquet_count": 8778
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 10,
+      "manifest_count": 7987,
+      "parquet_count": 7541
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 17,
+      "manifest_count": 8389,
+      "parquet_count": 7910
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 44,
+      "manifest_count": 10364,
+      "parquet_count": 9783
+    },
+    {
+      "kind": "B manifest source num_valid_anchors inherited from A",
+      "source_id": 47,
+      "manifest_count": 10065,
+      "parquet_count": 9668
+    }
+  ],
+  "limitations": [
+    "No decoded image/frame equality, exposure-time or simulator-clock synchronization check.",
+    "Parquet timestamps are nominal frame_index/30; agreement cannot establish physical sensor/action synchronization.",
+    "B idle-tail and decision-flag audit checks adherence to stored annotation plan; semantic correctness of that plan is not independently re-annotated.",
+    "Source HDF5 command/action semantics are taken from the recorded schema; no simulator execution is reproduced."
+  ],
+  "historical_canonical": {
+    "path": "/root/autodl-tmp/hrc_canonical/hrc_multitask_v01_step10/canonical.hdf5",
+    "bytes": 4210663,
+    "dataset_inventory": [
+      {
+        "key": "frames/action",
+        "shape": [
+          10239,
+          23
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/demo_id",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/deprecated/reward",
+        "shape": [
+          10239
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/deprecated/task_success",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/deprecated/terminated",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/deprecated/truncated",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/done",
+        "shape": [
+          10239
+        ],
+        "dtype": "bool"
+      },
+      {
+        "key": "frames/frame_id",
+        "shape": [
+          10239
+        ],
+        "dtype": "int64"
+      },
+      {
+        "key": "frames/frame_in_demo",
+        "shape": [
+          10239
+        ],
+        "dtype": "int64"
+      },
+      {
+        "key": "frames/obs/fsm_state_id",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/obs/gripper_state",
+        "shape": [
+          10239,
+          4
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/head_camera_local_pos",
+        "shape": [
+          10239,
+          3
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/head_camera_local_quat",
+        "shape": [
+          10239,
+          4
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/head_camera_pitch_deg",
+        "shape": [
+          10239
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/head_camera_world_pos",
+        "shape": [
+          10239,
+          3
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/head_camera_world_quat",
+        "shape": [
+          10239,
+          4
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/human_motion_state_id",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/obs/human_pos",
+        "shape": [
+          10239,
+          3
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/human_quat",
+        "shape": [
+          10239,
+          4
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/human_visible",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/obs/joint_positions",
+        "shape": [
+          10239,
+          28
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/relative_human_pose",
+        "shape": [
+          10239,
+          3
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/robot_pos",
+        "shape": [
+          10239,
+          3
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/obs/robot_quat",
+        "shape": [
+          10239,
+          4
+        ],
+        "dtype": "float32"
+      },
+      {
+        "key": "frames/round_id",
+        "shape": [
+          10239
+        ],
+        "dtype": "int32"
+      },
+      {
+        "key": "frames/timestamp_s",
+        "shape": [
+          10239
+        ],
+        "dtype": "float64"
+      }
+    ],
+    "scope": "Metadata only; historical ACT branch, not a mandatory intermediate for final pi0.5 continuous export."
+  },
+  "status": "passed_with_metadata_warnings"
+}

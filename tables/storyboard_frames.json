@@ -1,0 +1,74 @@
+[
+  {
+    "panel": "a",
+    "source": 0,
+    "split": "val",
+    "round": 0,
+    "raw_global_frame": 20,
+    "seconds": 0.6666666666666666,
+    "camera": "head RGB",
+    "control": "Scripted FSM",
+    "video": "hrc_batch_rerun_v1/ep_0000/videos/head_rgb.mp4",
+    "frame_image": "source0000_frame000020.png"
+  },
+  {
+    "panel": "b",
+    "source": 0,
+    "split": "val",
+    "round": 0,
+    "raw_global_frame": 998,
+    "seconds": 33.266666666666666,
+    "camera": "head RGB",
+    "control": "Recorded replay",
+    "video": "hrc_batch_rerun_v1/ep_0000/videos/head_rgb.mp4",
+    "frame_image": "source0000_frame000998.png"
+  },
+  {
+    "panel": "c",
+    "source": 0,
+    "split": "val",
+    "round": 0,
+    "raw_global_frame": 1572,
+    "seconds": 52.4,
+    "camera": "head RGB",
+    "control": "Recorded replay",
+    "video": "hrc_batch_rerun_v1/ep_0000/videos/head_rgb.mp4",
+    "frame_image": "source0000_frame001572.png"
+  },
+  {
+    "panel": "d",
+    "source": 0,
+    "split": "val",
+    "round": 0,
+    "raw_global_frame": 1693,
+    "seconds": 56.43333333333333,
+    "camera": "head RGB",
+    "control": "Recorded replay",
+    "video": "hrc_batch_rerun_v1/ep_0000/videos/head_rgb.mp4",
+    "frame_image": "source0000_frame001693.png"
+  },
+  {
+    "panel": "e",
+    "source": 0,
+    "split": "val",
+    "round": 1,
+    "raw_global_frame": 2895,
+    "seconds": 96.5,
+    "camera": "head RGB",
+    "control": "Scripted FSM",
+    "video": "hrc_batch_rerun_v1/ep_0000/videos/head_rgb.mp4",
+    "frame_image": "source0000_frame002895.png"
+  },
+  {
+    "panel": "f",
+    "source": 0,
+    "split": "val",
+    "round": 1,
+    "raw_global_frame": 4440,
+    "seconds": 148.0,
+    "camera": "head RGB",
+    "control": "Recorded replay",
+    "video": "hrc_batch_rerun_v1/ep_0000/videos/head_rgb.mp4",
+    "frame_image": "source0000_frame004440.png"
+  }
+]

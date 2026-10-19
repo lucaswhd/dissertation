@@ -1,0 +1,181 @@
+split,context,segment,position,population,total,target_center_in_frustum,target_center_not_in_frustum,target_center_in_frustum_ratio
+test,pickup,Drop the can into the trash can you are holding,early,frames,896,896,0,1.0
+test,pickup,Drop the can into the trash can you are holding,early,valid_anchors,896,896,0,1.0
+test,pickup,Drop the can into the trash can you are holding,early,strict_prompt_stable_anchors,896,896,0,1.0
+test,pickup,Drop the can into the trash can you are holding,early,decision_frame_anchors,204,204,0,1.0
+test,pickup,Drop the can into the trash can you are holding,late,frames,898,898,0,1.0
+test,pickup,Drop the can into the trash can you are holding,late,valid_anchors,898,898,0,1.0
+test,pickup,Drop the can into the trash can you are holding,late,strict_prompt_stable_anchors,514,514,0,1.0
+test,pickup,Drop the can into the trash can you are holding,late,decision_frame_anchors,192,192,0,1.0
+test,pickup,Drop the can into the trash can you are holding,middle,frames,888,888,0,1.0
+test,pickup,Drop the can into the trash can you are holding,middle,valid_anchors,888,888,0,1.0
+test,pickup,Drop the can into the trash can you are holding,middle,strict_prompt_stable_anchors,888,888,0,1.0
+test,pickup,Drop the can into the trash can you are holding,middle,decision_frame_anchors,0,0,0,
+test,pickup,Pick up the soda can,early,frames,3242,1610,1632,0.49660703269586676
+test,pickup,Pick up the soda can,early,valid_anchors,3242,1610,1632,0.49660703269586676
+test,pickup,Pick up the soda can,early,strict_prompt_stable_anchors,3242,1610,1632,0.49660703269586676
+test,pickup,Pick up the soda can,early,decision_frame_anchors,204,119,85,0.5833333333333334
+test,pickup,Pick up the soda can,late,frames,3246,3246,0,1.0
+test,pickup,Pick up the soda can,late,valid_anchors,3246,3246,0,1.0
+test,pickup,Pick up the soda can,late,strict_prompt_stable_anchors,2862,2862,0,1.0
+test,pickup,Pick up the soda can,late,decision_frame_anchors,192,192,0,1.0
+test,pickup,Pick up the soda can,middle,frames,3237,3155,82,0.9746679023787458
+test,pickup,Pick up the soda can,middle,valid_anchors,3237,3155,82,0.9746679023787458
+test,pickup,Pick up the soda can,middle,strict_prompt_stable_anchors,3237,3155,82,0.9746679023787458
+test,pickup,Pick up the soda can,middle,decision_frame_anchors,0,0,0,
+test,pickup,Put the trash can down,early,frames,393,393,0,1.0
+test,pickup,Put the trash can down,early,valid_anchors,393,393,0,1.0
+test,pickup,Put the trash can down,early,strict_prompt_stable_anchors,393,393,0,1.0
+test,pickup,Put the trash can down,early,decision_frame_anchors,68,68,0,1.0
+test,pickup,Put the trash can down,late,frames,393,393,0,1.0
+test,pickup,Put the trash can down,late,valid_anchors,393,393,0,1.0
+test,pickup,Put the trash can down,late,strict_prompt_stable_anchors,265,265,0,1.0
+test,pickup,Put the trash can down,late,decision_frame_anchors,64,64,0,1.0
+test,pickup,Put the trash can down,middle,frames,390,390,0,1.0
+test,pickup,Put the trash can down,middle,valid_anchors,390,390,0,1.0
+test,pickup,Put the trash can down,middle,strict_prompt_stable_anchors,390,390,0,1.0
+test,pickup,Put the trash can down,middle,decision_frame_anchors,0,0,0,
+test,pickup,Walk to the trash can and pick it up,early,frames,846,653,193,0.7718676122931442
+test,pickup,Walk to the trash can and pick it up,early,valid_anchors,846,653,193,0.7718676122931442
+test,pickup,Walk to the trash can and pick it up,early,strict_prompt_stable_anchors,846,653,193,0.7718676122931442
+test,pickup,Walk to the trash can and pick it up,early,decision_frame_anchors,0,0,0,
+test,pickup,Walk to the trash can and pick it up,late,frames,848,848,0,1.0
+test,pickup,Walk to the trash can and pick it up,late,valid_anchors,848,848,0,1.0
+test,pickup,Walk to the trash can and pick it up,late,strict_prompt_stable_anchors,720,720,0,1.0
+test,pickup,Walk to the trash can and pick it up,late,decision_frame_anchors,64,64,0,1.0
+test,pickup,Walk to the trash can and pick it up,middle,frames,846,846,0,1.0
+test,pickup,Walk to the trash can and pick it up,middle,valid_anchors,846,846,0,1.0
+test,pickup,Walk to the trash can and pick it up,middle,strict_prompt_stable_anchors,846,846,0,1.0
+test,pickup,Walk to the trash can and pick it up,middle,decision_frame_anchors,0,0,0,
+test,radio,Turn on the radio receiver,early,frames,207,207,0,1.0
+test,radio,Turn on the radio receiver,early,valid_anchors,207,207,0,1.0
+test,radio,Turn on the radio receiver,early,strict_prompt_stable_anchors,207,207,0,1.0
+test,radio,Turn on the radio receiver,early,decision_frame_anchors,68,68,0,1.0
+test,radio,Turn on the radio receiver,late,frames,209,209,0,1.0
+test,radio,Turn on the radio receiver,late,valid_anchors,209,209,0,1.0
+test,radio,Turn on the radio receiver,late,strict_prompt_stable_anchors,85,85,0,1.0
+test,radio,Turn on the radio receiver,late,decision_frame_anchors,64,64,0,1.0
+test,radio,Turn on the radio receiver,middle,frames,206,206,0,1.0
+test,radio,Turn on the radio receiver,middle,valid_anchors,206,206,0,1.0
+test,radio,Turn on the radio receiver,middle,strict_prompt_stable_anchors,202,202,0,1.0
+test,radio,Turn on the radio receiver,middle,decision_frame_anchors,0,0,0,
+train,pickup,Drop the can into the trash can you are holding,early,frames,7694,7694,0,1.0
+train,pickup,Drop the can into the trash can you are holding,early,valid_anchors,7694,7694,0,1.0
+train,pickup,Drop the can into the trash can you are holding,early,strict_prompt_stable_anchors,7694,7694,0,1.0
+train,pickup,Drop the can into the trash can you are holding,early,decision_frame_anchors,1887,1887,0,1.0
+train,pickup,Drop the can into the trash can you are holding,late,frames,7735,7735,0,1.0
+train,pickup,Drop the can into the trash can you are holding,late,valid_anchors,7735,7735,0,1.0
+train,pickup,Drop the can into the trash can you are holding,late,strict_prompt_stable_anchors,4186,4186,0,1.0
+train,pickup,Drop the can into the trash can you are holding,late,decision_frame_anchors,1776,1776,0,1.0
+train,pickup,Drop the can into the trash can you are holding,middle,frames,7653,7653,0,1.0
+train,pickup,Drop the can into the trash can you are holding,middle,valid_anchors,7653,7653,0,1.0
+train,pickup,Drop the can into the trash can you are holding,middle,strict_prompt_stable_anchors,7650,7650,0,1.0
+train,pickup,Drop the can into the trash can you are holding,middle,decision_frame_anchors,0,0,0,
+train,pickup,Pick up the soda can,early,frames,28113,15253,12860,0.5425603813182514
+train,pickup,Pick up the soda can,early,valid_anchors,28113,15253,12860,0.5425603813182514
+train,pickup,Pick up the soda can,early,strict_prompt_stable_anchors,28113,15253,12860,0.5425603813182514
+train,pickup,Pick up the soda can,early,decision_frame_anchors,1887,952,935,0.5045045045045045
+train,pickup,Pick up the soda can,late,frames,28154,28154,0,1.0
+train,pickup,Pick up the soda can,late,valid_anchors,28154,28154,0,1.0
+train,pickup,Pick up the soda can,late,strict_prompt_stable_anchors,24602,24602,0,1.0
+train,pickup,Pick up the soda can,late,decision_frame_anchors,1776,1776,0,1.0
+train,pickup,Pick up the soda can,middle,frames,28073,26421,1652,0.9411534214369679
+train,pickup,Pick up the soda can,middle,valid_anchors,28073,26421,1652,0.9411534214369679
+train,pickup,Pick up the soda can,middle,strict_prompt_stable_anchors,28073,26421,1652,0.9411534214369679
+train,pickup,Pick up the soda can,middle,decision_frame_anchors,0,0,0,
+train,pickup,Put the trash can down,early,frames,3031,3031,0,1.0
+train,pickup,Put the trash can down,early,valid_anchors,3031,3031,0,1.0
+train,pickup,Put the trash can down,early,strict_prompt_stable_anchors,3031,3031,0,1.0
+train,pickup,Put the trash can down,early,decision_frame_anchors,629,629,0,1.0
+train,pickup,Put the trash can down,late,frames,3050,3050,0,1.0
+train,pickup,Put the trash can down,late,valid_anchors,3050,3050,0,1.0
+train,pickup,Put the trash can down,late,strict_prompt_stable_anchors,1871,1871,0,1.0
+train,pickup,Put the trash can down,late,decision_frame_anchors,592,592,0,1.0
+train,pickup,Put the trash can down,middle,frames,3022,3022,0,1.0
+train,pickup,Put the trash can down,middle,valid_anchors,3022,3022,0,1.0
+train,pickup,Put the trash can down,middle,strict_prompt_stable_anchors,3017,3017,0,1.0
+train,pickup,Put the trash can down,middle,decision_frame_anchors,0,0,0,
+train,pickup,Walk to the trash can and pick it up,early,frames,11466,5280,6186,0.4604918890633176
+train,pickup,Walk to the trash can and pick it up,early,valid_anchors,11466,5280,6186,0.4604918890633176
+train,pickup,Walk to the trash can and pick it up,early,strict_prompt_stable_anchors,11466,5280,6186,0.4604918890633176
+train,pickup,Walk to the trash can and pick it up,early,decision_frame_anchors,0,0,0,
+train,pickup,Walk to the trash can and pick it up,late,frames,11481,11481,0,1.0
+train,pickup,Walk to the trash can and pick it up,late,valid_anchors,11481,11481,0,1.0
+train,pickup,Walk to the trash can and pick it up,late,strict_prompt_stable_anchors,10297,10297,0,1.0
+train,pickup,Walk to the trash can and pick it up,late,decision_frame_anchors,592,592,0,1.0
+train,pickup,Walk to the trash can and pick it up,middle,frames,11456,10659,797,0.930429469273743
+train,pickup,Walk to the trash can and pick it up,middle,valid_anchors,11456,10659,797,0.930429469273743
+train,pickup,Walk to the trash can and pick it up,middle,strict_prompt_stable_anchors,11456,10659,797,0.930429469273743
+train,pickup,Walk to the trash can and pick it up,middle,decision_frame_anchors,0,0,0,
+train,radio,Turn on the radio receiver,early,frames,2053,2053,0,1.0
+train,radio,Turn on the radio receiver,early,valid_anchors,2053,2053,0,1.0
+train,radio,Turn on the radio receiver,early,strict_prompt_stable_anchors,2053,2053,0,1.0
+train,radio,Turn on the radio receiver,early,decision_frame_anchors,629,629,0,1.0
+train,radio,Turn on the radio receiver,late,frames,2063,2063,0,1.0
+train,radio,Turn on the radio receiver,late,valid_anchors,2063,2063,0,1.0
+train,radio,Turn on the radio receiver,late,strict_prompt_stable_anchors,899,899,0,1.0
+train,radio,Turn on the radio receiver,late,decision_frame_anchors,592,592,0,1.0
+train,radio,Turn on the radio receiver,middle,frames,2039,2039,0,1.0
+train,radio,Turn on the radio receiver,middle,valid_anchors,2039,2039,0,1.0
+train,radio,Turn on the radio receiver,middle,strict_prompt_stable_anchors,2019,2019,0,1.0
+train,radio,Turn on the radio receiver,middle,decision_frame_anchors,0,0,0,
+val,pickup,Drop the can into the trash can you are holding,early,frames,519,519,0,1.0
+val,pickup,Drop the can into the trash can you are holding,early,valid_anchors,519,519,0,1.0
+val,pickup,Drop the can into the trash can you are holding,early,strict_prompt_stable_anchors,519,519,0,1.0
+val,pickup,Drop the can into the trash can you are holding,early,decision_frame_anchors,204,204,0,1.0
+val,pickup,Drop the can into the trash can you are holding,late,frames,525,525,0,1.0
+val,pickup,Drop the can into the trash can you are holding,late,valid_anchors,525,525,0,1.0
+val,pickup,Drop the can into the trash can you are holding,late,strict_prompt_stable_anchors,151,151,0,1.0
+val,pickup,Drop the can into the trash can you are holding,late,decision_frame_anchors,192,192,0,1.0
+val,pickup,Drop the can into the trash can you are holding,middle,frames,516,516,0,1.0
+val,pickup,Drop the can into the trash can you are holding,middle,valid_anchors,516,516,0,1.0
+val,pickup,Drop the can into the trash can you are holding,middle,strict_prompt_stable_anchors,506,506,0,1.0
+val,pickup,Drop the can into the trash can you are holding,middle,decision_frame_anchors,0,0,0,
+val,pickup,Pick up the soda can,early,frames,2263,1575,688,0.6959787892178524
+val,pickup,Pick up the soda can,early,valid_anchors,2263,1575,688,0.6959787892178524
+val,pickup,Pick up the soda can,early,strict_prompt_stable_anchors,2263,1575,688,0.6959787892178524
+val,pickup,Pick up the soda can,early,decision_frame_anchors,204,119,85,0.5833333333333334
+val,pickup,Pick up the soda can,late,frames,2269,2269,0,1.0
+val,pickup,Pick up the soda can,late,valid_anchors,2269,2269,0,1.0
+val,pickup,Pick up the soda can,late,strict_prompt_stable_anchors,1885,1885,0,1.0
+val,pickup,Pick up the soda can,late,decision_frame_anchors,192,192,0,1.0
+val,pickup,Pick up the soda can,middle,frames,2260,2210,50,0.9778761061946902
+val,pickup,Pick up the soda can,middle,valid_anchors,2260,2210,50,0.9778761061946902
+val,pickup,Pick up the soda can,middle,strict_prompt_stable_anchors,2260,2210,50,0.9778761061946902
+val,pickup,Pick up the soda can,middle,decision_frame_anchors,0,0,0,
+val,pickup,Put the trash can down,early,frames,127,127,0,1.0
+val,pickup,Put the trash can down,early,valid_anchors,127,127,0,1.0
+val,pickup,Put the trash can down,early,strict_prompt_stable_anchors,127,127,0,1.0
+val,pickup,Put the trash can down,early,decision_frame_anchors,68,68,0,1.0
+val,pickup,Put the trash can down,late,frames,128,128,0,1.0
+val,pickup,Put the trash can down,late,valid_anchors,128,128,0,1.0
+val,pickup,Put the trash can down,late,strict_prompt_stable_anchors,20,20,0,1.0
+val,pickup,Put the trash can down,late,decision_frame_anchors,64,64,0,1.0
+val,pickup,Put the trash can down,middle,frames,126,126,0,1.0
+val,pickup,Put the trash can down,middle,valid_anchors,126,126,0,1.0
+val,pickup,Put the trash can down,middle,strict_prompt_stable_anchors,106,106,0,1.0
+val,pickup,Put the trash can down,middle,decision_frame_anchors,0,0,0,
+val,pickup,Walk to the trash can and pick it up,early,frames,1189,536,653,0.4507989907485282
+val,pickup,Walk to the trash can and pick it up,early,valid_anchors,1189,536,653,0.4507989907485282
+val,pickup,Walk to the trash can and pick it up,early,strict_prompt_stable_anchors,1189,536,653,0.4507989907485282
+val,pickup,Walk to the trash can and pick it up,early,decision_frame_anchors,0,0,0,
+val,pickup,Walk to the trash can and pick it up,late,frames,1191,1191,0,1.0
+val,pickup,Walk to the trash can and pick it up,late,valid_anchors,1191,1191,0,1.0
+val,pickup,Walk to the trash can and pick it up,late,strict_prompt_stable_anchors,1063,1063,0,1.0
+val,pickup,Walk to the trash can and pick it up,late,decision_frame_anchors,64,64,0,1.0
+val,pickup,Walk to the trash can and pick it up,middle,frames,1189,1189,0,1.0
+val,pickup,Walk to the trash can and pick it up,middle,valid_anchors,1189,1189,0,1.0
+val,pickup,Walk to the trash can and pick it up,middle,strict_prompt_stable_anchors,1189,1189,0,1.0
+val,pickup,Walk to the trash can and pick it up,middle,decision_frame_anchors,0,0,0,
+val,radio,Turn on the radio receiver,early,frames,207,207,0,1.0
+val,radio,Turn on the radio receiver,early,valid_anchors,207,207,0,1.0
+val,radio,Turn on the radio receiver,early,strict_prompt_stable_anchors,207,207,0,1.0
+val,radio,Turn on the radio receiver,early,decision_frame_anchors,68,68,0,1.0
+val,radio,Turn on the radio receiver,late,frames,210,210,0,1.0
+val,radio,Turn on the radio receiver,late,valid_anchors,210,210,0,1.0
+val,radio,Turn on the radio receiver,late,strict_prompt_stable_anchors,82,82,0,1.0
+val,radio,Turn on the radio receiver,late,decision_frame_anchors,64,64,0,1.0
+val,radio,Turn on the radio receiver,middle,frames,207,207,0,1.0
+val,radio,Turn on the radio receiver,middle,valid_anchors,207,207,0,1.0
+val,radio,Turn on the radio receiver,middle,strict_prompt_stable_anchors,207,207,0,1.0
+val,radio,Turn on the radio receiver,middle,decision_frame_anchors,0,0,0,

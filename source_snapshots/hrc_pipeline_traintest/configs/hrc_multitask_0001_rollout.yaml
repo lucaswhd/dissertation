@@ -1,0 +1,158 @@
+# ROLLOUT-ONLY config — 闭环评测用，不用于采集。
+#
+# 与 hrc_multitask_0001.yaml 唯一的区别：把四个导航/等待相位的固定步数预算
+# 放宽到专家实测 p90 x1.2。采集配置保持冻结，以便 outputs/hrc_batch_rerun_v1
+# 的 45 条 CLEAN 数据可复现。
+#
+# 依据（45 条 CLEAN 实测，中位/p90 帧数，取两轮较大者）：
+#   go_to_task_steps     90 -> 690    专家 r1 中位 392 / p90 566
+#   return_steps         90 -> 1810   专家 r1 中位 646 / p90 1506
+#   relocate_steps      120 -> 1220   专家    中位 214 / p90 1009
+#   face_human_steps     45 -> 110    专家 r1 中位  51 / p90   88
+#
+# 旧值 return_steps=90 只有专家实际需要的 1/20，机器人 3 秒就被强制切相位，
+# 因此闭环里 ReturnToHuman/GoToTask 的 "未到达" 无法区分是策略不行还是预算不够。
+# ExecuteBehaviorTask 的预算不在本文件，走 --policy-execute-steps。
+#
+# Multi-task HRC: task-0001 (picking_up_trash) base scene + radio from task-0000.
+# Round 0 = Pick up the trash   (replay task-0001, honest real BDDL goal:
+#                                inside(soda_can, ashcan); NO fabricated label.)
+# Round 1 = Turn on the radio   (external replay of task-0000).
+#
+# Why task-0001 replaces task-0026 for Round 1:
+#   - same scene_model (house_double_floor_lower) + same loaded rooms
+#     [corridor, living_room, kitchen] as task-0000 -> radio borrow still valid.
+#   - real goal is a clean single-predicate pick-into-container, not the fictional
+#     "place basket on coffee table" task-0026 was mislabeled with.
+#   - much shorter: first subgoal (first can in ashcan) completes at step ~3048
+#     (ep0010) vs 7352+ for task-0026.
+#
+# !!! SPAWN POINT WARNING (user flagged): the robot now spawns at task-0001's
+#     step-0 pose, which differs from task-0026's. Round 0 GoToTask walks from
+#     that spawn to the radio; go_to_task_steps below is a FIXED step budget, so
+#     if the new spawn is farther from the radio than task-0026 was, 90 steps may
+#     not arrive and settle_to_config will yank the rest. Watch the early log line
+#     "[multitask] GoToTask: [spawn_xy] -> [radio_xy]" and bump go_to_task_steps
+#     if the gap is large.
+raw_hdf5: /root/autodl-tmp/datasets/2025-challenge-rawdata/task-0001/episode_00010010.hdf5
+output_dir: /root/autodl-tmp/outputs/hrc_multitask_0001_test
+
+# Human (Habitat male_0)
+human_usd: /root/hrc_pipeline/assets/character.usda
+human_motion_mode: walk
+human_distance: 1.8
+
+# Rendering / pacing (identical to hrc_multitask_v01.yaml)
+resolution: 256
+fps: 30
+head_camera_pitch_deg: -15
+head_camera_pitch_axis: x
+head_camera_horizontal_aperture: 45.0
+head_camera_phase_pitch:
+  WaitNearHuman:        0
+  ReceiveCommand:       0
+  FaceHuman:            0
+  WaitNextCommand:      0
+  AllTasksDone:         0
+  GoToTask:           -10
+  ReturnToHuman:      -10
+  Relocate:           -10
+  ExecuteBehaviorTask: -25
+  TaskSegmentDone:    -15
+# Gaze transition rate. GoToTask(-10) -> ExecuteBehaviorTask(-25) is a 15° dive;
+# at 1.0°/frame it completes in 0.5s and reads on video as "the robot suddenly
+# rushed to the radio" (ep002 4:49 — the base actually never moved, only the head
+# camera pitched down). Halved to 0.5°/frame -> ~1s dive, visually smooth.
+head_camera_pitch_smooth_deg_per_frame: 0.5
+return_steps: 1810
+go_to_task_steps: 690      # FIXED budget — see SPAWN POINT WARNING above.
+face_human_steps: 110
+wait_steps: 5
+stand_off: 1.5
+relocate_steps: 1220
+
+episode_id: 0
+require_task_success: false
+max_playback_steps: null
+
+# Honest episode: hide nothing. task-0001's manipulated objects (soda cans,
+# ashcan) stay visible.
+hidden_categories: []
+hidden_object_names: []
+
+# Categories that are THIS base task's manipulation targets — excluded from path
+# avoidance so the robot approaches them instead of detouring around them.
+# Matched as lowercase substring; list aliases generously (the scene categories
+# are can_of_soda / trash_can, but BDDL/synset names use soda_can / ashcan).
+avoid_exclude_categories:
+  - can_of_soda
+  - soda_can
+  - trash_can
+  - ashcan
+
+# Radio spawned on the shared living-room coffee table (same fixture/pose as v01;
+# coffee_table_koagbh_0 is a house_double_floor_lower fixture, identical world
+# pose across task instances of this scene).
+extra_objects:
+  - name: radio_89
+    category: radio
+    model: wxnicr
+    position: [3.4642012119293213, 4.886016845703125, 0.533974826335907]
+    orientation: [0.02642742544412613, -0.0009975440334528685, 0.9628932476043701, 0.26858365535736084]
+    in_rooms: [living_room_0]
+
+# === Task-round plan ===
+task_rounds:
+  # Round 0: pick up the trash (replay task-0001 FULL task). Runs FIRST now — the
+  # robot's step-0 spawn IS the trash task's start pose, so GoToTask for this
+  # round is minimal and the episode opens with the manipulation it was loaded
+  # for. (User decision: trash first, then radio.)
+  #
+  # replay_all_segments: true -> replay ALL reward-segments = [0, full_len), so
+  # ALL 3 soda cans get placed in the trash can (rewards at steps 3048/5121/6737),
+  # not just the first one. Auto-derived per source (batch-safe). Includes ~929
+  # trailing frames after the last can (cleanup/idle) — drop later if undesired.
+  #
+  # Honest predicate = the real BDDL goal inside(soda_can, ashcan). Instance
+  # names from the task-0001 scene instance (measured): 3 soda cans + trash can.
+  - kind: replay_segment
+    instruction: "Pick up the soda cans and put them in the trash can."
+    activity_override: picking_up_trash
+    replay_all_segments: true
+    # SUCCESS = ANY can ends up inside the trash can (replay_all places all 3).
+    success_predicate:
+      type: inside
+      objects: [can_of_soda_113, can_of_soda_114, can_of_soda_115]
+      container: trash_can_116
+
+  # Round 1: radio (external replay of task-0000). Now the SECOND round.
+  # NOTE for the batch driver: radio is round index 1 now, so override it with
+  #   --external-hdf5 1:<task-0000 file>   (was 0:... when radio came first).
+  - kind: replay_external_segment
+    instruction: "Turn on the radio receiver that's on the table in the living room."
+    external_hdf5: /root/autodl-tmp/datasets/2025-challenge-rawdata/task-0000/episode_00000010.hdf5
+    episode_id: 0
+    start_step: 0
+    # Before this round the human relocates and the robot follows. Any non-null
+    # value here enables the BANDED navigable-first destination sampler (2026-07-01
+    # plan): dest drawn from trav_map.get_random_point() and classified by A* path
+    # length into short [1.5,3] / medium [3,6] / long [6,9] m bands (band picked
+    # uniformly per episode -> walk-length diversity for training). Hard filters:
+    # outside furniture rects, >=0.35m trav clearance, whole path >=0.7m from the
+    # robot. The old fixed-waypoint value is IGNORED (no fixed fallback — sampler
+    # failure = relocation skipped).
+    # PREDEFINED endpoint(s) (2026-07-07): a point or list of points. The human
+    # relocates to one (picked at random), walking a deterministic A* path at
+    # constant speed (no taper, no wander) so the follow segment is clean. Endpoints
+    # are hand-picked OPEN locations the robot can trail to. (7,3) verified clean
+    # (58h: 5.16m straight, idle 0.6s, gap 1.0-1.56). Diversity comes from the
+    # pair-varying human start x leash dynamics. "banded_random" -> old sampler.
+    # "auto" = per-pair endpoint search (endpoint_search.py): straightest point in
+    # the 3-6m band on the ROBOT body-width erosion, robot pose masked out, then
+    # filtered to the human's own room via the runtime seg_map. A single fixed
+    # point cannot serve spawns spread over 1-7m (too close -> relocate skipped;
+    # too far -> robot falls behind). A point / list of points still works.
+    relocation_dest: auto
+    success_predicate:
+      type: toggled_on
+      object: radio_89

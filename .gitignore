@@ -1,0 +1,33 @@
+# Environments, caches, credentials and local paths
+.venv/
+.analysis-venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+*.pem
+*.key
+.netrc
+.git-credentials
+.vscode/
+# No raw research datasets / weights / videos / manuscript
+*.hdf5
+*.h5
+*.npz
+*.parquet
+*.mp4
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+checkpoints/
+*.docx
+LOCAL_RESOURCE_MANIFEST.csv
+# Third-party rendered imagery retained only in local delivery
+figures/methodology/fig_3_3_task_storyboard.*
+frames/
+# Large source assets / environments are never release inputs
+assets/
+datasets/
+logs/

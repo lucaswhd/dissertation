@@ -1,0 +1,146 @@
+{
+  "by_context": {
+    "follow": {
+      "arm_motion_expert": 0.00022459972114006633,
+      "arm_motion_model": 0.000997087481082417,
+      "arm_motion_ratio": 4.439397680554585,
+      "gripper": {
+        "expert_events": 0,
+        "f1": null,
+        "precision": null,
+        "predicted_events": 0,
+        "recall": null,
+        "sign_accuracy": 1.0,
+        "tolerance_frames": 8,
+        "true_positives": 0
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 0.00022459972114006633,
+          "raw_mae": 0.0011696704653149936,
+          "skill": -4.207800167238659
+        },
+        "base": {
+          "null_mae": 0.20390117039904,
+          "raw_mae": 0.12285192015056964,
+          "skill": 0.3974928152195243
+        },
+        "grippers": {
+          "null_mae": 4.2198551818728446e-06,
+          "raw_mae": 0.014154298775829376,
+          "skill": -3353.2143428598547
+        }
+      },
+      "num_anchors": 200
+    },
+    "pickup": {
+      "arm_motion_expert": 0.020232886140834124,
+      "arm_motion_model": 0.008673765909625217,
+      "arm_motion_ratio": 0.4286964227075728,
+      "gripper": {
+        "expert_events": 14,
+        "f1": 0.42105263157894735,
+        "precision": 0.3333333333333333,
+        "predicted_events": 24,
+        "recall": 0.5714285714285714,
+        "sign_accuracy": 0.9728125,
+        "tolerance_frames": 8,
+        "true_positives": 8
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 0.020232886140834124,
+          "raw_mae": 0.019684937867859843,
+          "skill": 0.0270820618057257
+        },
+        "base": {
+          "null_mae": 0.06913552904622308,
+          "raw_mae": 0.044543162221089005,
+          "skill": 0.355712426944646
+        },
+        "grippers": {
+          "null_mae": 0.041095505929552016,
+          "raw_mae": 0.06931871894747019,
+          "skill": -0.6867712753384718
+        }
+      },
+      "num_anchors": 200
+    },
+    "radio": {
+      "arm_motion_expert": 0.014372189354762668,
+      "arm_motion_model": 0.010840113568119704,
+      "arm_motion_ratio": 0.7542423287463506,
+      "gripper": {
+        "expert_events": 9,
+        "f1": 0.4,
+        "precision": 0.3125,
+        "predicted_events": 16,
+        "recall": 0.5555555555555556,
+        "sign_accuracy": 0.978828125,
+        "tolerance_frames": 8,
+        "true_positives": 5
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 0.014372189354762668,
+          "raw_mae": 0.019033871783176438,
+          "skill": -0.32435437032903947
+        },
+        "base": {
+          "null_mae": 0.06395881954142152,
+          "raw_mae": 0.04190317814412992,
+          "skill": 0.34484128311667395
+        },
+        "grippers": {
+          "null_mae": 0.020322539140470327,
+          "raw_mae": 0.06380677844863385,
+          "skill": -2.139705034277383
+        }
+      },
+      "num_anchors": 200
+    },
+    "wait": {
+      "arm_motion_expert": 1.489085887512304e-05,
+      "arm_motion_model": 0.000990682751692545,
+      "arm_motion_ratio": 66.52959107332613,
+      "gripper": {
+        "expert_events": 0,
+        "f1": null,
+        "precision": null,
+        "predicted_events": 0,
+        "recall": null,
+        "sign_accuracy": 1.0,
+        "tolerance_frames": 8,
+        "true_positives": 0
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 1.489085887512304e-05,
+          "raw_mae": 0.000990019605244295,
+          "skill": -65.48505727888141
+        },
+        "base": {
+          "null_mae": 0.0,
+          "raw_mae": 0.026773309021686707,
+          "skill": null
+        },
+        "grippers": {
+          "null_mae": 0.0,
+          "raw_mae": 0.00957675577284625,
+          "skill": null
+        }
+      },
+      "num_anchors": 52
+    }
+  },
+  "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_c_qnorm_20k/c_qnorm_seed42/20000",
+  "completed_at_utc": "2026-09-07T11:17:30.449888+00:00",
+  "config": "pi05_hrc_c_qnorm_20k",
+  "dataset_version": "hrc_subinstr_rerun_v1",
+  "flow_seed": 4,
+  "manifest_sha256": "d5553026605163a74820a865db80e90e81249d3fcceba9cb19655a43fa2bd6a8",
+  "model": "C20",
+  "num_anchors": 652,
+  "schema_version": 1,
+  "started_at_utc": "2026-09-07T11:08:27.937141+00:00"
+}

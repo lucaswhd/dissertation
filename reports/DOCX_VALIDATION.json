@@ -1,0 +1,12 @@
+{
+  "input_sha256": "ac144124d11b5bb4343b66a4cc29c5181abcb47167f29a9df0175a2cde0965ad",
+  "output_sha256": "9c5a52b1b7e9b7381500d5650fae945d44458a814f5cfdcb6b93b236d63fadf8",
+  "tables": 18,
+  "figures_added": 4,
+  "core_figures_total": 8,
+  "numbered_figures_including_appendix": 9,
+  "original_preserved": true,
+  "paper_size": "A4 (original v6 was US Letter)",
+  "page_render_verified": false,
+  "required_final_check": "Open in Microsoft Word, update all fields, then inspect pagination and export PDF."
+}

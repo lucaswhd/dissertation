@@ -1,0 +1,196 @@
+{
+  "source_plan": "/root/autodl-tmp/lerobot_datasets/hrc_pi05_continuous_rerun_v1/manifest.json",
+  "num_sources": 45,
+  "timeout_percentile": 90.0,
+  "timeout_scale": 1.0,
+  "min_percentile": 10.0,
+  "advance_rule": "advance when frames_in_segment >= advance_frames, or earlier when the policy's own gripper command performs `ends_with` and frames_in_segment >= min_frames",
+  "rounds": {
+    "0": [
+      {
+        "index": 0,
+        "label": "Walk to the trash can and pick it up.",
+        "ends_with": "Rclose",
+        "median_frames": 880,
+        "advance_frames": 1230,
+        "min_frames": 603,
+        "observed": {
+          "n": 45,
+          "p10": 603,
+          "p90": 1230,
+          "max": 1479
+        }
+      },
+      {
+        "index": 1,
+        "label": "Pick up the soda can.",
+        "ends_with": "Lclose",
+        "median_frames": 992,
+        "advance_frames": 1469,
+        "min_frames": 657,
+        "observed": {
+          "n": 45,
+          "p10": 657,
+          "p90": 1469,
+          "max": 1974
+        }
+      },
+      {
+        "index": 2,
+        "label": "Drop the can into the trash can you are holding.",
+        "ends_with": "Lopen",
+        "median_frames": 182,
+        "advance_frames": 286,
+        "min_frames": 138,
+        "observed": {
+          "n": 45,
+          "p10": 138,
+          "p90": 286,
+          "max": 332
+        }
+      },
+      {
+        "index": 3,
+        "label": "Pick up the soda can.",
+        "ends_with": "Lclose",
+        "median_frames": 599,
+        "advance_frames": 939,
+        "min_frames": 332,
+        "observed": {
+          "n": 45,
+          "p10": 332,
+          "p90": 939,
+          "max": 1409
+        }
+      },
+      {
+        "index": 4,
+        "label": "Drop the can into the trash can you are holding.",
+        "ends_with": "Lopen",
+        "median_frames": 201,
+        "advance_frames": 282,
+        "min_frames": 150,
+        "observed": {
+          "n": 45,
+          "p10": 150,
+          "p90": 281,
+          "max": 368
+        }
+      },
+      {
+        "index": 5,
+        "label": "Pick up the soda can.",
+        "ends_with": "Lclose",
+        "median_frames": 517,
+        "advance_frames": 895,
+        "min_frames": 311,
+        "observed": {
+          "n": 45,
+          "p10": 311,
+          "p90": 895,
+          "max": 1189
+        }
+      },
+      {
+        "index": 6,
+        "label": "Drop the can into the trash can you are holding.",
+        "ends_with": "Lopen",
+        "median_frames": 182,
+        "advance_frames": 312,
+        "min_frames": 140,
+        "observed": {
+          "n": 45,
+          "p10": 140,
+          "p90": 312,
+          "max": 379
+        }
+      },
+      {
+        "index": 7,
+        "label": "Put the trash can down.",
+        "ends_with": "Ropen",
+        "median_frames": 240,
+        "advance_frames": 338,
+        "min_frames": 127,
+        "observed": {
+          "n": 45,
+          "p10": 127,
+          "p90": 337,
+          "max": 533
+        }
+      },
+      {
+        "index": 8,
+        "label": "The trash is cleaned up. Stand by.",
+        "ends_with": null,
+        "median_frames": 397,
+        "advance_frames": 532,
+        "min_frames": 270,
+        "observed": {
+          "n": 45,
+          "p10": 270,
+          "p90": 531,
+          "max": 784
+        }
+      }
+    ],
+    "1": [
+      {
+        "index": 0,
+        "label": "Walk to the trash can and pick it up.",
+        "ends_with": "Rclose",
+        "median_frames": 1429,
+        "advance_frames": 1856,
+        "min_frames": 976,
+        "observed": {
+          "n": 45,
+          "p10": 976,
+          "p90": 1856,
+          "max": 2321
+        }
+      },
+      {
+        "index": 1,
+        "label": "Turn on the radio receiver.",
+        "ends_with": "Lclose",
+        "median_frames": 146,
+        "advance_frames": 255,
+        "min_frames": 90,
+        "observed": {
+          "n": 45,
+          "p10": 90,
+          "p90": 255,
+          "max": 372
+        }
+      },
+      {
+        "index": 2,
+        "label": "Put the trash can down.",
+        "ends_with": "Ropen",
+        "median_frames": 342,
+        "advance_frames": 477,
+        "min_frames": 262,
+        "observed": {
+          "n": 45,
+          "p10": 262,
+          "p90": 477,
+          "max": 701
+        }
+      },
+      {
+        "index": 3,
+        "label": "The radio is on. Stand by.",
+        "ends_with": null,
+        "median_frames": 324,
+        "advance_frames": 477,
+        "min_frames": 157,
+        "observed": {
+          "n": 45,
+          "p10": 157,
+          "p90": 477,
+          "max": 548
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+dataset_name: HRC-1K-v0
+output_root: outputs/hrc_dataset
+human_usd: "/path/to/external_project/asset_pipeline/b1k_pipeline/tools/HumanFemale/HumanFemale.usd"
+resolution: 256
+fps: 30
+wait_steps: 20
+command_steps: 10
+return_steps: 30
+human_distance: 1.8
+stand_off: 1.0
+
+schema:
+  videos:
+    - head_rgb.mp4
+    - third_person_rgb.mp4
+  annotations:
+    - commands.json
+  meta:
+    - episode_meta.json
+    - collector_config.json
+  data:
+    - hrc_data.npz
+    - frame_log.json
+
+episode_template:
+  rounds:
+    - wait_near_human
+    - receive_command
+    - execute_behavior_task
+    - return_to_human
+    - wait_next_command
+  command_source: docs/challenge/task_data.json
+  execution_source: datasets/2025-challenge-rawdata
+  human_motion_mode: static
+  third_view_mode: viewer_camera_track
+
+episodes:
+  - episode_name: assembling_gift_baskets_round1
+    raw_hdf5: /path/to/external_project/datasets/2025-challenge-rawdata/task-0026/episode_00260010.hdf5
+    activity: assembling_gift_baskets
+    instruction: "Place one candle, one butter cookie, one piece of Swiss cheese, and one bow from the table into each of the four wicker baskets on the floor in the living room."
+  # - episode_name: picking_up_trash_round1
+  #   raw_hdf5: /path/to/external_project/datasets/2025-challenge-rawdata/task-0002/episode_00020000.hdf5
+  #   activity: picking_up_trash
+  #   NOTE: commented out — this HDF5 file does not exist yet

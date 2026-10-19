@@ -1,0 +1,112 @@
+# Combo D — 厨房·热狗+培根 (house_single_floor / kitchen)
+# Round 0 = Cook hot dogs   (replay task-0045, external)
+# Round 1 = Cook bacon      (replay task-0046 segment 0, base)
+#
+# 物体重叠度探测 (scene_file objects 对比, 2026-05-29):
+#   task-0045 (hot_dogs): 260 objects
+#   task-0046 (bacon):    266 objects
+#   共享: 258  |  0045 独有: 2 (hotdog_207, hotdog_208)  |  0046 独有: 8
+# → external 仅 2 个独有物体 (两根热狗), 是 5 组合里最干净的配对。
+raw_hdf5: /root/autodl-tmp/datasets/2025-challenge-rawdata/task-0046/episode_00460010.hdf5
+output_dir: /root/autodl-tmp/outputs/hrc_combo_D
+
+# Human (Habitat male_0) — 与组合 A 共用同一资源
+human_usd: /root/hrc_pipeline/assets/character.usda
+human_motion_mode: walk
+human_distance: 1.8
+# Human spawn placement (ARCHITECTURE.md §14 — general collision-free spawn).
+# Kitchen (house_single_floor) is narrow; the legacy 2-D placement (and even a
+# hand-probed "navigable" anchor) clipped the human into a counter / the wall
+# behind the microwave, because the trav_map only checks the FLOOR, not the
+# human's 1.8 m body volume or overhanging appliances.
+#   - human_spawn_collision_free: true → a deterministic candidate search around
+#     the robot, validated against every scene object's 3-D AABB + a footprint-
+#     disc navigability test, auto-picks a clear spot. No per-scene anchor needed
+#     (this is the reusable fix for ALL current & future scenes).
+#   - human_spawn_jitter: reproducible per-episode perturbation (seed=episode_id)
+#     for cross-episode diversity; every jittered candidate is still validated.
+#   - human_spawn (anchor) / human_spawn_search are OPTIONAL hints/overrides; the
+#     defaults work here, so we set neither.
+human_spawn_collision_free: true
+human_spawn_jitter: {xy_m: 0.3, yaw_deg: 15}
+
+# Rendering / pacing — 直接抄 hrc_multitask_v01.yaml 验证过的值
+resolution: 256
+fps: 30
+head_camera_pitch_deg: -15
+head_camera_pitch_axis: x
+head_camera_horizontal_aperture: 45.0
+head_camera_phase_pitch:
+  WaitNearHuman:        0
+  ReceiveCommand:       0
+  FaceHuman:            0
+  WaitNextCommand:      0
+  AllTasksDone:         0
+  GoToTask:           -10
+  ReturnToHuman:      -10
+  Relocate:           -10
+  ExecuteBehaviorTask: -25
+  TaskSegmentDone:    -15
+head_camera_pitch_smooth_deg_per_frame: 1.0
+return_steps: 90
+go_to_task_steps: 90
+face_human_steps: 45
+wait_steps: 5
+stand_off: 1.0
+relocate_steps: 120
+# Between-round human relocation (ARCHITECTURE.md §16): keep it nearby so the
+# human stays in the kitchen / in view instead of trekking across the house.
+# The walk is wall-validated regardless; this just bounds the distance. A radius
+# sweep (diag_validate_fix.py) found the nearest furniture-clear + reachable +
+# wall-clear-path spot around the spawn is 2.61 m (the spawn area is hemmed in by
+# counters/table/chairs), so 2.5 m left nothing → 3.0 m enables a short, in-kitchen
+# move; if the search still finds nothing it safely stays put (never clips).
+relocate_max_dist: 3.0
+relocate_toward_staircase: false
+
+episode_id: 0
+require_task_success: false
+max_playback_steps: null
+
+# === Extra objects spawned on top of task-0046's (bacon) scene ===
+# task-0045 (hot_dogs) 相对 task-0046 仅 2 个独有可交互物体: 两根热狗。
+# 它们不在 task-0046 录制 state 里, 故 UUID 在 load_state(serialized=True)
+# 时被跳过, 保持下面的 spawn 位姿。名字必须与 task-0045 录制完全一致 (决定 UUID),
+# 这样 Round 0 回放 task-0045 时录制的抓取动作能落到正确的对象上。
+# Pose 从 task-0045 录制 state.registry.object_registry[name].root_link 读出。
+extra_objects:
+  - name: hotdog_207
+    category: hotdog
+    model: lsajfg
+    position: [7.66189432144165, -1.849505066871643, 0.9138544201850891]
+    orientation: [-0.02867845445871353, -0.02332809753715992, 0.8516595363616943, 0.5227900147438049]
+    in_rooms: [kitchen_0]
+  - name: hotdog_208
+    category: hotdog
+    model: lsajfg
+    position: [7.942324161529541, -1.8063545227050781, 0.5017811059951782]
+    orientation: [-0.04011690616607666, -0.0042348760180175304, 0.8425171971321106, 0.5371570587158203]
+    in_rooms: [kitchen_0]
+
+# === Task-round plan ===
+task_rounds:
+  # Round 0: REAL replay of task-0045 (cook_hot_dogs).
+  # 合并场景 (task-0046 base + spawned 两根热狗) 覆盖了 task-0045 录制引用的全部
+  # 260 个对象, 故可完整回放。task-0045 reward 在 step 6752 (~结尾) 才 spike,
+  # 因此回放全部 6805 步, 让机器人走完完整自然动作序列。
+  - kind: replay_external_segment
+    instruction: "Take the two hot dogs out of the refrigerator in the kitchen and cook them in the microwave until both are cooked."
+    external_hdf5: /root/autodl-tmp/datasets/2025-challenge-rawdata/task-0045/episode_00450010.hdf5
+    episode_id: 0
+    start_step: 0
+
+  # Round 1: replay task-0046 (cook_bacon) — FULL task.
+  # task-0046: reward spikes @4508 (1st sub-goal) then @8392 (terminated, 6/7),
+  # recording length 8485. We replay the WHOLE recording (replay_all_segments)
+  # so the bacon is cooked to completion before the robot returns to the human,
+  # instead of cutting off at the first sub-goal (the old end_step:4520).
+  - kind: replay_segment
+    instruction: "Take the tray of bacon out of the refrigerator and cook it in the frying pan on the stove."
+    activity_override: cook_bacon
+    segment_index: 0
+    replay_all_segments: true

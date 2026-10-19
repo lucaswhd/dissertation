@@ -1,0 +1,146 @@
+{
+  "by_context": {
+    "follow": {
+      "arm_motion_expert": 0.00022459972114006633,
+      "arm_motion_model": 0.0007035513920709491,
+      "arm_motion_ratio": 3.132467789807254,
+      "gripper": {
+        "expert_events": 0,
+        "f1": null,
+        "precision": null,
+        "predicted_events": 0,
+        "recall": null,
+        "sign_accuracy": 1.0,
+        "tolerance_frames": 8,
+        "true_positives": 0
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 0.00022459972114006633,
+          "raw_mae": 0.0008791109845333267,
+          "skill": -2.9141232236218575
+        },
+        "base": {
+          "null_mae": 0.20390117039904,
+          "raw_mae": 0.1276281742565334,
+          "skill": 0.37406845675892064
+        },
+        "grippers": {
+          "null_mae": 4.2198551818728446e-06,
+          "raw_mae": 0.02423586114309728,
+          "skill": -5742.292150689633
+        }
+      },
+      "num_anchors": 200
+    },
+    "pickup": {
+      "arm_motion_expert": 0.020232886140834124,
+      "arm_motion_model": 0.008171764389262535,
+      "arm_motion_ratio": 0.403885255538024,
+      "gripper": {
+        "expert_events": 14,
+        "f1": 0.17391304347826086,
+        "precision": 0.2222222222222222,
+        "predicted_events": 9,
+        "recall": 0.14285714285714285,
+        "sign_accuracy": 0.978046875,
+        "tolerance_frames": 8,
+        "true_positives": 2
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 0.020232886140834124,
+          "raw_mae": 0.01994673988869181,
+          "skill": 0.014142631463971544
+        },
+        "base": {
+          "null_mae": 0.06913552904622308,
+          "raw_mae": 0.04682230304752011,
+          "skill": 0.32274615247081784
+        },
+        "grippers": {
+          "null_mae": 0.041095505929552016,
+          "raw_mae": 0.07706613851711154,
+          "skill": -0.8752935819605723
+        }
+      },
+      "num_anchors": 200
+    },
+    "radio": {
+      "arm_motion_expert": 0.014372189354762668,
+      "arm_motion_model": 0.0076340454458841125,
+      "arm_motion_ratio": 0.5311678866347761,
+      "gripper": {
+        "expert_events": 9,
+        "f1": 0.0,
+        "precision": 0.0,
+        "predicted_events": 7,
+        "recall": 0.0,
+        "sign_accuracy": 0.986015625,
+        "tolerance_frames": 8,
+        "true_positives": 0
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 0.014372189354762668,
+          "raw_mae": 0.017080464978207602,
+          "skill": -0.18843862661379873
+        },
+        "base": {
+          "null_mae": 0.06395881954142152,
+          "raw_mae": 0.042556859189644455,
+          "skill": 0.334620940555611
+        },
+        "grippers": {
+          "null_mae": 0.020322539140470327,
+          "raw_mae": 0.06593735186383128,
+          "skill": -2.2445429878653087
+        }
+      },
+      "num_anchors": 200
+    },
+    "wait": {
+      "arm_motion_expert": 1.489085887512304e-05,
+      "arm_motion_model": 0.0009895520902668627,
+      "arm_motion_ratio": 66.4536611733006,
+      "gripper": {
+        "expert_events": 0,
+        "f1": null,
+        "precision": null,
+        "predicted_events": 0,
+        "recall": null,
+        "sign_accuracy": 1.0,
+        "tolerance_frames": 8,
+        "true_positives": 0
+      },
+      "groups": {
+        "arms": {
+          "null_mae": 1.489085887512304e-05,
+          "raw_mae": 0.0009905920607987074,
+          "skill": -65.5235006997219
+        },
+        "base": {
+          "null_mae": 0.0,
+          "raw_mae": 0.03196573514679375,
+          "skill": null
+        },
+        "grippers": {
+          "null_mae": 0.0,
+          "raw_mae": 0.021022779437211845,
+          "skill": null
+        }
+      },
+      "num_anchors": 52
+    }
+  },
+  "checkpoint": "/root/autodl-tmp/openpi_hrc/checkpoints/pi05_hrc_e6_rerun_20k/hrc_e6_rerun_seed42/20000",
+  "completed_at_utc": "2026-09-07T10:57:55.728776+00:00",
+  "config": "pi05_hrc_e6_rerun_20k",
+  "dataset_version": "hrc_pi05_continuous_rerun_v1",
+  "flow_seed": 2,
+  "manifest_sha256": "d5553026605163a74820a865db80e90e81249d3fcceba9cb19655a43fa2bd6a8",
+  "model": "A20",
+  "num_anchors": 652,
+  "schema_version": 1,
+  "started_at_utc": "2026-09-07T10:57:54.172835+00:00"
+}

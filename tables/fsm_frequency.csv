@@ -1,0 +1,11 @@
+state_id,state,frames
+0,WaitNearHuman,2475
+1,ReceiveCommand,450
+2,GoToTask,23478
+3,ExecuteBehaviorTask,298392
+4,TaskSegmentDone,1350
+5,ReturnToHuman,63324
+6,FaceHuman,1517
+7,WaitNextCommand,225
+8,AllTasksDone,225
+9,Relocate,18234

@@ -1,0 +1,22 @@
+diff --git a/OmniGibson/omnigibson/envs/data_wrapper.py b/OmniGibson/omnigibson/envs/data_wrapper.py
+index 991591081..c86f72394 100644
+--- a/OmniGibson/omnigibson/envs/data_wrapper.py
++++ b/OmniGibson/omnigibson/envs/data_wrapper.py
+@@ -755,7 +755,7 @@ class DataPlaybackWrapper(DataWrapper):
+         if flush_every_n_steps > 0:
+             assert flush_every_n_traj == 1, "flush_every_n_traj must be 1 if flush_every_n_steps is greater than 0"
+         # Read from the HDF5 file
+-        f = h5py.File(input_path, "r")
++        f = h5py.File(input_path, "r+")
+         config = json.loads(f["data"].attrs["config"])
+ 
+         # Hot swap in additional info for playing back data
+@@ -894,7 +894,7 @@ class DataPlaybackWrapper(DataWrapper):
+             macros.utils.registry_utils.STABILIZE_SKIPPED_OBJECTS = True
+ 
+         # Store scene file so we can restore the data upon each episode reset
+-        self.input_hdf5 = h5py.File(input_path, "r")
++        self.input_hdf5 = h5py.File(input_path, "r+")
+         self.scene_file = json.loads(self.input_hdf5["data"].attrs["scene_file"])
+         assert not (
+             load_room_instances and not full_scene_file

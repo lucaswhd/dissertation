@@ -1,0 +1,47 @@
+raw_hdf5: /path/to/external_project/datasets/2025-challenge-rawdata/task-0026/episode_00260010.hdf5
+output_dir: /path/to/external_project/outputs/hrc_v01_static
+# Construction worker (Isaac Sim) — replaced by Habitat humanoid
+# human_usd: http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/2022.2.1/Isaac/People/Characters/original_male_adult_construction_03/male_adult_construction_03.usd
+human_usd: /path/to/external_project/outputs/external/converted_humans/b962bca9544d/character.usda
+# Kit-converted USD has metersPerUnit=0.01 (cm); code auto-scales by mpu (0.01).
+# No manual human_scale needed — KinematicHumanoidActor reads mpu from USD.
+
+# v0.1 fixed scope
+human_motion_mode: walk
+episode_id: 0
+
+# Rendering and return behavior
+resolution: 256
+fps: 30
+return_steps: 300
+human_distance: 1.8
+stand_off: 1.0
+
+# Keep false for stability in v0.1 replay baseline
+require_task_success: false
+
+# Optional smoke-test shortcut (disabled by default).
+max_playback_steps: null
+
+# --- Optional: declarative human trajectory (per-phase) ---
+# Uncomment and edit to drive the human along a scripted path. Each pair of
+# consecutive waypoints is A*-expanded against the scene trav_map when
+# `expand_with_astar: true`, so intermediate points hug the navmesh.
+# human:
+#   phase_motion:
+#     ExecuteBehaviorTask:
+#       mode: waypoint_loop           # waypoint_once | waypoint_loop | hold
+#       face_robot: false
+#       speed: 0.6                    # m/s (nominal)
+#       distance_multiplier: 1.0      # global speed knob
+#       turning_step_amount_deg: 20.0 # max yaw change per frame
+#       min_angle_turn_deg: 5.0       # deadzone below which yaw snaps
+#       dist_thresh: 0.15             # arrival: position (m)
+#       turn_thresh_deg: 10.0         # arrival: heading (deg)
+#       expand_with_astar: true       # A* between consecutive waypoints
+#       loop: true
+#       waypoints:                    # world-frame [x, y, z]
+#         - [2.0, 1.0, 0.0]
+#         - [4.0, 1.0, 0.0]
+#         - [4.0, 3.0, 0.0]
+#         - [2.0, 3.0, 0.0]

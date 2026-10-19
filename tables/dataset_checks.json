@@ -1,0 +1,31 @@
+{
+  "sources": 45,
+  "frames": 409670,
+  "seconds": 13655.666666666666,
+  "split": [
+    {
+      "split": "train",
+      "sources": 37,
+      "frames": 341269
+    },
+    {
+      "split": "val",
+      "sources": 4,
+      "frames": 31084
+    },
+    {
+      "split": "test",
+      "sources": 4,
+      "frames": 37317
+    }
+  ],
+  "qc": {
+    "CLEAN": 45,
+    "REJECT": 19,
+    "TRIM": 1
+  },
+  "numeric_values_checked": 50799080,
+  "issues": [],
+  "video_metadata_matches": 45,
+  "method": "All 45 retained HDF5 files; numeric datasets scanned in chunks of 2048 rows; ffprobe container metadata (not full per-frame decoding)."
+}
