@@ -36,7 +36,7 @@ PDF：`/root/dissertation_v8_delivery/NTU_Dissertation_Reviewed_v8_review.pdf`�
 全部数值来自已有记录或本轮真实派生统计；没有生成仿真证据、训练或成功率。保留scripted FSM、upstream replay、Execute内低层policy的贡献边界。五seed是推理噪声，A/B与B/C均非单因素实验；teacher forcing和历史closed-loop分开。学校具体声明措辞未擅造，未代签。
 
 ## F. GitHub Sync
-目标私有仓库https://github.com/lucaswhd/dissertation，开始时已fetch且main与9c2cf27一致。上传非视频图、代码、CSV/JSON、README、映射与报告；完整Word/PDF、真实帧和逐页预览仅本地（第三方渲染再分发许可未明确）。内容已准备，push尚待执行；完成后本生成器会读取V8_PUSH_VERIFICATION.json写入实际核验。
+目标私有仓库https://github.com/lucaswhd/dissertation，开始时已fetch且main与9c2cf27一致。上传非视频图、代码、CSV/JSON、README、映射与报告；完整Word/PDF、真实帧和逐页预览仅本地（第三方渲染再分发许可未明确）。**Pass**：branch `main`；内容提交 `16a68ad5ff2a112920f26882d9d8b85918815e9c`。GitHub API确认Private，fresh fetch后的远程tree与本地一致，全部373个文件逐一SHA256一致；无受禁资产。该回执验证内容提交；最终补记报告的HEAD另见本地V8_RELEASE_RECEIPT.json。更新文件的完整列表及hash见V8_PUSH_VERIFICATION.json。
 
 ## G. Remaining NTU Submission Actions
 1. **Pending official template verification**：已取得真实25Nov2025公开NTU模板，尚未查实July2026后EEE适用版本；由学校/作者核对，保留真实AI披露并补确知的工具版本。

@@ -458,8 +458,8 @@
     },
     {
       "path": "reports/V8_FINAL_DELIVERY_REPORT.md",
-      "bytes": 4921,
-      "sha256": "59979b38a2b96a4a70beba5b6c8619c02d1c05992105c7475fbf3663acbe2da0"
+      "bytes": 5179,
+      "sha256": "426442bc27405b92412fe849190aa12a2974ff11bf4cc38a203bddabf5440aca"
     },
     {
       "path": "reports/V8_FRUSTUM_FIGURE.md",
@@ -485,6 +485,11 @@
       "path": "reports/V8_PDF_QA.json",
       "bytes": 22544,
       "sha256": "c457cb697e48a35033cedc84b83775faf1bf1e1d1822eeea1b241d97fd7c4a19"
+    },
+    {
+      "path": "reports/V8_PUSH_VERIFICATION.json",
+      "bytes": 97760,
+      "sha256": "a3a5009d48bbb5c8d24127dd964152ddc607c5b8696630486cb3efbd116ff2a1"
     },
     {
       "path": "reports/V8_RENDER_METADATA.json",
