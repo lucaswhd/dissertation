@@ -1,0 +1,5 @@
+segment,valid_anchors,in_frustum,ratio
+Walk to / acquire trash can,3569,2916,0.8170355841972541
+Pick up soda can,6792,6054,0.8913427561837456
+Deposit can,1560,1560,1.0
+Put trash can down,381,381,1.0

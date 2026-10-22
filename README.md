@@ -88,7 +88,7 @@ python tools/plotting/build_tables.py --data-root /path/to/local-data-root
 python tools/plotting/update_dissertation.py --input /path/to/original.docx --output /path/to/separate-v7.docx
 ```
 
-The Word script targets the supplied 836-paragraph v6 manuscript. It preserves the input, restores 18 native tables, adds three methodology/dataset figures plus an appendix training figure, sets A4, and replaces stale front-matter indexes with updateable Word fields. Other manuscript revisions require adapting the anchors. Word/LibreOffice pagination was not rendered on this server: update fields and review pagination in Word before exporting a submission PDF.
+The Word script targets the supplied 836-paragraph v6 manuscript. It preserves the input, restores 18 native tables, adds three methodology/dataset figures plus an appendix training figure, sets A4, and replaces stale front-matter indexes with updateable Word fields. Other manuscript revisions require adapting the anchors. This describes the historical v7 build. The v8 revision below supplies an actual LibreOffice-rendered and reviewed PDF; the original v7 receipt is preserved.
 
 The task storyboard remains a local output and will be recreated only when videos are available. Use [figure plan](reports/FIGURE_IMPROVEMENT_PLAN.md), [figure traceability](reports/FIGURE_TRACEABILITY.md) and `tables/figure_to_thesis_mapping.json` for captions and exact insertion anchors.
 
@@ -109,6 +109,35 @@ The task storyboard remains a local output and will be recreated only when video
 
 Local source snapshots preserve original notices. OmniGibson/BEHAVIOR replay, robot/environment capabilities, OpenPI and pretrained π0.5 components are upstream contributions. Project contributions concern HRC orchestration/integration, dataset construction/annotation, protocol construction and diagnostic evaluation. Human participants were not newly recruited for these simulated HRC executions; the virtual human is scripted, while upstream manipulation demonstrations originated from teleoperation.
 
-No full model training, inference or simulator rollout was rerun. Missing B/C weights, inherited B manifest counts, unresolved asset redistribution scope and unrendered final Word pagination are recorded, rather than silently treated as solved. Citation metadata for a public dataset/repository release has not been minted; use the actual dissertation bibliographic record and upstream project citations when available.
+No full model training, inference or simulator rollout was rerun. Missing B/C weights, inherited B manifest counts, unresolved asset redistribution scope and Microsoft Word cross-engine pagination differences are recorded, rather than silently treated as solved. Citation metadata for a public dataset/repository release has not been minted; use the actual dissertation bibliographic record and upstream project citations when available.
 
 Start with the [Chinese final release report](reports/FINAL_RELEASE_REPORT.md).
+
+
+## Dissertation v8 revision
+
+The v8 local manuscript has11 figures,18 unchanged native tables and12 restored native Word equations. Image line spacing, figure/caption pagination, indexes, table breaks and chapter page numbering were repaired. A real78-page review PDF was rendered with LibreOffice Writer **and Math**, then all pages were reviewed. See [v8 delivery report](reports/V8_FINAL_DELIVERY_REPORT.md), [visual QA](reports/V8_VISUAL_QA.md) and [traceability](reports/V8_FIGURE_TRACEABILITY.md).
+
+Reproduce the safe new/revised graphics from included evidence:
+
+```bash
+python tools/plotting/generate_v8_methodology.py
+python tools/plotting/generate_v8_evidence.py --from-tables
+python tools/plotting/generate_v8_frustum.py
+```
+
+Figure3.6 uses real segment, per-source action and valid-mask statistics. The event profile is Figure5.3 in the manuscript, followed by conditioning Figure5.4, to follow first appearance; its asset stem retains the requested5.4. Error bars represent five inference-noise seeds, not training seeds. Figure5.1 is redrawn from exactly the archived validation counts.
+
+The local-only v7 manuscript and six verified frames are needed for Word rebuilding:
+
+```bash
+python tools/plotting/generate_v8_storyboard.py --frames /path/to/verified/frames
+python tools/plotting/update_dissertation_v8.py --input /path/to/v7.docx --output /path/to/v8_source.docx --event-number 5.3
+/usr/bin/python3 tools/plotting/render_v8_document.py --input /path/to/v8_source.docx --pdf /path/to/v8_review.pdf --updated-docx /path/to/v8_editable.docx
+python tools/plotting/validate_v8_docx.py /path/to/v8_editable.docx --expect-pass
+OMP_NUM_THREADS=1 /usr/bin/python3 tools/plotting/qa_v8_pdf.py --pdf /path/to/v8_review.pdf --out /path/to/private-qa
+```
+
+Analysis uses Python3.12, matplotlib, numpy, Pillow, h5py and python-docx1.2/lxml; rendering uses system Python3.10, python3-uno, python3-fitz, python3-pil, LibreOffice Writer+Math7.3.7.2, Poppler and Liberation/DejaVu/STIX fonts. These are observed versions, not a simulator lockfile. No training environment was changed. The Math component is required: omitting it can silently blank native equations in exported PDF.
+
+Full DOCX/PDF, real simulation frames, all-page previews and the detailed v7 diff stay in the controlled local delivery because upstream scene/human-render redistribution permission is unconfirmed. The private repository contains safe numerical/diagram assets, code, metadata and reports. The exact latest applicable EEE declaration remains **Pending official template verification**; real AI disclosure and unsigned placeholders are preserved.

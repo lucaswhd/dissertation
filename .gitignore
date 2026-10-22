@@ -31,3 +31,10 @@ frames/
 assets/
 datasets/
 logs/
+
+# v8 storyboard also embeds restricted simulation frames
+figures/methodology/v8_fig_3_3_task_storyboard.*
+
+# Full rendered manuscript and renderer profiles remain private local outputs
+manuscript/*.pdf
+.lo_v8_profile/

@@ -1,0 +1,496 @@
+source_id,split,round_id,segment_index,label,start_frame,stop_frame_exclusive,duration_frames,duration_seconds,fps
+0,val,0,0,Walk to the trash can and pick it up.,201,1008,807,26.9,30
+0,val,0,1,Pick up the soda can.,1008,1582,574,19.133333333333333,30
+0,val,0,2,Drop the can into the trash can you are holding.,1582,1703,121,4.033333333333333,30
+0,val,0,3,Pick up the soda can.,1703,2029,326,10.866666666666667,30
+0,val,0,4,Drop the can into the trash can you are holding.,2029,2128,99,3.3,30
+0,val,0,5,Pick up the soda can.,2128,2416,288,9.6,30
+0,val,0,6,Drop the can into the trash can you are holding.,2416,2503,87,2.9,30
+0,val,0,7,Put the trash can down.,2503,2553,50,1.6666666666666667,30
+0,val,1,0,Walk to the trash can and pick it up.,3227,4321,1094,36.46666666666667,30
+0,val,1,1,Turn on the radio receiver.,4321,4448,127,4.233333333333333,30
+0,val,1,2,Put the trash can down.,4448,4824,376,12.533333333333333,30
+2,val,0,0,Walk to the trash can and pick it up.,245,1029,784,26.133333333333333,30
+2,val,0,1,Pick up the soda can.,1029,1475,446,14.866666666666667,30
+2,val,0,2,Drop the can into the trash can you are holding.,1475,1580,105,3.5,30
+2,val,0,3,Pick up the soda can.,1580,2055,475,15.833333333333334,30
+2,val,0,4,Drop the can into the trash can you are holding.,2055,2143,88,2.933333333333333,30
+2,val,0,5,Pick up the soda can.,2143,2603,460,15.333333333333334,30
+2,val,0,6,Drop the can into the trash can you are holding.,2603,2682,79,2.6333333333333333,30
+2,val,0,7,Put the trash can down.,2682,2763,81,2.7,30
+2,val,1,0,Walk to the trash can and pick it up.,4451,5379,928,30.933333333333334,30
+2,val,1,1,Turn on the radio receiver.,5379,5521,142,4.733333333333333,30
+2,val,1,2,Put the trash can down.,5521,6222,701,23.366666666666667,30
+3,train,0,0,Walk to the trash can and pick it up.,125,964,839,27.966666666666665,30
+3,train,0,1,Pick up the soda can.,964,1442,478,15.933333333333334,30
+3,train,0,2,Drop the can into the trash can you are holding.,1442,1558,116,3.8666666666666667,30
+3,train,0,3,Pick up the soda can.,1558,2040,482,16.066666666666666,30
+3,train,0,4,Drop the can into the trash can you are holding.,2040,2167,127,4.233333333333333,30
+3,train,0,5,Pick up the soda can.,2167,2549,382,12.733333333333333,30
+3,train,0,6,Drop the can into the trash can you are holding.,2549,2634,85,2.8333333333333335,30
+3,train,0,7,Put the trash can down.,2634,2714,80,2.6666666666666665,30
+3,train,1,0,Walk to the trash can and pick it up.,4678,5738,1060,35.333333333333336,30
+3,train,1,1,Turn on the radio receiver.,5738,5840,102,3.4,30
+3,train,1,2,Put the trash can down.,5840,6162,322,10.733333333333333,30
+4,train,0,0,Walk to the trash can and pick it up.,203,1334,1131,37.7,30
+4,train,0,1,Pick up the soda can.,1334,2475,1141,38.03333333333333,30
+4,train,0,2,Drop the can into the trash can you are holding.,2475,2650,175,5.833333333333333,30
+4,train,0,3,Pick up the soda can.,2650,3587,937,31.233333333333334,30
+4,train,0,4,Drop the can into the trash can you are holding.,3587,3896,309,10.3,30
+4,train,0,5,Pick up the soda can.,3896,4407,511,17.033333333333335,30
+4,train,0,6,Drop the can into the trash can you are holding.,4407,4585,178,5.933333333333334,30
+4,train,0,7,Put the trash can down.,4585,4977,392,13.066666666666666,30
+4,train,1,0,Walk to the trash can and pick it up.,7848,8826,978,32.6,30
+4,train,1,1,Turn on the radio receiver.,8826,8909,83,2.7666666666666666,30
+4,train,1,2,Put the trash can down.,8909,9149,240,8.0,30
+5,train,0,0,Walk to the trash can and pick it up.,194,993,799,26.633333333333333,30
+5,train,0,1,Pick up the soda can.,993,1913,920,30.666666666666668,30
+5,train,0,2,Drop the can into the trash can you are holding.,1913,2087,174,5.8,30
+5,train,0,3,Pick up the soda can.,2087,2430,343,11.433333333333334,30
+5,train,0,4,Drop the can into the trash can you are holding.,2430,2576,146,4.866666666666666,30
+5,train,0,5,Pick up the soda can.,2576,2919,343,11.433333333333334,30
+5,train,0,6,Drop the can into the trash can you are holding.,2919,3078,159,5.3,30
+5,train,0,7,Put the trash can down.,3078,3207,129,4.3,30
+5,train,1,0,Walk to the trash can and pick it up.,4087,6408,2321,77.36666666666666,30
+5,train,1,1,Turn on the radio receiver.,6408,6517,109,3.6333333333333333,30
+5,train,1,2,Put the trash can down.,6517,6930,413,13.766666666666667,30
+6,train,0,0,Walk to the trash can and pick it up.,187,1267,1080,36.0,30
+6,train,0,1,Pick up the soda can.,1267,1881,614,20.466666666666665,30
+6,train,0,2,Drop the can into the trash can you are holding.,1881,2123,242,8.066666666666666,30
+6,train,0,3,Pick up the soda can.,2123,2430,307,10.233333333333333,30
+6,train,0,4,Drop the can into the trash can you are holding.,2430,2621,191,6.366666666666666,30
+6,train,0,5,Pick up the soda can.,2621,2925,304,10.133333333333333,30
+6,train,0,6,Drop the can into the trash can you are holding.,2925,3246,321,10.7,30
+6,train,0,7,Put the trash can down.,3246,3434,188,6.266666666666667,30
+6,train,1,0,Walk to the trash can and pick it up.,5064,6487,1423,47.43333333333333,30
+6,train,1,1,Turn on the radio receiver.,6487,6577,90,3.0,30
+6,train,1,2,Put the trash can down.,6577,6868,291,9.7,30
+7,train,0,0,Walk to the trash can and pick it up.,187,1169,982,32.733333333333334,30
+7,train,0,1,Pick up the soda can.,1169,2170,1001,33.36666666666667,30
+7,train,0,2,Drop the can into the trash can you are holding.,2170,2331,161,5.366666666666666,30
+7,train,0,3,Pick up the soda can.,2331,2585,254,8.466666666666667,30
+7,train,0,4,Drop the can into the trash can you are holding.,2585,2786,201,6.7,30
+7,train,0,5,Pick up the soda can.,2786,3134,348,11.6,30
+7,train,0,6,Drop the can into the trash can you are holding.,3134,3341,207,6.9,30
+7,train,0,7,Put the trash can down.,3341,3549,208,6.933333333333334,30
+7,train,1,0,Walk to the trash can and pick it up.,5263,6680,1417,47.233333333333334,30
+7,train,1,1,Turn on the radio receiver.,6680,6805,125,4.166666666666667,30
+7,train,1,2,Put the trash can down.,6805,7312,507,16.9,30
+8,train,0,0,Walk to the trash can and pick it up.,194,993,799,26.633333333333333,30
+8,train,0,1,Pick up the soda can.,993,2048,1055,35.166666666666664,30
+8,train,0,2,Drop the can into the trash can you are holding.,2048,2286,238,7.933333333333334,30
+8,train,0,3,Pick up the soda can.,2286,2665,379,12.633333333333333,30
+8,train,0,4,Drop the can into the trash can you are holding.,2665,2885,220,7.333333333333333,30
+8,train,0,5,Pick up the soda can.,2885,3163,278,9.266666666666667,30
+8,train,0,6,Drop the can into the trash can you are holding.,3163,3338,175,5.833333333333333,30
+8,train,0,7,Put the trash can down.,3338,3603,265,8.833333333333334,30
+8,train,1,0,Walk to the trash can and pick it up.,6554,8001,1447,48.233333333333334,30
+8,train,1,1,Turn on the radio receiver.,8001,8257,256,8.533333333333333,30
+8,train,1,2,Put the trash can down.,8257,8585,328,10.933333333333334,30
+9,train,0,0,Walk to the trash can and pick it up.,125,1010,885,29.5,30
+9,train,0,1,Pick up the soda can.,1010,1651,641,21.366666666666667,30
+9,train,0,2,Drop the can into the trash can you are holding.,1651,1848,197,6.566666666666666,30
+9,train,0,3,Pick up the soda can.,1848,2280,432,14.4,30
+9,train,0,4,Drop the can into the trash can you are holding.,2280,2479,199,6.633333333333334,30
+9,train,0,5,Pick up the soda can.,2479,2981,502,16.733333333333334,30
+9,train,0,6,Drop the can into the trash can you are holding.,2981,3131,150,5.0,30
+9,train,0,7,Put the trash can down.,3131,3332,201,6.7,30
+9,train,1,0,Walk to the trash can and pick it up.,5338,6849,1511,50.36666666666667,30
+9,train,1,1,Turn on the radio receiver.,6849,7039,190,6.333333333333333,30
+9,train,1,2,Put the trash can down.,7039,7426,387,12.9,30
+10,test,0,0,Walk to the trash can and pick it up.,187,788,601,20.033333333333335,30
+10,test,0,1,Pick up the soda can.,788,1530,742,24.733333333333334,30
+10,test,0,2,Drop the can into the trash can you are holding.,1530,1715,185,6.166666666666667,30
+10,test,0,3,Pick up the soda can.,1715,2656,941,31.366666666666667,30
+10,test,0,4,Drop the can into the trash can you are holding.,2656,2890,234,7.8,30
+10,test,0,5,Pick up the soda can.,2890,3200,310,10.333333333333334,30
+10,test,0,6,Drop the can into the trash can you are holding.,3200,3438,238,7.933333333333334,30
+10,test,0,7,Put the trash can down.,3438,3719,281,9.366666666666667,30
+10,test,1,0,Walk to the trash can and pick it up.,5181,7218,2037,67.9,30
+10,test,1,1,Turn on the radio receiver.,7218,7466,248,8.266666666666667,30
+10,test,1,2,Put the trash can down.,7466,7865,399,13.3,30
+11,train,0,0,Walk to the trash can and pick it up.,245,1326,1081,36.03333333333333,30
+11,train,0,1,Pick up the soda can.,1326,2261,935,31.166666666666668,30
+11,train,0,2,Drop the can into the trash can you are holding.,2261,2408,147,4.9,30
+11,train,0,3,Pick up the soda can.,2408,2948,540,18.0,30
+11,train,0,4,Drop the can into the trash can you are holding.,2948,3128,180,6.0,30
+11,train,0,5,Pick up the soda can.,3128,3442,314,10.466666666666667,30
+11,train,0,6,Drop the can into the trash can you are holding.,3442,3571,129,4.3,30
+11,train,0,7,Put the trash can down.,3571,3775,204,6.8,30
+11,train,1,0,Walk to the trash can and pick it up.,4534,5831,1297,43.233333333333334,30
+11,train,1,1,Turn on the radio receiver.,5831,6203,372,12.4,30
+11,train,1,2,Put the trash can down.,6203,6574,371,12.366666666666667,30
+12,train,0,0,Walk to the trash can and pick it up.,187,1117,930,31.0,30
+12,train,0,1,Pick up the soda can.,1117,2039,922,30.733333333333334,30
+12,train,0,2,Drop the can into the trash can you are holding.,2039,2205,166,5.533333333333333,30
+12,train,0,3,Pick up the soda can.,2205,2700,495,16.5,30
+12,train,0,4,Drop the can into the trash can you are holding.,2700,2863,163,5.433333333333334,30
+12,train,0,5,Pick up the soda can.,2863,3296,433,14.433333333333334,30
+12,train,0,6,Drop the can into the trash can you are holding.,3296,3486,190,6.333333333333333,30
+12,train,0,7,Put the trash can down.,3486,3719,233,7.766666666666667,30
+12,train,1,0,Walk to the trash can and pick it up.,5501,7034,1533,51.1,30
+12,train,1,1,Turn on the radio receiver.,7034,7172,138,4.6,30
+12,train,1,2,Put the trash can down.,7172,7427,255,8.5,30
+14,train,0,0,Walk to the trash can and pick it up.,183,677,494,16.466666666666665,30
+14,train,0,1,Pick up the soda can.,677,1892,1215,40.5,30
+14,train,0,2,Drop the can into the trash can you are holding.,1892,2046,154,5.133333333333334,30
+14,train,0,3,Pick up the soda can.,2046,2516,470,15.666666666666666,30
+14,train,0,4,Drop the can into the trash can you are holding.,2516,2707,191,6.366666666666666,30
+14,train,0,5,Pick up the soda can.,2707,3167,460,15.333333333333334,30
+14,train,0,6,Drop the can into the trash can you are holding.,3167,3344,177,5.9,30
+14,train,0,7,Put the trash can down.,3344,3682,338,11.266666666666667,30
+14,train,1,0,Walk to the trash can and pick it up.,5731,7188,1457,48.56666666666667,30
+14,train,1,1,Turn on the radio receiver.,7188,7442,254,8.466666666666667,30
+14,train,1,2,Put the trash can down.,7442,7788,346,11.533333333333333,30
+15,val,0,0,Walk to the trash can and pick it up.,183,1189,1006,33.53333333333333,30
+15,val,0,1,Pick up the soda can.,1189,1957,768,25.6,30
+15,val,0,2,Drop the can into the trash can you are holding.,1957,2096,139,4.633333333333334,30
+15,val,0,3,Pick up the soda can.,2096,2562,466,15.533333333333333,30
+15,val,0,4,Drop the can into the trash can you are holding.,2562,2720,158,5.266666666666667,30
+15,val,0,5,Pick up the soda can.,2720,3590,870,29.0,30
+15,val,0,6,Drop the can into the trash can you are holding.,3590,3759,169,5.633333333333334,30
+15,val,0,7,Put the trash can down.,3759,3876,117,3.9,30
+15,val,1,0,Walk to the trash can and pick it up.,6478,7775,1297,43.233333333333334,30
+15,val,1,1,Turn on the radio receiver.,7775,7974,199,6.633333333333334,30
+15,val,1,2,Put the trash can down.,7974,8276,302,10.066666666666666,30
+17,test,0,0,Walk to the trash can and pick it up.,192,955,763,25.433333333333334,30
+17,test,0,1,Pick up the soda can.,955,2063,1108,36.93333333333333,30
+17,test,0,2,Drop the can into the trash can you are holding.,2063,2326,263,8.766666666666667,30
+17,test,0,3,Pick up the soda can.,2326,2646,320,10.666666666666666,30
+17,test,0,4,Drop the can into the trash can you are holding.,2646,2885,239,7.966666666666667,30
+17,test,0,5,Pick up the soda can.,2885,3521,636,21.2,30
+17,test,0,6,Drop the can into the trash can you are holding.,3521,3763,242,8.066666666666666,30
+17,test,0,7,Put the trash can down.,3763,4036,273,9.1,30
+17,test,1,0,Walk to the trash can and pick it up.,5945,7853,1908,63.6,30
+17,test,1,1,Turn on the radio receiver.,7853,8034,181,6.033333333333333,30
+17,test,1,2,Put the trash can down.,8034,8219,185,6.166666666666667,30
+18,val,0,0,Walk to the trash can and pick it up.,201,1173,972,32.4,30
+18,val,0,1,Pick up the soda can.,1173,2135,962,32.06666666666667,30
+18,val,0,2,Drop the can into the trash can you are holding.,2135,2299,164,5.466666666666667,30
+18,val,0,3,Pick up the soda can.,2299,3020,721,24.033333333333335,30
+18,val,0,4,Drop the can into the trash can you are holding.,3020,3202,182,6.066666666666666,30
+18,val,0,5,Pick up the soda can.,3202,3638,436,14.533333333333333,30
+18,val,0,6,Drop the can into the trash can you are holding.,3638,3807,169,5.633333333333334,30
+18,val,0,7,Put the trash can down.,3807,3940,133,4.433333333333334,30
+18,val,1,0,Walk to the trash can and pick it up.,6447,7643,1196,39.86666666666667,30
+18,val,1,1,Turn on the radio receiver.,7643,7799,156,5.2,30
+18,val,1,2,Put the trash can down.,7799,8109,310,10.333333333333334,30
+20,train,0,0,Walk to the trash can and pick it up.,183,1043,860,28.666666666666668,30
+20,train,0,1,Pick up the soda can.,1043,2250,1207,40.233333333333334,30
+20,train,0,2,Drop the can into the trash can you are holding.,2250,2527,277,9.233333333333333,30
+20,train,0,3,Pick up the soda can.,2527,3013,486,16.2,30
+20,train,0,4,Drop the can into the trash can you are holding.,3013,3179,166,5.533333333333333,30
+20,train,0,5,Pick up the soda can.,3179,3682,503,16.766666666666666,30
+20,train,0,6,Drop the can into the trash can you are holding.,3682,3825,143,4.766666666666667,30
+20,train,0,7,Put the trash can down.,3825,4036,211,7.033333333333333,30
+20,train,1,0,Walk to the trash can and pick it up.,6120,7402,1282,42.733333333333334,30
+20,train,1,1,Turn on the radio receiver.,7402,7631,229,7.633333333333334,30
+20,train,1,2,Put the trash can down.,7631,7900,269,8.966666666666667,30
+22,train,0,0,Walk to the trash can and pick it up.,201,1414,1213,40.43333333333333,30
+22,train,0,1,Pick up the soda can.,1414,2321,907,30.233333333333334,30
+22,train,0,2,Drop the can into the trash can you are holding.,2321,2499,178,5.933333333333334,30
+22,train,0,3,Pick up the soda can.,2499,3163,664,22.133333333333333,30
+22,train,0,4,Drop the can into the trash can you are holding.,3163,3335,172,5.733333333333333,30
+22,train,0,5,Pick up the soda can.,3335,3620,285,9.5,30
+22,train,0,6,Drop the can into the trash can you are holding.,3620,3827,207,6.9,30
+22,train,0,7,Put the trash can down.,3827,4086,259,8.633333333333333,30
+22,train,1,0,Walk to the trash can and pick it up.,5617,7367,1750,58.333333333333336,30
+22,train,1,1,Turn on the radio receiver.,7367,7594,227,7.566666666666666,30
+22,train,1,2,Put the trash can down.,7594,7947,353,11.766666666666667,30
+23,train,0,0,Walk to the trash can and pick it up.,183,831,648,21.6,30
+23,train,0,1,Pick up the soda can.,831,1561,730,24.333333333333332,30
+23,train,0,2,Drop the can into the trash can you are holding.,1561,1717,156,5.2,30
+23,train,0,3,Pick up the soda can.,1717,2457,740,24.666666666666668,30
+23,train,0,4,Drop the can into the trash can you are holding.,2457,2680,223,7.433333333333334,30
+23,train,0,5,Pick up the soda can.,2680,3503,823,27.433333333333334,30
+23,train,0,6,Drop the can into the trash can you are holding.,3503,3674,171,5.7,30
+23,train,0,7,Put the trash can down.,3674,4032,358,11.933333333333334,30
+23,train,1,0,Walk to the trash can and pick it up.,6100,7537,1437,47.9,30
+23,train,1,1,Turn on the radio receiver.,7537,7803,266,8.866666666666667,30
+23,train,1,2,Put the trash can down.,7803,8122,319,10.633333333333333,30
+26,train,0,0,Walk to the trash can and pick it up.,187,1034,847,28.233333333333334,30
+26,train,0,1,Pick up the soda can.,1034,2003,969,32.3,30
+26,train,0,2,Drop the can into the trash can you are holding.,2003,2232,229,7.633333333333334,30
+26,train,0,3,Pick up the soda can.,2232,2831,599,19.966666666666665,30
+26,train,0,4,Drop the can into the trash can you are holding.,2831,3036,205,6.833333333333333,30
+26,train,0,5,Pick up the soda can.,3036,3573,537,17.9,30
+26,train,0,6,Drop the can into the trash can you are holding.,3573,3775,202,6.733333333333333,30
+26,train,0,7,Put the trash can down.,3775,4096,321,10.7,30
+26,train,1,0,Walk to the trash can and pick it up.,5544,6685,1141,38.03333333333333,30
+26,train,1,1,Turn on the radio receiver.,6685,6949,264,8.8,30
+26,train,1,2,Put the trash can down.,6949,7259,310,10.333333333333334,30
+29,train,0,0,Walk to the trash can and pick it up.,183,854,671,22.366666666666667,30
+29,train,0,1,Pick up the soda can.,854,2051,1197,39.9,30
+29,train,0,2,Drop the can into the trash can you are holding.,2051,2314,263,8.766666666666667,30
+29,train,0,3,Pick up the soda can.,2314,2800,486,16.2,30
+29,train,0,4,Drop the can into the trash can you are holding.,2800,3099,299,9.966666666666667,30
+29,train,0,5,Pick up the soda can.,3099,3901,802,26.733333333333334,30
+29,train,0,6,Drop the can into the trash can you are holding.,3901,4107,206,6.866666666666666,30
+29,train,0,7,Put the trash can down.,4107,4285,178,5.933333333333334,30
+29,train,1,0,Walk to the trash can and pick it up.,5249,7155,1906,63.53333333333333,30
+29,train,1,1,Turn on the radio receiver.,7155,7369,214,7.133333333333334,30
+29,train,1,2,Put the trash can down.,7369,7646,277,9.233333333333333,30
+30,train,0,0,Walk to the trash can and pick it up.,245,1340,1095,36.5,30
+30,train,0,1,Pick up the soda can.,1340,2623,1283,42.766666666666666,30
+30,train,0,2,Drop the can into the trash can you are holding.,2623,2781,158,5.266666666666667,30
+30,train,0,3,Pick up the soda can.,2781,3205,424,14.133333333333333,30
+30,train,0,4,Drop the can into the trash can you are holding.,3205,3345,140,4.666666666666667,30
+30,train,0,5,Pick up the soda can.,3345,3862,517,17.233333333333334,30
+30,train,0,6,Drop the can into the trash can you are holding.,3862,4118,256,8.533333333333333,30
+30,train,0,7,Put the trash can down.,4118,4317,199,6.633333333333334,30
+30,train,1,0,Walk to the trash can and pick it up.,7342,8572,1230,41.0,30
+30,train,1,1,Turn on the radio receiver.,8572,8780,208,6.933333333333334,30
+30,train,1,2,Put the trash can down.,8780,9078,298,9.933333333333334,30
+31,train,0,0,Walk to the trash can and pick it up.,183,1063,880,29.333333333333332,30
+31,train,0,1,Pick up the soda can.,1063,1816,753,25.1,30
+31,train,0,2,Drop the can into the trash can you are holding.,1816,1971,155,5.166666666666667,30
+31,train,0,3,Pick up the soda can.,1971,2332,361,12.033333333333333,30
+31,train,0,4,Drop the can into the trash can you are holding.,2332,2495,163,5.433333333333334,30
+31,train,0,5,Pick up the soda can.,2495,3395,900,30.0,30
+31,train,0,6,Drop the can into the trash can you are holding.,3395,3569,174,5.8,30
+31,train,0,7,Put the trash can down.,3569,3900,331,11.033333333333333,30
+31,train,1,0,Walk to the trash can and pick it up.,6586,7562,976,32.53333333333333,30
+31,train,1,1,Turn on the radio receiver.,7562,7699,137,4.566666666666666,30
+31,train,1,2,Put the trash can down.,7699,7965,266,8.866666666666667,30
+34,train,0,0,Walk to the trash can and pick it up.,187,1233,1046,34.86666666666667,30
+34,train,0,1,Pick up the soda can.,1233,2105,872,29.066666666666666,30
+34,train,0,2,Drop the can into the trash can you are holding.,2105,2355,250,8.333333333333334,30
+34,train,0,3,Pick up the soda can.,2355,2960,605,20.166666666666668,30
+34,train,0,4,Drop the can into the trash can you are holding.,2960,3328,368,12.266666666666667,30
+34,train,0,5,Pick up the soda can.,3328,3782,454,15.133333333333333,30
+34,train,0,6,Drop the can into the trash can you are holding.,3782,4006,224,7.466666666666667,30
+34,train,0,7,Put the trash can down.,4006,4287,281,9.366666666666667,30
+34,train,1,0,Walk to the trash can and pick it up.,5837,6634,797,26.566666666666666,30
+34,train,1,1,Turn on the radio receiver.,6634,6804,170,5.666666666666667,30
+34,train,1,2,Put the trash can down.,6804,7146,342,11.4,30
+35,train,0,0,Walk to the trash can and pick it up.,183,1437,1254,41.8,30
+35,train,0,1,Pick up the soda can.,1437,2118,681,22.7,30
+35,train,0,2,Drop the can into the trash can you are holding.,2118,2387,269,8.966666666666667,30
+35,train,0,3,Pick up the soda can.,2387,3016,629,20.966666666666665,30
+35,train,0,4,Drop the can into the trash can you are holding.,3016,3180,164,5.466666666666667,30
+35,train,0,5,Pick up the soda can.,3180,3971,791,26.366666666666667,30
+35,train,0,6,Drop the can into the trash can you are holding.,3971,4110,139,4.633333333333334,30
+35,train,0,7,Put the trash can down.,4110,4237,127,4.233333333333333,30
+35,train,1,0,Walk to the trash can and pick it up.,7041,7997,956,31.866666666666667,30
+35,train,1,1,Turn on the radio receiver.,7997,8182,185,6.166666666666667,30
+35,train,1,2,Put the trash can down.,8182,8494,312,10.4,30
+36,train,0,0,Walk to the trash can and pick it up.,183,987,804,26.8,30
+36,train,0,1,Pick up the soda can.,987,1979,992,33.06666666666667,30
+36,train,0,2,Drop the can into the trash can you are holding.,1979,2161,182,6.066666666666666,30
+36,train,0,3,Pick up the soda can.,2161,2747,586,19.533333333333335,30
+36,train,0,4,Drop the can into the trash can you are holding.,2747,3038,291,9.7,30
+36,train,0,5,Pick up the soda can.,3038,3740,702,23.4,30
+36,train,0,6,Drop the can into the trash can you are holding.,3740,3888,148,4.933333333333334,30
+36,train,0,7,Put the trash can down.,3888,4225,337,11.233333333333333,30
+36,train,1,0,Walk to the trash can and pick it up.,5856,7401,1545,51.5,30
+36,train,1,1,Turn on the radio receiver.,7401,7591,190,6.333333333333333,30
+36,train,1,2,Put the trash can down.,7591,7853,262,8.733333333333333,30
+37,train,0,0,Walk to the trash can and pick it up.,245,1432,1187,39.56666666666667,30
+37,train,0,1,Pick up the soda can.,1432,2127,695,23.166666666666668,30
+37,train,0,2,Drop the can into the trash can you are holding.,2127,2322,195,6.5,30
+37,train,0,3,Pick up the soda can.,2322,2924,602,20.066666666666666,30
+37,train,0,4,Drop the can into the trash can you are holding.,2924,3154,230,7.666666666666667,30
+37,train,0,5,Pick up the soda can.,3154,4091,937,31.233333333333334,30
+37,train,0,6,Drop the can into the trash can you are holding.,4091,4260,169,5.633333333333334,30
+37,train,0,7,Put the trash can down.,4260,4434,174,5.8,30
+37,train,1,0,Walk to the trash can and pick it up.,5382,6842,1460,48.666666666666664,30
+37,train,1,1,Turn on the radio receiver.,6842,6993,151,5.033333333333333,30
+37,train,1,2,Put the trash can down.,6993,7309,316,10.533333333333333,30
+38,train,0,0,Walk to the trash can and pick it up.,187,1341,1154,38.46666666666667,30
+38,train,0,1,Pick up the soda can.,1341,2796,1455,48.5,30
+38,train,0,2,Drop the can into the trash can you are holding.,2796,2960,164,5.466666666666667,30
+38,train,0,3,Pick up the soda can.,2960,3260,300,10.0,30
+38,train,0,4,Drop the can into the trash can you are holding.,3260,3439,179,5.966666666666667,30
+38,train,0,5,Pick up the soda can.,3439,3982,543,18.1,30
+38,train,0,6,Drop the can into the trash can you are holding.,3982,4182,200,6.666666666666667,30
+38,train,0,7,Put the trash can down.,4182,4433,251,8.366666666666667,30
+38,train,1,0,Walk to the trash can and pick it up.,7361,8756,1395,46.5,30
+38,train,1,1,Turn on the radio receiver.,8756,8872,116,3.8666666666666667,30
+38,train,1,2,Put the trash can down.,8872,9136,264,8.8,30
+39,train,0,0,Walk to the trash can and pick it up.,187,1101,914,30.466666666666665,30
+39,train,0,1,Pick up the soda can.,1101,2624,1523,50.766666666666666,30
+39,train,0,2,Drop the can into the trash can you are holding.,2624,2804,180,6.0,30
+39,train,0,3,Pick up the soda can.,2804,3291,487,16.233333333333334,30
+39,train,0,4,Drop the can into the trash can you are holding.,3291,3495,204,6.8,30
+39,train,0,5,Pick up the soda can.,3495,3921,426,14.2,30
+39,train,0,6,Drop the can into the trash can you are holding.,3921,4087,166,5.533333333333333,30
+39,train,0,7,Put the trash can down.,4087,4333,246,8.2,30
+39,train,1,0,Walk to the trash can and pick it up.,7111,8550,1439,47.96666666666667,30
+39,train,1,1,Turn on the radio receiver.,8550,8694,144,4.8,30
+39,train,1,2,Put the trash can down.,8694,9125,431,14.366666666666667,30
+42,train,0,0,Walk to the trash can and pick it up.,192,1671,1479,49.3,30
+42,train,0,1,Pick up the soda can.,1671,2833,1162,38.733333333333334,30
+42,train,0,2,Drop the can into the trash can you are holding.,2833,3158,325,10.833333333333334,30
+42,train,0,3,Pick up the soda can.,3158,3594,436,14.533333333333333,30
+42,train,0,4,Drop the can into the trash can you are holding.,3594,3754,160,5.333333333333333,30
+42,train,0,5,Pick up the soda can.,3754,4096,342,11.4,30
+42,train,0,6,Drop the can into the trash can you are holding.,4096,4309,213,7.1,30
+42,train,0,7,Put the trash can down.,4309,4502,193,6.433333333333334,30
+42,train,1,0,Walk to the trash can and pick it up.,5820,6784,964,32.13333333333333,30
+42,train,1,1,Turn on the radio receiver.,6784,6895,111,3.7,30
+42,train,1,2,Put the trash can down.,6895,7205,310,10.333333333333334,30
+43,train,0,0,Walk to the trash can and pick it up.,203,663,460,15.333333333333334,30
+43,train,0,1,Pick up the soda can.,663,2178,1515,50.5,30
+43,train,0,2,Drop the can into the trash can you are holding.,2178,2391,213,7.1,30
+43,train,0,3,Pick up the soda can.,2391,3239,848,28.266666666666666,30
+43,train,0,4,Drop the can into the trash can you are holding.,3239,3399,160,5.333333333333333,30
+43,train,0,5,Pick up the soda can.,3399,4008,609,20.3,30
+43,train,0,6,Drop the can into the trash can you are holding.,4008,4212,204,6.8,30
+43,train,0,7,Put the trash can down.,4212,4522,310,10.333333333333334,30
+43,train,1,0,Walk to the trash can and pick it up.,6339,7936,1597,53.233333333333334,30
+43,train,1,1,Turn on the radio receiver.,7936,8209,273,9.1,30
+43,train,1,2,Put the trash can down.,8209,8625,416,13.866666666666667,30
+44,test,0,0,Walk to the trash can and pick it up.,182,833,651,21.7,30
+44,test,0,1,Pick up the soda can.,833,2298,1465,48.833333333333336,30
+44,test,0,2,Drop the can into the trash can you are holding.,2298,2490,192,6.4,30
+44,test,0,3,Pick up the soda can.,2490,3102,612,20.4,30
+44,test,0,4,Drop the can into the trash can you are holding.,3102,3340,238,7.933333333333334,30
+44,test,0,5,Pick up the soda can.,3340,3921,581,19.366666666666667,30
+44,test,0,6,Drop the can into the trash can you are holding.,3921,4088,167,5.566666666666666,30
+44,test,0,7,Put the trash can down.,4088,4435,347,11.566666666666666,30
+44,test,1,0,Walk to the trash can and pick it up.,6714,8483,1769,58.96666666666667,30
+44,test,1,1,Turn on the radio receiver.,8483,8567,84,2.8,30
+44,test,1,2,Put the trash can down.,8567,8969,402,13.4,30
+45,train,0,0,Walk to the trash can and pick it up.,187,1568,1381,46.03333333333333,30
+45,train,0,1,Pick up the soda can.,1568,2455,887,29.566666666666666,30
+45,train,0,2,Drop the can into the trash can you are holding.,2455,2634,179,5.966666666666667,30
+45,train,0,3,Pick up the soda can.,2634,3397,763,25.433333333333334,30
+45,train,0,4,Drop the can into the trash can you are holding.,3397,3602,205,6.833333333333333,30
+45,train,0,5,Pick up the soda can.,3602,4245,643,21.433333333333334,30
+45,train,0,6,Drop the can into the trash can you are holding.,4245,4457,212,7.066666666666666,30
+45,train,0,7,Put the trash can down.,4457,4710,253,8.433333333333334,30
+45,train,1,0,Walk to the trash can and pick it up.,6567,8008,1441,48.03333333333333,30
+45,train,1,1,Turn on the radio receiver.,8008,8124,116,3.8666666666666667,30
+45,train,1,2,Put the trash can down.,8124,8456,332,11.066666666666666,30
+46,train,0,0,Walk to the trash can and pick it up.,183,1335,1152,38.4,30
+46,train,0,1,Pick up the soda can.,1335,2380,1045,34.833333333333336,30
+46,train,0,2,Drop the can into the trash can you are holding.,2380,2562,182,6.066666666666666,30
+46,train,0,3,Pick up the soda can.,2562,3337,775,25.833333333333332,30
+46,train,0,4,Drop the can into the trash can you are holding.,3337,3548,211,7.033333333333333,30
+46,train,0,5,Pick up the soda can.,3548,4268,720,24.0,30
+46,train,0,6,Drop the can into the trash can you are holding.,4268,4442,174,5.8,30
+46,train,0,7,Put the trash can down.,4442,4653,211,7.033333333333333,30
+46,train,1,0,Walk to the trash can and pick it up.,7091,8872,1781,59.36666666666667,30
+46,train,1,1,Turn on the radio receiver.,8872,9018,146,4.866666666666666,30
+46,train,1,2,Put the trash can down.,9018,9373,355,11.833333333333334,30
+47,test,0,0,Walk to the trash can and pick it up.,125,650,525,17.5,30
+47,test,0,1,Pick up the soda can.,650,2122,1472,49.06666666666667,30
+47,test,0,2,Drop the can into the trash can you are holding.,2122,2304,182,6.066666666666666,30
+47,test,0,3,Pick up the soda can.,2304,3303,999,33.3,30
+47,test,0,4,Drop the can into the trash can you are holding.,3303,3506,203,6.766666666666667,30
+47,test,0,5,Pick up the soda can.,3506,4045,539,17.966666666666665,30
+47,test,0,6,Drop the can into the trash can you are holding.,4045,4344,299,9.966666666666667,30
+47,test,0,7,Put the trash can down.,4344,4619,275,9.166666666666666,30
+47,test,1,0,Walk to the trash can and pick it up.,6971,8129,1158,38.6,30
+47,test,1,1,Turn on the radio receiver.,8129,8238,109,3.6333333333333333,30
+47,test,1,2,Put the trash can down.,8238,8641,403,13.433333333333334,30
+50,train,0,0,Walk to the trash can and pick it up.,201,832,631,21.033333333333335,30
+50,train,0,1,Pick up the soda can.,832,2237,1405,46.833333333333336,30
+50,train,0,2,Drop the can into the trash can you are holding.,2237,2529,292,9.733333333333333,30
+50,train,0,3,Pick up the soda can.,2529,3397,868,28.933333333333334,30
+50,train,0,4,Drop the can into the trash can you are holding.,3397,3675,278,9.266666666666667,30
+50,train,0,5,Pick up the soda can.,3675,4117,442,14.733333333333333,30
+50,train,0,6,Drop the can into the trash can you are holding.,4117,4457,340,11.333333333333334,30
+50,train,0,7,Put the trash can down.,4457,4716,259,8.633333333333333,30
+50,train,1,0,Walk to the trash can and pick it up.,6613,7894,1281,42.7,30
+50,train,1,1,Turn on the radio receiver.,7894,7978,84,2.8,30
+50,train,1,2,Put the trash can down.,7978,8218,240,8.0,30
+52,train,0,0,Walk to the trash can and pick it up.,187,1187,1000,33.333333333333336,30
+52,train,0,1,Pick up the soda can.,1187,2449,1262,42.06666666666667,30
+52,train,0,2,Drop the can into the trash can you are holding.,2449,2757,308,10.266666666666667,30
+52,train,0,3,Pick up the soda can.,2757,3451,694,23.133333333333333,30
+52,train,0,4,Drop the can into the trash can you are holding.,3451,3674,223,7.433333333333334,30
+52,train,0,5,Pick up the soda can.,3674,4075,401,13.366666666666667,30
+52,train,0,6,Drop the can into the trash can you are holding.,4075,4257,182,6.066666666666666,30
+52,train,0,7,Put the trash can down.,4257,4498,241,8.033333333333333,30
+52,train,1,0,Walk to the trash can and pick it up.,8903,10332,1429,47.63333333333333,30
+52,train,1,1,Turn on the radio receiver.,10332,10425,93,3.1,30
+52,train,1,2,Put the trash can down.,10425,10837,412,13.733333333333333,30
+53,train,0,0,Walk to the trash can and pick it up.,125,1014,889,29.633333333333333,30
+53,train,0,1,Pick up the soda can.,1014,2195,1181,39.36666666666667,30
+53,train,0,2,Drop the can into the trash can you are holding.,2195,2527,332,11.066666666666666,30
+53,train,0,3,Pick up the soda can.,2527,3210,683,22.766666666666666,30
+53,train,0,4,Drop the can into the trash can you are holding.,3210,3469,259,8.633333333333333,30
+53,train,0,5,Pick up the soda can.,3469,4043,574,19.133333333333333,30
+53,train,0,6,Drop the can into the trash can you are holding.,4043,4409,366,12.2,30
+53,train,0,7,Put the trash can down.,4409,4740,331,11.033333333333333,30
+53,train,1,0,Walk to the trash can and pick it up.,5682,7234,1552,51.733333333333334,30
+53,train,1,1,Turn on the radio receiver.,7234,7424,190,6.333333333333333,30
+53,train,1,2,Put the trash can down.,7424,7885,461,15.366666666666667,30
+54,train,0,0,Walk to the trash can and pick it up.,187,837,650,21.666666666666668,30
+54,train,0,1,Pick up the soda can.,837,2024,1187,39.56666666666667,30
+54,train,0,2,Drop the can into the trash can you are holding.,2024,2162,138,4.6,30
+54,train,0,3,Pick up the soda can.,2162,2819,657,21.9,30
+54,train,0,4,Drop the can into the trash can you are holding.,2819,3014,195,6.5,30
+54,train,0,5,Pick up the soda can.,3014,4203,1189,39.63333333333333,30
+54,train,0,6,Drop the can into the trash can you are holding.,4203,4582,379,12.633333333333333,30
+54,train,0,7,Put the trash can down.,4582,4809,227,7.566666666666666,30
+54,train,1,0,Walk to the trash can and pick it up.,6842,8383,1541,51.36666666666667,30
+54,train,1,1,Turn on the radio receiver.,8383,8610,227,7.566666666666666,30
+54,train,1,2,Put the trash can down.,8610,9139,529,17.633333333333333,30
+57,train,0,0,Walk to the trash can and pick it up.,201,1612,1411,47.03333333333333,30
+57,train,0,1,Pick up the soda can.,1612,3066,1454,48.46666666666667,30
+57,train,0,2,Drop the can into the trash can you are holding.,3066,3266,200,6.666666666666667,30
+57,train,0,3,Pick up the soda can.,3266,3982,716,23.866666666666667,30
+57,train,0,4,Drop the can into the trash can you are holding.,3982,4152,170,5.666666666666667,30
+57,train,0,5,Pick up the soda can.,4152,4596,444,14.8,30
+57,train,0,6,Drop the can into the trash can you are holding.,4596,4748,152,5.066666666666666,30
+57,train,0,7,Put the trash can down.,4748,4977,229,7.633333333333334,30
+57,train,1,0,Walk to the trash can and pick it up.,6495,8514,2019,67.3,30
+57,train,1,1,Turn on the radio receiver.,8514,8586,72,2.4,30
+57,train,1,2,Put the trash can down.,8586,8989,403,13.433333333333334,30
+58,train,0,0,Walk to the trash can and pick it up.,183,871,688,22.933333333333334,30
+58,train,0,1,Pick up the soda can.,871,2845,1974,65.8,30
+58,train,0,2,Drop the can into the trash can you are holding.,2845,3099,254,8.466666666666667,30
+58,train,0,3,Pick up the soda can.,3099,3621,522,17.4,30
+58,train,0,4,Drop the can into the trash can you are holding.,3621,3839,218,7.266666666666667,30
+58,train,0,5,Pick up the soda can.,3839,4361,522,17.4,30
+58,train,0,6,Drop the can into the trash can you are holding.,4361,4592,231,7.7,30
+58,train,0,7,Put the trash can down.,4592,4833,241,8.033333333333333,30
+58,train,1,0,Walk to the trash can and pick it up.,6644,8079,1435,47.833333333333336,30
+58,train,1,1,Turn on the radio receiver.,8079,8170,91,3.033333333333333,30
+58,train,1,2,Put the trash can down.,8170,8588,418,13.933333333333334,30
+59,train,0,0,Walk to the trash can and pick it up.,125,731,606,20.2,30
+59,train,0,1,Pick up the soda can.,731,2229,1498,49.93333333333333,30
+59,train,0,2,Drop the can into the trash can you are holding.,2229,2420,191,6.366666666666666,30
+59,train,0,3,Pick up the soda can.,2420,3106,686,22.866666666666667,30
+59,train,0,4,Drop the can into the trash can you are holding.,3106,3376,270,9.0,30
+59,train,0,5,Pick up the soda can.,3376,4077,701,23.366666666666667,30
+59,train,0,6,Drop the can into the trash can you are holding.,4077,4280,203,6.766666666666667,30
+59,train,0,7,Put the trash can down.,4280,4813,533,17.766666666666666,30
+59,train,1,0,Walk to the trash can and pick it up.,6801,8269,1468,48.93333333333333,30
+59,train,1,1,Turn on the radio receiver.,8269,8406,137,4.566666666666666,30
+59,train,1,2,Put the trash can down.,8406,8729,323,10.766666666666667,30
+61,train,0,0,Walk to the trash can and pick it up.,203,987,784,26.133333333333333,30
+61,train,0,1,Pick up the soda can.,987,1862,875,29.166666666666668,30
+61,train,0,2,Drop the can into the trash can you are holding.,1862,2187,325,10.833333333333334,30
+61,train,0,3,Pick up the soda can.,2187,3398,1211,40.36666666666667,30
+61,train,0,4,Drop the can into the trash can you are holding.,3398,3682,284,9.466666666666667,30
+61,train,0,5,Pick up the soda can.,3682,4570,888,29.6,30
+61,train,0,6,Drop the can into the trash can you are holding.,4570,4904,334,11.133333333333333,30
+61,train,0,7,Put the trash can down.,4904,5087,183,6.1,30
+61,train,1,0,Walk to the trash can and pick it up.,6683,7947,1264,42.13333333333333,30
+61,train,1,1,Turn on the radio receiver.,7947,8064,117,3.9,30
+61,train,1,2,Put the trash can down.,8064,8756,692,23.066666666666666,30
+62,train,0,0,Walk to the trash can and pick it up.,125,562,437,14.566666666666666,30
+62,train,0,1,Pick up the soda can.,562,1517,955,31.833333333333332,30
+62,train,0,2,Drop the can into the trash can you are holding.,1517,1653,136,4.533333333333333,30
+62,train,0,3,Pick up the soda can.,1653,3062,1409,46.96666666666667,30
+62,train,0,4,Drop the can into the trash can you are holding.,3062,3257,195,6.5,30
+62,train,0,5,Pick up the soda can.,3257,4417,1160,38.666666666666664,30
+62,train,0,6,Drop the can into the trash can you are holding.,4417,4671,254,8.466666666666667,30
+62,train,0,7,Put the trash can down.,4671,4911,240,8.0,30
+62,train,1,0,Walk to the trash can and pick it up.,7301,8359,1058,35.266666666666666,30
+62,train,1,1,Turn on the radio receiver.,8359,8521,162,5.4,30
+62,train,1,2,Put the trash can down.,8521,9009,488,16.266666666666666,30
+64,train,0,0,Walk to the trash can and pick it up.,245,1487,1242,41.4,30
+64,train,0,1,Pick up the soda can.,1487,2429,942,31.4,30
+64,train,0,2,Drop the can into the trash can you are holding.,2429,2629,200,6.666666666666667,30
+64,train,0,3,Pick up the soda can.,2629,3726,1097,36.56666666666667,30
+64,train,0,4,Drop the can into the trash can you are holding.,3726,3965,239,7.966666666666667,30
+64,train,0,5,Pick up the soda can.,3965,5074,1109,36.96666666666667,30
+64,train,0,6,Drop the can into the trash can you are holding.,5074,5237,163,5.433333333333334,30
+64,train,0,7,Put the trash can down.,5237,5378,141,4.7,30
+64,train,1,0,Walk to the trash can and pick it up.,8455,9827,1372,45.733333333333334,30
+64,train,1,1,Turn on the radio receiver.,9827,9943,116,3.8666666666666667,30
+64,train,1,2,Put the trash can down.,9943,10303,360,12.0,30

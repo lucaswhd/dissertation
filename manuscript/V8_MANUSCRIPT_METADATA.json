@@ -1,0 +1,40 @@
+{
+  "version": "v8",
+  "date": "2026-10-22 Asia/Singapore",
+  "author": "WUHAODONG",
+  "v7_sha256": "e24f23f635b43b97297273ae1f85b66d97b2b09a39e971dee9725b76694afbb9",
+  "v7_preserved": true,
+  "docx": {
+    "file": "NTU_Dissertation_Reviewed_v8_figures_editable.docx",
+    "bytes": 3729808,
+    "sha256": "4a8be224061693504453aed26ef8e86e89b0d4a8ddbfbab290eb0b30e20c280a"
+  },
+  "pdf": {
+    "file": "NTU_Dissertation_Reviewed_v8_review.pdf",
+    "bytes": 1884499,
+    "sha256": "617b1c80a95c9650857949235a8b0ddbd1603b7c89ae2a872138d390146f8273",
+    "pages": 78,
+    "renderer": "LibreOffice 7.3.7.2 Writer + Math"
+  },
+  "native_tables": 18,
+  "table_values_preserved": true,
+  "native_omml_equations": 12,
+  "reference_text_preserved": true,
+  "figure_numbers": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5",
+    "3.6",
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "A.1"
+  ],
+  "event_number": "5.3",
+  "conditioning_number": "5.4",
+  "official_template_status": "Pending official template verification",
+  "redistribution": "Full manuscript and recorded-frame storyboard retained locally because underlying scene/human rendering redistribution permission is not established."
+}

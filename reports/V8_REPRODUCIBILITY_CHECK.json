@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "commands_passed": 3,
+  "six_pngs_byte_identical_on_repeat_under_current_environment": true,
+  "png_sha256": {
+    "figures/methodology/v8_fig_3_1_diagnostic_hierarchy.png": "47208b66817ac27370881d52132749c8455dca0f6116e63626dff7dfefc82c26",
+    "figures/methodology/v8_fig_3_2_task_supervision.png": "ba31ac1585b23a9f101bbacdcef0b8db98b1a74177a69a2926426e2164ddf6fc",
+    "figures/methodology/v8_fig_3_4_controller_data_flow.png": "e88cfdccff641a800a5dc145f475fb2dc96796a79fbcb4e321ca5c87e97311a2",
+    "figures/dataset/fig_3_6_temporal_action_characteristics.png": "9782ea3bdf05ef12d15108b02070897abb5020ac04a461168e4690f829e959c4",
+    "figures/results/fig_5_4_gripper_event_performance.png": "10ea3e5c48f3aa35aef25ce732898d91f05a71111347ce17b4b2f7a41a7987cc",
+    "figures/results/v8_fig_5_1_frustum.png": "a556f6901d98c5d7d6730476f8079e0ba7e7a7e7ba850bd1e0595bbbd3bb4b77"
+  },
+  "embedded_image_checks": [
+    {
+      "figure": "3.1",
+      "embedded_pixels_equal_regenerated": true,
+      "embedded_bytes_equal": true
+    },
+    {
+      "figure": "3.2",
+      "embedded_pixels_equal_regenerated": true,
+      "embedded_bytes_equal": true
+    },
+    {
+      "figure": "3.4",
+      "embedded_pixels_equal_regenerated": true,
+      "embedded_bytes_equal": true
+    },
+    {
+      "figure": "3.6",
+      "embedded_pixels_equal_regenerated": true,
+      "embedded_bytes_equal": false
+    },
+    {
+      "figure": "5.1",
+      "embedded_pixels_equal_regenerated": true,
+      "embedded_bytes_equal": true
+    },
+    {
+      "figure": "5.3",
+      "embedded_pixels_equal_regenerated": true,
+      "embedded_bytes_equal": false
+    }
+  ],
+  "note": "Initial cross-environment byte comparison differed for3.6/event because PNG Software metadata names matplotlib3.10.3 versus3.10.5. Decoded pixels were identical. Repeat generation within3.10.5 reproduced PNG bytes exactly. The actual manuscript remains unchanged."
+}

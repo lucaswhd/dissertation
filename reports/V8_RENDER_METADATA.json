@@ -1,0 +1,25 @@
+{
+  "renderer": "LibreOffice",
+  "input": "v8_final_layout_source.docx",
+  "pdf": "NTU_Dissertation_Reviewed_v8_review.pdf",
+  "indexes": [
+    {
+      "name": "Table of Contents1",
+      "type": "SwXDocumentIndex",
+      "text_length": 3429
+    },
+    {
+      "name": "Table of Figures1",
+      "type": "SwXDocumentIndex",
+      "text_length": 853
+    },
+    {
+      "name": "Table of Figures2",
+      "type": "SwXDocumentIndex",
+      "text_length": 1040
+    }
+  ],
+  "page_count": 78,
+  "pdf_bytes": 1884499,
+  "saved_docx": "NTU_Dissertation_Reviewed_v8_figures_editable.docx"
+}

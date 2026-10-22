@@ -1,0 +1,172 @@
+{
+  "input_v7_sha256": "e24f23f635b43b97297273ae1f85b66d97b2b09a39e971dee9725b76694afbb9",
+  "output_sha256": "fb18c68ee6379b9159e18c8f172ce2d2018a98445d3fbacb10154c1b15b0f956",
+  "event_figure_number": "5.3",
+  "conditioning_figure_number": "5.4",
+  "native_tables": 18,
+  "numbered_figures": 11,
+  "changes": [
+    "Redraw Figure 3.1",
+    "Redraw Figure 3.2",
+    "Redraw Figure 3.4",
+    "Insert Figure 3.6",
+    "Insert Figure 5.3",
+    "Redraw Figure 5.1 from archived counts to repair source-axis clipping",
+    {
+      "status": "Repaired",
+      "equation": "3.1",
+      "original": [
+        "s\ud835\udc61= bprev \ud835\udc61 , qtorso \ud835\udc61 , q\ud835\udc3f \ud835\udc61, \ud835\udc54\ud835\udc3f \ud835\udc61, q\ud835\udc45 \ud835\udc61, \ud835\udc54\ud835\udc45 \ud835\udc61 . (3.1)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.2",
+      "original": [
+        "\u0394\ud835\udc4e( \ud835\udc57) \ud835\udc61+\ud835\udc58= \ud835\udc4e( \ud835\udc57) \ud835\udc61+\ud835\udc58\u2212\ud835\udc60( \ud835\udc57) \ud835\udc61 . (3.2)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.3",
+      "original": [
+        "(\ud835\udc5c\ud835\udc61, s\ud835\udc61, \ud835\udc5d\ud835\udc61) \u2192(a\ud835\udc61+1, . . . , a\ud835\udc61+\ud835\udc3b) , (3.3)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.4",
+      "original": [
+        "\ud835\udc43data(\ud835\udc51= 1) \u22480.0396, (3.4)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.5",
+      "original": [
+        "\ud835\udc43train(\ud835\udc51= 1) = 0.20, (3.5)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.6",
+      "original": [
+        "\ud835\udc46= 1 \u2212\ud835\udc38\ud835\udc5a",
+        "\ud835\udc380 . (3.6)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.7",
+      "original": [
+        "\ud835\udc45motion = E[|\u0394\u02c6aarm|]",
+        "E[|\u0394aarm|] . (3.7)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.8",
+      "original": [
+        "\u02c6\ud835\udc4e( \ud835\udc57) \ud835\udc65 \u2212\ud835\udc60( \ud835\udc57) \ud835\udc65, \ud835\udc57\u2208D,",
+        "\u02dc\ud835\udc4e( \ud835\udc57) \ud835\udc65 =",
+        "\u02c6\ud835\udc4e( \ud835\udc57) \ud835\udc65, \ud835\udc57\u2209D, (3.8)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.9",
+      "original": [
+        "\ud835\udc37(\ud835\udc54) \ud835\udc56,\ud835\udc65= mean \u02dca(\ud835\udc54) \ud835\udc65 \u2212\u02dca(\ud835\udc54) ref",
+        ". (3.9)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "3.10",
+      "original": [
+        "\ud835\udc44(\ud835\udc54) \ud835\udc56,\ud835\udc65= \ud835\udc37(\ud835\udc54) \ud835\udc56,\ud835\udc65",
+        "\ud835\udc37(\ud835\udc54) \ud835\udc56,noise . (3.10)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "4.1",
+      "original": [
+        "\ud835\udc67(\ud835\udc65) = \ud835\udc65\u2212\ud835\udf07",
+        "\ud835\udf0e+ \ud835\udf16, (4.1)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "equation": "4.2",
+      "original": [
+        "whereas C uses \ud835\udc5e(\ud835\udc65) = 2 \ud835\udc65\u2212\ud835\udc5e0.01 \ud835\udc5e0.99 \u2212\ud835\udc5e0.01 + \ud835\udf16\u22121. (4.2)"
+      ],
+      "layout": "Native Word OMML; original number retained"
+    },
+    {
+      "status": "Repaired",
+      "kind": "native superscript",
+      "original": "The optimiser is AdamW with \ud835\udefd1 = 0.9, \ud835\udefd2 = 0.95, \ud835\udf16= 10\u22128, weight decay 10\u221210, and global gradient-norm clipping at 1.0. The learning-rate schedule warms up for 1,000 updates to 2.5 \u00d7 10\u22125 and then follows the configured cosine schedule toward 2.5 \u00d7 10\u22126. Its total schedule length is 30,000 updates, including warm-up; training stops at 20,000 updates before the scheduled endpoint.",
+      "powers": [
+        "10\u22128",
+        "10\u221210",
+        "10\u22125",
+        "10\u22126"
+      ]
+    },
+    {
+      "status": "Repaired",
+      "kind": "native superscript",
+      "original": "Here, \ud835\udf16= 10\u22126 and the statistics are estimated from training anchors only. Torso and arm",
+      "powers": [
+        "10\u22126"
+      ]
+    },
+    {
+      "status": "Repaired",
+      "kind": "native superscript",
+      "original": "point discrepancy was approximately 1.93 \u00d7 10\u22127, within the specified absolute and relative tolerances. Normalisation statistics were recomputed from the 37 training sources, with a maximum absolute difference of 0.0 from the saved assets for each configuration. The conditioning manifest has no overlap with test sources.",
+      "powers": [
+        "10\u22127"
+      ]
+    },
+    {
+      "status": "Repaired",
+      "kind": "native superscript",
+      "original": "Fixed-noise repeated inference gives a maximum absolute difference of 0.0 for all three checkpoints. An independent spot check rescored ten shared anchors. The largest scaled floating-point discrepancy is approximately 1.93 \u00d7 10\u22127.",
+      "powers": [
+        "10\u22127"
+      ]
+    },
+    {
+      "status": "Repaired",
+      "kind": "native superscript",
+      "original": "The wait no-motion MAE is approximately 1.4891 \u00d7 10\u22125, and the follow arm no-motion",
+      "powers": [
+        "10\u22125"
+      ]
+    },
+    {
+      "status": "Repaired",
+      "kind": "native superscript",
+      "original": "absolute difference of 0.0 for all three models. Independent metric spot checks differed by at most approximately 1.93 \u00d7 10\u22127 under the scaled comparison.",
+      "powers": [
+        "10\u22127"
+      ]
+    }
+  ],
+  "fixed_cause": "New v7 pictures inherited Normal exact line height; all v8 image paragraphs use explicit automatic single spacing.",
+  "v7_preserved": true
+}

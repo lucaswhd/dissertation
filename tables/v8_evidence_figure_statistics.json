@@ -1,0 +1,255 @@
+{
+  "scope": "Descriptive dataset characteristic extraction and saved-seed score aggregation only; no v7 audit rerun, inference, training or simulation.",
+  "dataset_population": {
+    "sources": 45,
+    "train_val_test_sources": [
+      37,
+      4,
+      4
+    ],
+    "raw_frames": 409670,
+    "nonstandby_segments": 495,
+    "source_context_statistics": 180,
+    "within_context_next_action_rows": 409490
+  },
+  "definitions": {
+    "segment_duration_seconds": "(exclusive stop raw frame - start raw frame) / 30; actual measured subinstruction instances; five nonstandby labels.",
+    "arm_delta": "Mean over 18 torso/arm dimensions of abs(exported physical shift1 target[t] - current physical state[t]); aggregate mean within each source/context, excluding last raw row of every context. Joint position units rad; no normalization or angle wrapping.",
+    "context_counts": "Raw frames versus eligible B/C anchors counted from actual Parquet mask; decision subset is valid_anchor & task_id==1. All 45 retained sources, all splits descriptive.",
+    "boxplots": "Median, 25th/75th percentiles; whiskers at measured-sample 10th/90th percentiles; outliers outside whiskers not drawn; no confidence intervals.",
+    "gripper_metrics": "At each seed, context-pooled event counts greedily matched by gripper/direction within +/-8 frames; then mean and sample SD (ddof=1) across five inference seeds. One training run per model, seed42.",
+    "uncertainty_limit": "No training-seed uncertainty or significance/causal claim; SD bars are not confidence intervals and may extend below zero."
+  },
+  "generator": {
+    "path": "tools/plotting/generate_v8_evidence.py",
+    "sha256": "f25603b495aed84051383da041684e45c2ad4a017ff542d227b6fd428c34c752"
+  },
+  "joint_unit_evidence": [
+    {
+      "joint": "torso_joint1",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "torso_joint2",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "torso_joint3",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "torso_joint4",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "left_arm_joint1",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "left_arm_joint2",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "left_arm_joint3",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "left_arm_joint4",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "left_arm_joint5",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "left_arm_joint6",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "left_arm_joint7",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "right_arm_joint1",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "right_arm_joint2",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "right_arm_joint3",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "right_arm_joint4",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "right_arm_joint5",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "right_arm_joint6",
+      "type": "revolute",
+      "position_unit": "rad"
+    },
+    {
+      "joint": "right_arm_joint7",
+      "type": "revolute",
+      "position_unit": "rad"
+    }
+  ],
+  "input_provenance": [
+    {
+      "role": "source_identity_only_not_valid_counts",
+      "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/manifest.json",
+      "sha256": "a804b01f9630ee0503b0def0914afeb19e8e44441e6a93de1131ac02ac0cd142"
+    },
+    {
+      "role": "measured_segment_boundaries",
+      "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstructions_rerun_v1.json",
+      "sha256": "7c822fd29fde7c21b9eec876e68993b8a614d9ed8ff41e4b754eceab4d907682"
+    },
+    {
+      "role": "local_joint_type_unit_verification_only_not_redistributed",
+      "path": "/root/autodl-tmp/datasets/omnigibson-robot-assets/models/r1pro/urdf/r1pro.urdf",
+      "sha256": "b0d76760cbedfbcbe1ddc280380dd5f497bbca380313bc096d7239a2c50dae61"
+    },
+    {
+      "role": "numeric_characteristic_extraction",
+      "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/train/data/chunk-000/file-000.parquet",
+      "sha256": "dee33040ff0271c61afc129c0a2db6b26ffa0bac87c0f66be73cae024daa8fd1"
+    },
+    {
+      "role": "numeric_characteristic_extraction",
+      "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/val/data/chunk-000/file-000.parquet",
+      "sha256": "ab1dbf24b94f75c174b596c0d3ec6d2930bc3546dc878d09c9d2adfc86757548"
+    },
+    {
+      "role": "numeric_characteristic_extraction",
+      "path": "/root/autodl-tmp/lerobot_datasets/hrc_subinstr_rerun_v1/test/data/chunk-000/file-000.parquet",
+      "sha256": "b15564dfc15dbf5bed94d79c13c4528b7ab9590423904b5c97597377f7c5d605"
+    },
+    {
+      "role": "matched_validation_anchor_manifest",
+      "path": "/root/dissertation_release_staging/evidence/frozen_audit/anchor_manifest.json",
+      "sha256": "d5553026605163a74820a865db80e90e81249d3fcceba9cb19655a43fa2bd6a8"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/A20/per_seed/seed_0/summary.json",
+      "sha256": "d673b24c09d9e5042026bd6c73ea2100070f66401e93905f58f51f938a8b5102"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/A20/per_seed/seed_1/summary.json",
+      "sha256": "2e30679827619cfa7c00d718f8babbf06b2a3a83e99f3ce8585d5683552e0345"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/A20/per_seed/seed_2/summary.json",
+      "sha256": "753644cfe94e29b421782e03113b6db5bf24af69241ba5bbc92f04d8766b0ed1"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/A20/per_seed/seed_3/summary.json",
+      "sha256": "96eefea2aa861da5923fbe0ed5197a139113d549d0b4d0b0cde52cb8e6901a76"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/A20/per_seed/seed_4/summary.json",
+      "sha256": "978991c0e18f14475718b2f12f99eb055caea2f3a4f1068ccebb6bb42d017427"
+    },
+    {
+      "role": "included_frozen_summary_cross_check",
+      "path": "/root/dissertation_release_staging/evidence/frozen_audit/A20/summary.json",
+      "sha256": "61712ff8c9423b63475d3c0cd792f5a84d35dee6fe6e5523de1ca2609b4722c1"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/B20/per_seed/seed_0/summary.json",
+      "sha256": "7b9e1c6a94cffcba433ffa9278aa422e314c0886dacd152ae07d66b8f0ae83d6"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/B20/per_seed/seed_1/summary.json",
+      "sha256": "284b1377f23434eceb9f14a01e9e57e12626b9f925998b591a1a879d50941907"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/B20/per_seed/seed_2/summary.json",
+      "sha256": "acd01de8d75e924346611cfc5d4224fdf94f9114f08ebdfb882cbcff05708998"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/B20/per_seed/seed_3/summary.json",
+      "sha256": "40be77a2ca08e48a150683bac347fb896c168ac8ae91e727c4587ce9a0f273f1"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/B20/per_seed/seed_4/summary.json",
+      "sha256": "58033a9433da0c7528e8f3eeb17968823905c1b3afaea66362537141e31298d0"
+    },
+    {
+      "role": "included_frozen_summary_cross_check",
+      "path": "/root/dissertation_release_staging/evidence/frozen_audit/B20/summary.json",
+      "sha256": "6c2a0477e5f4611254096879f5a644b64db7ed4ee7996ad28e882e39c2438681"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/C20/per_seed/seed_0/summary.json",
+      "sha256": "41811b1f7f520e73692b842d4acba3813640f66c2ab11e21b726110f0608f1ec"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/C20/per_seed/seed_1/summary.json",
+      "sha256": "7fe20c0de8a1e2147c1b582c16f1a85a50b1f8d3653019d5e2447c15931b52d2"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/C20/per_seed/seed_2/summary.json",
+      "sha256": "fa9ce723e469176056536e69f187d2bec1554bec8969e5bbb98f51b1ffccfe99"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/C20/per_seed/seed_3/summary.json",
+      "sha256": "9e14c85d9c2fbda04e6e9b2c527a05dbbb098c0a9e8f3355409692a049552064"
+    },
+    {
+      "role": "frozen_inference_seed_summary",
+      "path": "/root/autodl-tmp/openpi_hrc/outputs/dissertation_final_audit/C20/per_seed/seed_4/summary.json",
+      "sha256": "bf93a65a2c7fdbd68e01d26aba168951e5242511f29e8a90ffd1b323f1ee4300"
+    },
+    {
+      "role": "included_frozen_summary_cross_check",
+      "path": "/root/dissertation_release_staging/evidence/frozen_audit/C20/summary.json",
+      "sha256": "e6a83da35bf5e48c4941e12fb5865dd4db260cc60982a56f5d8a3c9198caf4a2"
+    }
+  ],
+  "checks": {
+    "archived_summary_max_difference_tolerance": 1e-12,
+    "F1_four_decimal_sanity_check": "passed",
+    "actual_B_valid_mask_counts_match_existing_v7_summary": true
+  },
+  "figure_paths": {
+    "3.6": "figures/dataset/fig_3_6_temporal_action_characteristics",
+    "5.4": "figures/results/fig_5_4_gripper_event_performance"
+  }
+}

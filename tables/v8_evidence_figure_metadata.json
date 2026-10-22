@@ -1,0 +1,55 @@
+{
+  "3.6": {
+    "png": "figures/dataset/fig_3_6_temporal_action_characteristics.png",
+    "lead": "Figure 3.6 shows why total frame count alone does not describe the supervision available to the learner. Acquisition and soda-can pickup segments last longer than deposit or radio-interaction segments, while next-action targets change much less in wait and follow than in the two manipulation contexts. Eligibility for a complete action horizon further changes the available anchor population. These descriptive differences motivate RQ1: chunk construction and sampling determine which recorded rows contribute to learning. Repeated segments within each source are correlated.",
+    "caption": "Figure 3.6: Temporal and action characteristics of the 45 retained HRC sources (all splits, descriptive). (a) Durations of 495 measured non-standby sub-instruction segments; n counts actual segment instances, including repeated cycles. (b) Across-source distributions of the mean absolute difference between next-action targets and current states over 18 revolute torso/arm joints, with 45 sources per context. Boxes show medians and interquartile ranges; whiskers use the 10th–90th percentiles, with more extreme values omitted. (c) Recorded frames and eligible B/C anchors from actual masks; labels show valid/raw ratios. Panels (a,b) use logarithmic axes.",
+    "population": {
+      "sources": 45,
+      "source_split": [
+        37,
+        4,
+        4
+      ],
+      "measured_nonstandby_segments": 495,
+      "raw_frames": 409670,
+      "eligible_B_C_anchors": 387544
+    },
+    "width_inches": 5.7,
+    "height_inches": 6.35,
+    "variables": {
+      "a": "Actual segment duration, seconds",
+      "b": "Per-source mean absolute next-action target minus state across 18 revolute torso/arm joints, radians",
+      "c": "Raw frame and eligible anchor counts; all source splits descriptive"
+    },
+    "evidence": [
+      "tables/v8_segment_durations.csv",
+      "tables/v8_source_context_characteristics.csv",
+      "tables/v8_context_characteristic_summary.csv"
+    ]
+  },
+  "5.4": {
+    "png": "figures/results/fig_5_4_gripper_event_performance.png",
+    "lead": "Figure 5.4 compares the event-detection profiles in the two manipulation contexts. B20 and C20 have higher mean F1 than A20 on the frozen validation anchors, but precision remains limited: the highest pickup precision is 0.3163. Radio scores also vary substantially with inference noise. These differences do not establish successful grasping, a single-factor causal effect, or statistical significance. A20 to B20 changes prompts and sampling together; B20 to C20 changes state and action normalisation together.",
+    "caption": "Figure 5.4: Gripper-event prediction performance across A20, B20 and C20 for (a) pickup and (b) radio. Points show mean F1 and precision; bars show sample standard deviations over five inference flow-noise seeds. Each seed pools event counts over 200 matched validation anchors per context. Each checkpoint comes from one training run; the bars are not training-run uncertainty or confidence intervals. Lines guide comparison between configurations. SD bars are untruncated and may extend below zero. Higher event scores do not establish successful grasping.",
+    "population": {
+      "full_matched_validation_manifest": 652,
+      "matched_anchors_per_context": 200,
+      "validation_sources": 4,
+      "inference_seeds": 5,
+      "training_runs_per_model": 1,
+      "training_seed": 42
+    },
+    "width_inches": 5.7,
+    "height_inches": 2.95,
+    "variables": {
+      "x": "A20/B20/C20 categorical checkpoints at 20000 optimizer updates",
+      "y": "Dimensionless context-pooled event F1 or precision",
+      "error_bar": "Sample standard deviation across five inference seeds, ddof=1"
+    },
+    "evidence": [
+      "tables/v8_gripper_event_per_seed.csv",
+      "tables/v8_gripper_event_summary.csv",
+      "evidence/frozen_audit/anchor_manifest.json"
+    ]
+  }
+}
