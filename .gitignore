@@ -22,6 +22,8 @@ __pycache__/
 *.ckpt
 *.safetensors
 checkpoints/
+!evidence/checkpoints/
+!evidence/checkpoints/verification_summary.json
 *.docx
 LOCAL_RESOURCE_MANIFEST.csv
 # Third-party rendered imagery retained only in local delivery

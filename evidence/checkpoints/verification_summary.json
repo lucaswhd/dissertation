@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "verification_date_utc": "2026-10-22",
+  "bounded_search_root_count": 20,
+  "models": {
+    "A20": {
+      "step": 20000,
+      "current_weight_payload_located": true,
+      "repository_normalisation_sha256": "038b3453843efdb1dcab05cb679dbe58b1ab94f506e834a2f81428a6051f685f",
+      "training_log_sha256": "5cd6a32b1fedb81bbda05f678c73cd58b7842a886788aa66078ce71138a03d85",
+      "historical_final_save_record": true,
+      "fresh_matched_inference": "not_verified",
+      "inference_parameter_leaves_restored": 71,
+      "parameters": 3403421456,
+      "all_restored_parameters_finite": true,
+      "architecture_bind": "Verified",
+      "training_state_restored": false,
+      "payload_bytes_at_verification": 5446920617,
+      "checkpoint_normalisation_matches_repository": true
+    },
+    "B20": {
+      "step": 20000,
+      "current_weight_payload_located": false,
+      "repository_normalisation_sha256": "b0328714f8415e586ffe63dc9eba6c65c3ff0446baa8e79c57f581f7d93da793",
+      "training_log_sha256": "b6fa6c845da847a2f9198abd9937f81e5a218875c625d04ce30096fe4b96a46a",
+      "historical_final_save_record": true,
+      "fresh_matched_inference": "not_verified",
+      "bounded_search_scope": "project_and_backup_locations_recorded_in_restricted_audit",
+      "weight_status": "not_located_within_documented_scope"
+    },
+    "C20": {
+      "step": 20000,
+      "current_weight_payload_located": false,
+      "repository_normalisation_sha256": "ef9567d4aed6c3d3fc8963173a445157b9804403bb0c2353b8983aeb4d4aab2b",
+      "training_log_sha256": "ea98ab459ca51759886da893e032cd2d6129477846db8a936f1477c7cf7a5593",
+      "historical_final_save_record": true,
+      "fresh_matched_inference": "not_verified",
+      "bounded_search_scope": "project_and_backup_locations_recorded_in_restricted_audit",
+      "weight_status": "not_located_within_documented_scope"
+    }
+  },
+  "caveat": "A20 parameter restoration and model binding do not constitute regenerated predictions. B20/C20 absence is limited to the documented search scope; historical save logs and archived predictions remain. One historical training run per model and five inference flow-noise seeds are distinct."
+}

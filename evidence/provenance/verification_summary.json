@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "retained_sources": 45,
+  "split_counts": {
+    "val": 4,
+    "train": 37,
+    "test": 4
+  },
+  "upstream_demonstrations": 90,
+  "unique_raw_file_sha256": 90,
+  "within_and_cross_split_exact_complete_demonstration_reuse": 0,
+  "exact_replay_action_matches": 90,
+  "scope_note": "No exact complete-demonstration reuse in the audited 45-source final population; this does not establish generalisation across scenes, objects, tasks, or partially overlapping behaviours.",
+  "source_evidence": "Server verification on 2026-10-22; raw file paths and datasets are excluded from this release."
+}

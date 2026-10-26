@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "scope": "frozen final teacher-forced audit predictions only",
+  "anchor_manifest_sha256": "d5553026605163a74820a865db80e90e81249d3fcceba9cb19655a43fa2bd6a8",
+  "prediction_files": [
+    {
+      "model": "A20",
+      "inference_flow_seed": 0,
+      "relative_path": "A20/per_seed/seed_0/predictions.npz",
+      "size_bytes": 1796927,
+      "sha256": "cbb8cb92019071ac91fdc7ad5e60ac9dc02054e860cecfff53413579d6d2bd22",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "A20",
+      "inference_flow_seed": 1,
+      "relative_path": "A20/per_seed/seed_1/predictions.npz",
+      "size_bytes": 1796621,
+      "sha256": "5b7070456445884d204bbcc3a752a8ba9542b6e16e815a7f02068d126f5142cb",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "A20",
+      "inference_flow_seed": 2,
+      "relative_path": "A20/per_seed/seed_2/predictions.npz",
+      "size_bytes": 1796709,
+      "sha256": "d4a1f6e64152202139d79c36d4653ab888ccc137663e736ae7b693311fcfbf00",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "A20",
+      "inference_flow_seed": 3,
+      "relative_path": "A20/per_seed/seed_3/predictions.npz",
+      "size_bytes": 1796010,
+      "sha256": "17d1e72b8aa2853471e30b19326dd8380e59402a7cb87493d82df65739d904e5",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "A20",
+      "inference_flow_seed": 4,
+      "relative_path": "A20/per_seed/seed_4/predictions.npz",
+      "size_bytes": 1797005,
+      "sha256": "29f0cc938545bfc17b87c57093446ecaea12b2ab41634dcb0449bd62fd7ff490",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "B20",
+      "inference_flow_seed": 0,
+      "relative_path": "B20/per_seed/seed_0/predictions.npz",
+      "size_bytes": 1795926,
+      "sha256": "3087b411f18d61a8cba038f6ee88b7c26e42fa6e173e3fa10da6cf08134b9045",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "B20",
+      "inference_flow_seed": 1,
+      "relative_path": "B20/per_seed/seed_1/predictions.npz",
+      "size_bytes": 1795709,
+      "sha256": "d4c961d163ce59310e8029bd49aa63bab448ca52bedd7bd0d2b15e92aa313e16",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "B20",
+      "inference_flow_seed": 2,
+      "relative_path": "B20/per_seed/seed_2/predictions.npz",
+      "size_bytes": 1795772,
+      "sha256": "f7bb38775b04071da7af882c1bdd5b90eefc83d2477f07a65df0c3e4a1ea321c",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "B20",
+      "inference_flow_seed": 3,
+      "relative_path": "B20/per_seed/seed_3/predictions.npz",
+      "size_bytes": 1795916,
+      "sha256": "f5bb0b15d15390cef487283e088981e8365e1ab6262ead87fa060c5ec75b427d",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "B20",
+      "inference_flow_seed": 4,
+      "relative_path": "B20/per_seed/seed_4/predictions.npz",
+      "size_bytes": 1795956,
+      "sha256": "6314d3e771e32c02f28a801eb31cb3f28e465311d5cac12f55c5f3c7f4fd0d80",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "C20",
+      "inference_flow_seed": 0,
+      "relative_path": "C20/per_seed/seed_0/predictions.npz",
+      "size_bytes": 1799054,
+      "sha256": "db79e7548425e0c100438c2f7abf3426221759134f996646c433a9026f6d17c9",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "C20",
+      "inference_flow_seed": 1,
+      "relative_path": "C20/per_seed/seed_1/predictions.npz",
+      "size_bytes": 1798809,
+      "sha256": "efae20da1c09f0f5e2e4ba959e849950960fe9969d7b3df2fc63eae893f9a754",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "C20",
+      "inference_flow_seed": 2,
+      "relative_path": "C20/per_seed/seed_2/predictions.npz",
+      "size_bytes": 1798621,
+      "sha256": "444768ac03554e7ee2041ca4ba6c6d63aee648ada19c1db64758422319b5ca82",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "C20",
+      "inference_flow_seed": 3,
+      "relative_path": "C20/per_seed/seed_3/predictions.npz",
+      "size_bytes": 1798931,
+      "sha256": "e5d3df72a52d6067b6f6d38310470f7b187f07c7e4fb631132268285aebecba9",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    },
+    {
+      "model": "C20",
+      "inference_flow_seed": 4,
+      "relative_path": "C20/per_seed/seed_4/predictions.npz",
+      "size_bytes": 1799044,
+      "sha256": "6a2f027628f7acdfc2fbeea10e93d46d6c2a3600d91986524544296676e8503e",
+      "arrays": [
+        {
+          "name": "predictions.npy",
+          "shape": [
+            652,
+            32,
+            23
+          ],
+          "dtype": "<f4",
+          "fortran_order": false
+        },
+        {
+          "name": "anchor_ids.npy",
+          "shape": [
+            652
+          ],
+          "dtype": "<U13",
+          "fortran_order": false
+        }
+      ],
+      "repository_status": "excluded_pending_derivative_data_rights_review"
+    }
+  ]
+}
