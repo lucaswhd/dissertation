@@ -2,7 +2,7 @@
 
 This private supplementary research repository accompanies the MSc dissertation by **WUHAODONG** at Nanyang Technological University. The dissertation studies structured human–robot collaboration (HRC) dataset construction, a diagnostic benchmark, a policy adaptation case study, and the evidence needed to interpret their limits. It does not propose a new foundation model.
 
-The manuscript corresponding to this repository is identified by the [`msc-dissertation-submission-2026` tag](https://github.com/lucaswhd/dissertation/tree/msc-dissertation-submission-2026). Access to this private repository must be granted to authorised examiners. The formal PDF and LaTeX source are held in the controlled dissertation delivery, pending a separate third-party asset redistribution review.
+The current branch contains the curated supplementary research material for the final dissertation; the immutable release commit is cited in the dissertation Appendix A.8. The earlier `msc-dissertation-submission-2026` tag is retained as a historical pre-cleanup snapshot. Access to this private repository must be granted to authorised examiners. The formal PDF and LaTeX source are held in the controlled dissertation delivery, pending a separate third-party asset redistribution review.
 
 ## Research objective and contributions
 
@@ -43,7 +43,7 @@ The included evidence supports inspection of source splits and provenance, cross
 | `tools/` | Release consistency checker and historical plotting/audit utilities. |
 | `docs/` | Protocol, schema, access, traceability, and reproduction guidance. |
 | `manuscript/` | LaTeX build requirements and correspondence to the submitted manuscript. |
-| `reports/` | Historical research audits, retained for provenance; read their dates and scope. |
+| `reports/` | Core methodology, dataset, experiment and numerical-traceability audits; superseded Word-layout reports were removed from the current tree. |
 
 ## Checked reproduction entry point
 
